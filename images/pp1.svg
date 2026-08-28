@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 50" width="540" height="50">
+  <g font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+    
+    <!-- ITUS en Blanco -->
+    <text 
+      x="0" 
+      y="38" 
+      fill="#FFFFFF" 
+      font-size="48" 
+      font-weight="900" 
+      letter-spacing="1">ITUS</text>
+    
+    <!-- Separador Vertical en Blanco -->
+    <rect 
+      x="130" 
+      y="4" 
+      width="4" 
+      height="42" 
+      rx="2" 
+      fill="#FFFFFF" />
+    
+    <!-- Texto Institucional a la Derecha en 2 líneas -->
+    <text 
+      x="148" 
+      y="22" 
+      fill="#FFFFFF" 
+      font-size="16" 
+      font-weight="800" 
+      letter-spacing="0.5">INSTITUTO TECNOLÓGICO</text>
+      
+    <text 
+      x="148" 
+      y="42" 
+      fill="#FFFFFF" 
+      font-size="16" 
+      font-weight="800" 
+      letter-spacing="0.5">UNIVERSITARIO DE SANTIAGO</text>
+      
+  </g>
+</svg>
