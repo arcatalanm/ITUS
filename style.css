@@ -1,22 +1,37 @@
-.root {
-    /*variable basadas en root, mas facil de progrmar  por q son diretcas al codigo*/
-    --itus-purple-primary: #7224A6;
-    --itus-purple-medium: #421F73;
-    --itus-purple-dark: #361D59;
-    --itus-gold: #F2BB16;
-    --itus-gray-light: #D9D9D9;
-    --itus-light-gray: #f8f9fa;
-    --itus-red: #c9182b;
-    
+:root {
+    /* Variables de Color ITUS */
+    --itus-navbar: #421F73;        /* Barra de navegación */
+    --itus-background: #f8f9fa;    /* Fondo general */
+    --itus-cards: #FFFFFF;         /* Fondo de tarjetas / contenedores */
+    --itus-title: #361D59;         /* Títulos y jerarquía */
+    --itus-text: #361D59;          /* Texto y lectura */
+    --itus-buttons: #7224A6;       /* Botones y llamadas a la acción */
+    --itus-accent: #F2BB16;        /* Color de acento / destaque / dorados */
+    --itus-borders: #D9D9D9;       /* Bordes y líneas divisorias */
+    --itus-alerts: #c9182b;        /* Alertas y avisos */
 }
 
-
+/* Base y Tipografía */
 body {
-    background-color: black;
+    background-color: var(--itus-background);
+    color: var(--itus-text);
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    color: var(--itus-title);
+    font-family: "Roboto", sans-serif;
+}
+
+p {
+    color: var(--itus-text);
+}
+
+/* Barra de Navegación */
 .my-nav-personalized {
-    background-color: black;
+    background-color: var(--itus-navbar);
 }
 
 .img-itus {
@@ -28,47 +43,215 @@ body {
 }
 
 .nav-link {
-    color: #D9D9D9;
+    color: var(--itus-borders) !important;
     font-family: "Roboto", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
     font-size: 18px;
+    transition: color 0.3s ease;
 }
 
-/* Modificaciones al Carrusel */
-.carousel-item {
-    filter: brightness(50%);
+.nav-link:hover {
+    color: var(--itus-accent) !important;
 }
 
-.carousel-item img {
-    height: 1000px;
+/* Modificaciones al Carrusel de Cabecera */
+#carouselExampleControls .carousel-item {
+    filter: brightness(60%);
+}
+
+#carouselExampleControls .carousel-item img,
+.sld {
+    height: 650px;
     object-fit: cover;
-    object-position: top;
+    object-position: center 20%;
 }
 
+#carouselExampleControls .carousel-control-prev-icon,
+#carouselExampleControls .carousel-control-next-icon {
+    filter: drop-shadow(0px 0px 4px var(--itus-navbar));
+}
+
+/* Sección Carreras Destacadas y su Carrusel */
 .featured-careers {
-    color: #D9D9D9;
+    padding: 40px 0;
+}
+
+.featured-careers h2 {
+    color: var(--itus-title);
+}
+
+/* Estilos específicos para la presentación dividida de carreras */
+#carrerasCarousel .carousel-item {
+    filter: none;
+    min-height: 420px;
+    transition: transform 0.7s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.carrera-title {
+    color: var(--itus-title);
+    line-height: 1.2;
+}
+
+.carrera-description {
+    color: var(--itus-text);
+    font-size: 1.15rem;
+    line-height: 1.65;
+}
+
+.carrera-meta strong {
+    color: var(--itus-title);
+}
+
+.carrera-img-wrapper {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 2px solid var(--itus-borders);
+    transition: border-color 0.4s ease, transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.carrera-img-wrapper:hover {
+    border-color: var(--itus-accent);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 25px rgba(66, 31, 115, 0.18) !important;
+}
+
+.carrera-split-img {
+    width: 100%;
+    height: 390px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s ease;
+}
+
+.carrera-img-wrapper:hover .carrera-split-img {
+    transform: scale(1.03);
+}
+
+/* Botones de navegación personalizados para el carrusel de carreras */
+.carrera-nav-btn {
+    background-color: var(--itus-navbar);
+    border: none;
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.carrera-nav-btn:hover {
+    background-color: var(--itus-buttons);
+    transform: scale(1.1);
+}
+
+.carrera-nav-btn .carousel-control-prev-icon,
+.carrera-nav-btn .carousel-control-next-icon {
+    width: 20px;
+    height: 20px;
+    filter: none;
+}
+
+#carrerasCarousel .carousel-indicators [data-bs-target] {
+    background-color: var(--itus-navbar);
+    opacity: 0.35;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin: 0 6px;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+#carrerasCarousel .carousel-indicators .active {
+    background-color: var(--itus-accent);
+    opacity: 1;
+    width: 32px;
+    border-radius: 6px;
+}
+
+.card {
+    background-color: var(--itus-cards);
+    border: 1px solid var(--itus-borders);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    border-color: var(--itus-accent);
+    box-shadow: 0 10px 20px rgba(66, 31, 115, 0.15) !important;
+}
+
+.card-title {
+    color: var(--itus-title);
 }
 
 .card-text {
+    color: var(--itus-text);
     text-align: justify;
 }
 
-/* Sección Clientes Felices */
-.happy-learners {
+/* Botones */
+.btn-primary {
+    background-color: var(--itus-buttons);
+    border-color: var(--itus-buttons);
+    color: #FFFFFF;
+    font-weight: bold;
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
 }
 
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active {
+    background-color: var(--itus-navbar);
+    border-color: var(--itus-navbar);
+    color: var(--itus-accent);
+}
 
+/* Sección Estudiantes Felices / Comunidad en Números */
+.happy-learners {
+    background-color: var(--itus-navbar);
+    padding: 60px 0;
+}
 
+.happy-learners h2 {
+    color: #FFFFFF;
+}
 
+.happy-learners .lead {
+    color: var(--itus-borders);
+}
+
+.happy-learners .border {
+    border-color: var(--itus-borders) !important;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.happy-learners .border:hover {
+    border-color: var(--itus-accent) !important;
+    transform: translateY(-10px);
+}
+
+.happy-learners h3 {
+    color: var(--itus-accent) !important;
+}
+
+.happy-learners p {
+    color: var(--itus-borders);
+}
 
 /* Sección Noticias */
 .card-noticias {
-    background-color: #7224A6;
-    color: #D9D9D9;
+    background-color: var(--itus-navbar);
+    color: var(--itus-borders);
     padding: 20px;
     border-radius: 10px;
     margin: 10px;
+    border: 1px solid var(--itus-borders);
     display: flex;
     flex-direction: row; 
     align-items: center; 
@@ -82,7 +265,7 @@ body {
     border-radius: 5px; 
 }
 
-.card-body-noticia{
+.card-body-noticia {
     display: flex;
     flex-direction: row;
     align-items: center; 
@@ -101,18 +284,19 @@ body {
 .titulo-noticia {
     margin: 0;
     font-size: 24px;
-    color: white;
+    color: #FFFFFF;
     font-weight: bold;
 }
 
 .texto-noticia {
     margin: 0;
     font-size: 16px;
+    color: var(--itus-borders);
 }
 
 .btn-noticia {
-    background-color: #0d6efd; 
-    color: white;
+    background-color: var(--itus-buttons); 
+    color: #FFFFFF;
     border: none;
     padding: 15px 30px;
     border-radius: 5px;
@@ -121,18 +305,328 @@ body {
     font-size: 16px;
     flex-shrink: 0; 
     margin-left: 20px; 
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.titulo-seccion-noticia{
-    color: #D9D9D9;
+.btn-noticia:hover {
+    background-color: var(--itus-accent);
+    color: var(--itus-title);
+}
+
+.titulo-seccion-noticia {
+    color: var(--itus-title);
     font-family: "Roboto", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
     font-size: 32px;
     text-align: center;
-
 }
 
+/* Sección: Vive la Experiencia ITUS - Mosaico Intercalado y Apegado */
+.experience-section {
+    background-color: #ffffff;
+    border-bottom: 1px solid var(--itus-borders);
+    overflow: hidden;
+}
 
+.mosaic-container {
+    padding: 10px 0 20px 0;
+}
 
-/* Sección Noticias */
+.mosaic-bar {
+    position: relative;
+    overflow: hidden;
+    background-color: var(--itus-title);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 0;
+    transition: border-color 0.4s ease, box-shadow 0.4s ease;
+    cursor: pointer;
+}
+
+/* Alturas e Intercalado en pantallas de escritorio (Desktop) */
+@media (min-width: 992px) {
+    .mosaic-bar-1 {
+        height: 620px;
+        margin-top: 0;
+    }
+    .mosaic-bar-2 {
+        height: 550px;
+        margin-top: 45px;
+    }
+    .mosaic-bar-3 {
+        height: 620px;
+        margin-top: 0;
+    }
+    .mosaic-bar-4 {
+        height: 550px;
+        margin-top: 45px;
+    }
+}
+
+/* En tablets (md) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .mosaic-bar-1 {
+        height: 520px;
+        margin-top: 0;
+    }
+    .mosaic-bar-2 {
+        height: 470px;
+        margin-top: 30px;
+    }
+    .mosaic-bar-3 {
+        height: 520px;
+        margin-top: 0;
+    }
+    .mosaic-bar-4 {
+        height: 470px;
+        margin-top: 30px;
+    }
+}
+
+/* En móviles (sm/xs) */
+@media (max-width: 767.98px) {
+    .mosaic-bar {
+        height: 450px;
+        border-radius: 0;
+    }
+}
+
+.mosaic-bar:hover {
+    border-color: var(--itus-accent) !important;
+    box-shadow: 0 16px 36px rgba(54, 29, 89, 0.35);
+}
+
+.mosaic-bg-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.mosaic-bar:hover .mosaic-bg-img {
+    transform: scale(1.12);
+}
+
+.mosaic-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        to bottom, 
+        rgba(54, 29, 89, 0.22) 0%, 
+        rgba(54, 29, 89, 0.45) 40%, 
+        rgba(30, 14, 55, 0.93) 74%, 
+        rgba(18, 7, 34, 0.98) 100%
+    );
+    transition: background 0.4s ease;
+}
+
+.mosaic-bar:hover .mosaic-overlay {
+    background: linear-gradient(
+        to bottom, 
+        rgba(66, 31, 115, 0.15) 0%, 
+        rgba(66, 31, 115, 0.4) 35%, 
+        rgba(40, 15, 75, 0.95) 70%, 
+        rgba(22, 6, 42, 1) 100%
+    );
+}
+
+.mosaic-content {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    padding: 30px 22px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.mosaic-number {
+    font-size: 2.2rem;
+    font-weight: 900;
+    color: var(--itus-accent);
+    letter-spacing: 1.5px;
+    line-height: 1;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+}
+
+.mosaic-title {
+    color: #ffffff;
+    font-size: 1.45rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+    line-height: 1.25;
+    transition: color 0.3s ease;
+}
+
+.mosaic-bar:hover .mosaic-title {
+    color: var(--itus-accent);
+}
+
+.mosaic-text {
+    color: #e5dbf7;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 0;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.experience-cta-box {
+    background: linear-gradient(135deg, var(--itus-navbar) 0%, var(--itus-title) 100%);
+    border: 1px solid rgba(242, 187, 22, 0.4);
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-accent-custom {
+    background-color: var(--itus-accent);
+    color: var(--itus-title);
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.btn-accent-custom:hover {
+    background-color: #ffd24d;
+    color: var(--itus-title);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(242, 187, 22, 0.4);
+}
+
+/* Sección: Alianzas Estratégicas y Certificaciones */
+.alliances-section {
+    background-color: #ffffff;
+    border-bottom: 1px solid var(--itus-borders);
+}
+
+.alliance-card {
+    background-color: #ffffff;
+    border: 1px solid var(--itus-borders) !important;
+    border-radius: 18px;
+    transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+}
+
+.alliance-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--itus-accent) !important;
+    box-shadow: 0 14px 28px rgba(66, 31, 115, 0.12) !important;
+}
+
+.alliance-icon-wrapper {
+    width: 48px;
+    height: 48px;
+    background-color: rgba(66, 31, 115, 0.08);
+    color: var(--itus-navbar);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    flex-shrink: 0;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.alliance-card:hover .alliance-icon-wrapper {
+    background-color: var(--itus-navbar);
+    color: var(--itus-accent);
+}
+
+.alliances-highlight-box {
+    background-color: rgba(242, 187, 22, 0.08);
+    border-color: rgba(242, 187, 22, 0.4) !important;
+}
+
+/* Sección: Formas de Financiamiento y Beneficios */
+.financing-section {
+    background-color: var(--itus-background);
+    border-bottom: 1px solid var(--itus-borders);
+}
+
+.financing-card {
+    background-color: #ffffff;
+    border: 1px solid var(--itus-borders) !important;
+    border-radius: 18px;
+    transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+}
+
+.financing-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--itus-accent) !important;
+    box-shadow: 0 16px 32px rgba(66, 31, 115, 0.12) !important;
+}
+
+.financing-icon-box {
+    width: 52px;
+    height: 52px;
+    background-color: rgba(66, 31, 115, 0.08);
+    color: var(--itus-navbar);
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.financing-card:hover .financing-icon-box {
+    background-color: var(--itus-navbar);
+    color: var(--itus-accent);
+}
+
+.text-itus-title {
+    color: var(--itus-title);
+}
+
+.financing-features li {
+    display: flex;
+    align-items: flex-start;
+    line-height: 1.4;
+}
+
+.financing-features i {
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.btn-outline-primary {
+    color: var(--itus-buttons);
+    border-color: var(--itus-buttons);
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--itus-buttons);
+    border-color: var(--itus-buttons);
+    color: #ffffff;
+}
+
+.financing-help-box {
+    background-color: #ffffff;
+    border-color: var(--itus-borders) !important;
+    border-left: 5px solid var(--itus-accent) !important;
+}
+
+.financing-help-icon {
+    width: 50px;
+    height: 50px;
+    background-color: rgba(242, 187, 22, 0.15);
+    color: var(--itus-navbar);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+
+/* Footer */
+footer {
+    background-color: var(--itus-title);
+    color: var(--itus-borders);
+    border-top: 3px solid var(--itus-accent);
+    padding: 25px 0;
+    text-align: center;
+}

@@ -3,9 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Boostrap</title>
+    <title>Instituto Tecnológico Universitario de Santiago | ITUS</title>
     <!-- Importación de la hoja de estilos de bootstrap-->
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Importación de Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <!-- Importacion de la hoja de estilos css -->
     <link rel="stylesheet" href="style.css">
     <!-- Importancio de Font de Google-->
@@ -15,7 +17,7 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg my-nav-personalized sticky-top" data-bs-theme="dark">
+        <nav class="navbar navbar-expand-lg sticky-top my-nav-personalized">
             <!-- Container fluid similitud a flex-->
             <div class="container-fluid">
                 <!-- Zona destinada al logotipo o marca -->
@@ -32,16 +34,14 @@
                         <li class="nav-item">
                             <a class="nav-link" href="sedes.html">SEDES</a>
                         </li>
-                            <li class="nav-item">
-                            <a class="nav-link" href="sobre-nosotros.html">NOSOTROS </a>
+                        <li class="nav-item">
+                            <a class="nav-link" href="sobre-nosotros.html">NOSOTROS</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contactos.html">CONTACTOS</a>
                         </li>
-                            <li class="nav-item">
-                            <a class="nav-link" href="contactos.html">CONTACTOS </a>
-                        </li>
-                        </li>
-                            <li class="nav-item">
-                            <a class="nav-link" href="noticias.html">NOTICIAS </a>
+                        <li class="nav-item">
+                            <a class="nav-link" href="noticias.html">NOTICIAS</a>
                         </li>
                     </ul>
                 </div>
@@ -53,13 +53,13 @@
             <div class="carousel-inner">
                 <!-- Páginas o Elementos del Carrusel (Active = Principal) -->
                 <div class="carousel-item active">
-                    <img class="d-block w-100 object-fit-cover" src="images/image5.png" alt="Imágen de estudiantes dando una presentación">
+                    <img class="d-block w-100 object-fit-cover sld" src="images/image5.png" alt="Imágen de estudiantes dando una presentación">
                 </div>
                 <div class="carousel-item">
-                    <img class="d-block w-100 object-fit-cover" src="images/image1.png" alt="Second slide">
+                    <img class="d-block w-100 object-fit-cover sld" src="images/image1.png" alt="Second slide">
                 </div>
                 <div class="carousel-item">
-                    <img class="d-block w-100 object-fit-cover" src="images/image8.png" alt="Third slide">
+                    <img class="d-block w-100 object-fit-cover sld" src="images/image8.png" alt="Third slide">
                 </div>
             </div>
             <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-bs-slide="prev">
@@ -71,52 +71,460 @@
         </div>  
     </header>
     <main>
-        <!-- Carreras Destacadas -->
-        <div class="container featured-careers">
-            <h2 class="fw-bold display-5 text-center mt-5 mb-5">Nuestras Carreras Destacadas</h2>
-            <div class="row">
-                <div class="col-md-4 mb-4">
-                    <div class="card h-100 shadow-sm">
-                        <img src="images/informatica.jpg" class="card-img-top" alt="Imagen representativa de Ingeniería Civil en Informática">
-                        <div class="card-body d-flex flex-column">
-                            <h5 class="card-title text-center fw-bold">Ingeniería Civil en Informática</h5>
-                            <p class="card-text text-muted">La Ingeniería Civil en Informática es una carrera profesional que forma expertos en el diseño, desarrollo y gestión de soluciones tecnológicas estratégicas para las organizaciones. Su enfoque combina la ingeniería de software con la gestión de proyectos y la analítica de datos.</p>
-                            
-                            <!-- mt-auto empuja el botón automáticamente hacia abajo para que todos queden alineados -->
-                            <div class="mt-auto text-center">
-                                <a href="#" class="btn btn-primary w-100">Visitar Carrera</a>
+        <!-- Sección: Vive la Experiencia Universitaria ITUS -->
+        <section class="experience-section py-5">
+            <div class="container py-3">
+                <div class="text-center mb-5">
+                    <h2 class="fw-bold display-5">Vive la Experiencia ITUS</h2>
+                    <p class="lead text-muted mx-auto" style="max-width: 760px;">
+                        Más que una carrera, tu camino hacia el liderazgo digital. Descubre un entorno dinámico, innovación tecnológica y una comunidad comprometida con tu futuro.
+                    </p>
+                </div>
+
+                <!-- Mosaico de 4 Barras Altas Apegadas e Intercaladas -->
+                <div class="row g-0 mosaic-container justify-content-center align-items-start">
+                    <!-- Barra 1: Laboratorios & Innovación -->
+                    <div class="col-12 col-md-3 col-lg-2">
+                        <div class="mosaic-bar mosaic-bar-1 border-2">
+                            <img src="images/robotica.jpg" class="mosaic-bg-img" alt="Laboratorios de Robótica y Tecnología">
+                            <div class="mosaic-overlay"></div>
+                            <div class="mosaic-content">
+                                <div class="mosaic-header"></div>
+                                <div class="mosaic-body">
+                                    <h3 class="mosaic-title">Laboratorios & Tech</h3>
+                                    <p class="mosaic-text">
+                                        Aprende haciendo desde el primer día en laboratorios de última generación en Robótica, IA, Cloud y Ciberseguridad.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Barra 2: Comunidad & Vida Estudiantil -->
+                    <div class="col-12 col-md-3 col-lg-2">
+                        <div class="mosaic-bar mosaic-bar-2 border-2">
+                            <img src="images/image8.png" class="mosaic-bg-img" alt="Comunidad Estudiantil">
+                            <div class="mosaic-overlay"></div>
+                            <div class="mosaic-content">
+                                <div class="mosaic-header"></div>
+                                <div class="mosaic-body">
+                                    <h3 class="mosaic-title">Comunidad & Eventos</h3>
+                                    <p class="mosaic-text">
+                                        Participa en hackathons, torneos tecnológicos, actividades culturales y forja redes de contacto que durarán toda la vida.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Barra 3: Conexión con la Industria -->
+                    <div class="col-12 col-md-3 col-lg-2">
+                        <div class="mosaic-bar mosaic-bar-3 border-2">
+                            <img src="images/cloud.jpg" class="mosaic-bg-img" alt="Conexión Empresarial">
+                            <div class="mosaic-overlay"></div>
+                            <div class="mosaic-content">
+                                <div class="mosaic-header"></div>
+                                <div class="mosaic-body">
+                                    <h3 class="mosaic-title">Alianzas Industriales</h3>
+                                    <p class="mosaic-text">
+                                        Convenios con empresas líderes del sector tecnológico para pasantías tempranas y proyectos de titulación aplicados.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Barra 4: Mentoría & Futuro -->
+                    <div class="col-12 col-md-3 col-lg-2">
+                        <div class="mosaic-bar mosaic-bar-4 border-2">
+                            <img src="images/image1.png" class="mosaic-bg-img" alt="Acompañamiento y Mentorías">
+                            <div class="mosaic-overlay"></div>
+                            <div class="mosaic-content">
+                                <div class="mosaic-header"></div>
+                                <div class="mosaic-body">
+                                    <h3 class="mosaic-title">Mentoría & Becas</h3>
+                                    <p class="mosaic-text">
+                                        Acompañamiento docente personalizado, programas de bienestar estudiantil y asesoría integral para becas.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección: Alianzas Estratégicas y Certificaciones -->
+        <section class="alliances-section py-5">
+            <div class="container py-4">
+                <div class="text-center mb-5">
+                    <h2 class="fw-bold display-5">Alianzas Estratégicas</h2>
+                    <p class="lead text-muted mx-auto" style="max-width: 760px;">
+                        Convenios con líderes tecnológicos globales para que te formes con herramientas oficiales y obtengas certificaciones de alta demanda en la industria.
+                    </p>
+                </div>
+
+                <!-- Grid de Alianzas Tecnológicas -->
+                <div class="row g-4 justify-content-center">
+                    <!-- Alianza 1: AWS Academy -->
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card h-100 alliance-card shadow-sm border-0">
+                            <div class="card-body p-4 d-flex flex-column">
+                                <div class="d-flex align-items-center gap-3 mb-3">
+                                    <div class="alliance-icon-wrapper">
+                                        <i class="bi bi-cloud-check-fill"></i>
+                                    </div>
+                                    <div>
+                                        <h3 class="h5 fw-bold mb-0 text-itus-title">AWS Academy</h3>
+                                        <span class="small text-muted">Cloud Computing & DevOps</span>
+                                    </div>
+                                </div>
+                                <p class="card-text text-muted small flex-grow-1">
+                                    Acceso a entornos y laboratorios en la nube de Amazon Web Services, con preparación y vouchers de certificación oficial.
+                                </p>
+                                <div class="alliance-badge mt-2">
+                                    <span class="badge bg-light text-dark border px-2 py-1"><i class="bi bi-patch-check-fill text-warning me-1"></i>Certificación Oficial AWS</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Alianza 2: Cisco Networking Academy -->
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card h-100 alliance-card shadow-sm border-0">
+                            <div class="card-body p-4 d-flex flex-column">
+                                <div class="d-flex align-items-center gap-3 mb-3">
+                                    <div class="alliance-icon-wrapper">
+                                        <i class="bi bi-hdd-network-fill"></i>
+                                    </div>
+                                    <div>
+                                        <h3 class="h5 fw-bold mb-0 text-itus-title">Cisco Academy</h3>
+                                        <span class="small text-muted">Redes & Ciberseguridad</span>
+                                    </div>
+                                </div>
+                                <p class="card-text text-muted small flex-grow-1">
+                                    Formación curricular basada en estándares mundiales de conectividad, enrutamiento avanzado y seguridad perimetral CCNA.
+                                </p>
+                                <div class="alliance-badge mt-2">
+                                    <span class="badge bg-light text-dark border px-2 py-1"><i class="bi bi-patch-check-fill text-warning me-1"></i>Insignias Digitales Cisco</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Alianza 3: Microsoft Learn -->
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card h-100 alliance-card shadow-sm border-0">
+                            <div class="card-body p-4 d-flex flex-column">
+                                <div class="d-flex align-items-center gap-3 mb-3">
+                                    <div class="alliance-icon-wrapper">
+                                        <i class="bi bi-windows"></i>
+                                    </div>
+                                    <div>
+                                        <h3 class="h5 fw-bold mb-0 text-itus-title">Microsoft Learn</h3>
+                                        <span class="small text-muted">Inteligencia Artificial & Azure</span>
+                                    </div>
+                                </div>
+                                <p class="card-text text-muted small flex-grow-1">
+                                    Rutas de aprendizaje oficiales en desarrollo de software, servicios de IA generativa y créditos para proyectos en Microsoft Azure.
+                                </p>
+                                <div class="alliance-badge mt-2">
+                                    <span class="badge bg-light text-dark border px-2 py-1"><i class="bi bi-patch-check-fill text-warning me-1"></i>Rutas Azure Certified</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Alianza 4: Oracle Academy -->
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card h-100 alliance-card shadow-sm border-0">
+                            <div class="card-body p-4 d-flex flex-column">
+                                <div class="d-flex align-items-center gap-3 mb-3">
+                                    <div class="alliance-icon-wrapper">
+                                        <i class="bi bi-database-fill-check"></i>
+                                    </div>
+                                    <div>
+                                        <h3 class="h5 fw-bold mb-0 text-itus-title">Oracle Academy</h3>
+                                        <span class="small text-muted">Bases de Datos & Big Data</span>
+                                    </div>
+                                </div>
+                                <p class="card-text text-muted small flex-grow-1">
+                                    Especialización en diseño de modelos relacionales, SQL avanzado y administración de grandes volúmenes de datos empresariales.
+                                </p>
+                                <div class="alliance-badge mt-2">
+                                    <span class="badge bg-light text-dark border px-2 py-1"><i class="bi bi-patch-check-fill text-warning me-1"></i>Curriculum Oracle Global</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Alianza 5: Google Cloud Education -->
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card h-100 alliance-card shadow-sm border-0">
+                            <div class="card-body p-4 d-flex flex-column">
+                                <div class="d-flex align-items-center gap-3 mb-3">
+                                    <div class="alliance-icon-wrapper">
+                                        <i class="bi bi-google"></i>
+                                    </div>
+                                    <div>
+                                        <h3 class="h5 fw-bold mb-0 text-itus-title">Google Cloud</h3>
+                                        <span class="small text-muted">Data Analytics & Machine Learning</span>
+                                    </div>
+                                </div>
+                                <p class="card-text text-muted small flex-grow-1">
+                                    Herramientas de vanguardia en analítica con BigQuery, entrenamiento de modelos de Machine Learning y desarrollo nativo en nube.
+                                </p>
+                                <div class="alliance-badge mt-2">
+                                    <span class="badge bg-light text-dark border px-2 py-1"><i class="bi bi-patch-check-fill text-warning me-1"></i>Google Cloud Skills Boost</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Alianza 6: Red Hat Academy -->
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card h-100 alliance-card shadow-sm border-0">
+                            <div class="card-body p-4 d-flex flex-column">
+                                <div class="d-flex align-items-center gap-3 mb-3">
+                                    <div class="alliance-icon-wrapper">
+                                        <i class="bi bi-terminal-fill"></i>
+                                    </div>
+                                    <div>
+                                        <h3 class="h5 fw-bold mb-0 text-itus-title">Red Hat Academy</h3>
+                                        <span class="small text-muted">Linux & Virtualización</span>
+                                    </div>
+                                </div>
+                                <p class="card-text text-muted small flex-grow-1">
+                                    Formación en administración de sistemas empresariales Red Hat Enterprise Linux, contenedores y microservicios con Kubernetes.
+                                </p>
+                                <div class="alliance-badge mt-2">
+                                    <span class="badge bg-light text-dark border px-2 py-1"><i class="bi bi-patch-check-fill text-warning me-1"></i>Estándar Red Hat RHCSA</span>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 mb-4">
-                    <div class="card h-100 shadow-sm">
-                        <img src="images/redes.jpg" class="card-img-top" alt="Imagen representativa de Ingeniería en Conectividad y Redes">
-                        <div class="card-body d-flex flex-column">
-                            <h5 class="card-title text-center fw-bold">Ingeniería en Conectividad y Redes</h5>
-                            <p class="card-text text-muted">La Ingeniería en Conectividad y Redes forma profesionales expertos en el diseño, implementación, administración y seguridad de la infraestructura tecnológica que permite la comunicación de datos. En un mundo hiperconectado, esta carrera prepara a los estudiantes para asegurar que los sistemas y plataformas de las empresas operen de manera continua, eficiente y segura, integrando soluciones físicas y en la nube.</p>
-                            
-                            <!-- mt-auto empuja el botón automáticamente hacia abajo para que todos queden alineados -->
-                            <div class="mt-auto text-center">
-                                <a href="#" class="btn btn-primary w-100">Visitar Carrera</a>
+
+                <!-- Banner Informativo de Beneficio para Estudiantes -->
+                <div class="alliances-highlight-box mt-5 p-4 rounded-4 text-center border">
+                    <div class="row align-items-center justify-content-center">
+                        <div class="col-lg-10">
+                            <div class="d-flex flex-column flex-md-row align-items-center justify-content-center gap-3">
+                                <i class="bi bi-award-fill text-warning fs-2"></i>
+                                <p class="mb-0 fw-semibold text-itus-title fs-6">
+                                    El 100% de nuestros estudiantes cuenta con acceso gratuito a licencias oficiales, laboratorios en la nube y preparación para exámenes de certificación internacional.
+                                </p>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 mb-4">
-                    <div class="card h-100 shadow-sm">
-                        <img src="images/ciencias.jpg" class="card-img-top" alt="Imagen representativa de la Ingeniería en Ciencia de Datos">
-                        <div class="card-body d-flex flex-column">
-                            <h5 class="card-title text-center fw-bold">Ingeniería en Ciencia de Datos</h5>
-                            <p class="card-text text-muted">La Ingeniería en Ciencia de Datos forma especialistas capaces de transformar grandes volúmenes de datos brutos en información valiosa y estratégica para la toma de decisiones. Combina la informática, la estadística y los negocios, preparando a los profesionales para diseñar modelos predictivos y soluciones basadas en Inteligencia Artificial que resuelvan problemas complejos del mundo real.</p>
-                            
-                            <!-- mt-auto empuja el botón automáticamente hacia abajo para que todos queden alineados -->
-                            <div class="mt-auto  text-center">
-                                <a href="#" class="btn btn-primary w-100">Visitar Carrera</a>
+            </div>
+        </section>
+
+        <!-- Sección: Formas de Financiamiento y Beneficios -->
+        <section class="financing-section py-5">
+            <div class="container py-4">
+                <div class="text-center mb-5">
+                    <h2 class="fw-bold display-5">Opciones de Financiamiento</h2>
+                    <p class="lead text-muted mx-auto" style="max-width: 760px;">
+                        En ITUS creemos en tu potencial. Contamos con múltiples alternativas estatales e institucionales para que nada te impida alcanzar tu título profesional.
+                    </p>
+                </div>
+
+                <!-- Grid de Opciones de Financiamiento -->
+                <div class="row g-4 justify-content-center">
+                    <!-- Tarjeta 1: Gratuidad -->
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="card h-100 financing-card shadow-sm border-0">
+                            <div class="card-body p-4 d-flex flex-column">
+                                <div class="financing-icon-box mb-3">
+                                    <i class="bi bi-mortarboard-fill"></i>
+                                </div>
+                                <h3 class="card-title h5 fw-bold mb-2 text-itus-title">Gratuidad Universitaria</h3>
+                                <p class="card-text text-muted mb-4 small flex-grow-1">
+                                    Financia el 100% de la matrícula y el arancel durante toda la duración formal de la carrera.
+                                </p>
+                                <ul class="list-unstyled financing-features small text-muted mb-0">
+                                    <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>60% menores ingresos (FUAS)</li>
+                                    <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Sin cobro de matrícula ni arancel</li>
+                                    <li><i class="bi bi-check-circle-fill text-success me-2"></i>Válido para todas las carreras</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta 2: Crédito con Aval del Estado (CAE) -->
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="card h-100 financing-card shadow-sm border-0">
+                            <div class="card-body p-4 d-flex flex-column">
+                                <div class="financing-icon-box mb-3">
+                                    <i class="bi bi-bank2"></i>
+                                </div>
+                                <h3 class="card-title h5 fw-bold mb-2 text-itus-title">Crédito CAE</h3>
+                                <p class="card-text text-muted mb-4 small flex-grow-1">
+                                    Financiamiento con garantía estatal de Comisión Ingresa con tasa de interés preferencial y pago posterior al egreso.
+                                </p>
+                                <ul class="list-unstyled financing-features small text-muted mb-0">
+                                    <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Tasa de interés fija del 2% anual</li>
+                                    <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Pago a partir de los 18 meses de egreso</li>
+                                    <li><i class="bi bi-check-circle-fill text-success me-2"></i>Financia arancel de referencia</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta 3: Becas Estatales y Mineduc -->
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="card h-100 financing-card shadow-sm border-0">
+                            <div class="card-body p-4 d-flex flex-column">
+                                <div class="financing-icon-box mb-3">
+                                    <i class="bi bi-award-fill"></i>
+                                </div>
+                                <h3 class="card-title h5 fw-bold mb-2 text-itus-title">Becas Mineduc & JUNAEB</h3>
+                                <p class="card-text text-muted mb-4 small flex-grow-1">
+                                    Beneficios estatales complementarios para aranceles, alimentación y mantención a través del portal FUAS.
+                                </p>
+                                <ul class="list-unstyled financing-features small text-muted mb-0">
+                                    <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Beca Nuevo Milenio y Excelencia</li>
+                                    <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Beca Juan Gómez Millas</li>
+                                    <li><i class="bi bi-check-circle-fill text-success me-2"></i>Beca de Alimentación JUNAEB (BAES)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta 4: Beneficios Propios ITUS & Cuotas -->
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="card h-100 financing-card shadow-sm border-0">
+                            <div class="card-body p-4 d-flex flex-column">
+                                <div class="financing-icon-box mb-3">
+                                    <i class="bi bi-wallet2"></i>
+                                </div>
+                                <h3 class="card-title h5 fw-bold mb-2 text-itus-title">Convenios & Cuotas ITUS</h3>
+                                <p class="card-text text-muted mb-4 small flex-grow-1">
+                                    Planes de pago flexibles en cuotas directas sin interés, descuentos por mérito y convenios con empresas e instituciones.
+                                </p>
+                                <ul class="list-unstyled financing-features small text-muted mb-0">
+                                    <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Hasta 12 cuotas fijas sin interés</li>
+                                    <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Descuento por pago contado</li>
+                                    <li><i class="bi bi-check-circle-fill text-success me-2"></i>Beca de Mérito y Convenios Empresa</li>
+                                </ul>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
+        </section>
+
+        <!-- Carreras Destacadas: Titulo/Carreras -->
+        <div class="container featured-careers py-5">
+
+            <div class="text-center py-5">
+                <h2 class="fw-bold display-5">Nuestras Carreras Destacadas</h2>
+                <p class="lead text-muted">Programas de vanguardia diseñados para liderar el futuro tecnológico.</p>
+            </div>
+
+            <!-- Carrusel de Presentación Dividida -->
+            <div id="carrerasCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000" data-bs-pause="hover">
+                
+                <div class="carousel-inner">
+                    <!-- Carrera 1: Informática -->
+                    <div class="carousel-item active">
+                        <div class="row align-items-center g-4 g-lg-5">
+                            <div class="col-lg-6 order-2 order-lg-1">
+                                <div class="carrera-info pe-lg-3">
+                                    <h3 class="display-6 fw-bold mb-3 carrera-title">Ingeniería Civil en Informática</h3>
+                                    <p class="lead mb-4 carrera-description">
+                                        Forma expertos en el diseño, desarrollo y gestión de soluciones tecnológicas estratégicas para las organizaciones. Su enfoque combina la ingeniería de software con la gestión de proyectos y la analítica de datos.
+                                    </p>
+                                    <div class="carrera-meta d-flex gap-4 mb-4 text-muted">
+                                        <div><strong>Duración:</strong> 8 Semestres</div>
+                                        <div><strong>Modalidad:</strong> Presencial</div>
+                                    </div>
+                                    <div class="d-flex gap-3 align-items-center">
+                                        <a href="carrera.html" class="btn btn-primary btn-lg px-4 py-2">Explorar Carrera</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 order-1 order-lg-2">
+                                <div class="carrera-img-wrapper">
+                                    <img src="images/informatica.jpg" class="img-fluid carrera-split-img shadow" alt="Ingeniería Civil en Informática">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Carrera 2: Redes -->
+                    <div class="carousel-item">
+                        <div class="row align-items-center g-4 g-lg-5">
+                            <div class="col-lg-6 order-2 order-lg-1">
+                                <div class="carrera-info pe-lg-3">
+                                    <h3 class="display-6 fw-bold mb-3 carrera-title">Ingeniería en Conectividad y Redes</h3>
+                                    <p class="lead mb-4 carrera-description">
+                                        Forma profesionales expertos en el diseño, administración y seguridad de la infraestructura tecnológica que permite la comunicación de datos, integrando soluciones físicas y en la nube.
+                                    </p>
+                                    <div class="carrera-meta d-flex gap-4 mb-4 text-muted">
+                                        <div><strong>Duración:</strong> 8 Semestres</div>
+                                        <div><strong>Modalidad:</strong> Presencial / Híbrida</div>
+                                    </div>
+                                    <div class="d-flex gap-3 align-items-center">
+                                        <a href="carrera.html" class="btn btn-primary btn-lg px-4 py-2">Explorar Carrera</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 order-1 order-lg-2">
+                                <div class="carrera-img-wrapper">
+                                    <img src="images/redes.jpg" class="img-fluid carrera-split-img shadow" alt="Ingeniería en Conectividad y Redes">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Carrera 3: Ciencia de Datos -->
+                    <div class="carousel-item">
+                        <div class="row align-items-center g-4 g-lg-5">
+                            <div class="col-lg-6 order-2 order-lg-1">
+                                <div class="carrera-info pe-lg-3">
+                                    <h3 class="display-6 fw-bold mb-3 carrera-title">Ingeniería en Ciencia de Datos</h3>
+                                    <p class="lead mb-4 carrera-description">
+                                        Forma especialistas en transformar grandes volúmenes de datos brutos en decisiones de alto impacto, diseñando modelos predictivos, analítica avanzada y algoritmos de Machine Learning.
+                                    </p>
+                                    <div class="carrera-meta d-flex gap-4 mb-4 text-muted">
+                                        <div><strong>Duración:</strong> 8 Semestres</div>
+                                        <div><strong>Modalidad:</strong> Presencial</div>
+                                    </div>
+                                    <div class="d-flex gap-3 align-items-center">
+                                        <a href="carrera.html" class="btn btn-primary btn-lg px-4 py-2">Explorar Carrera</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 order-1 order-lg-2">
+                                <div class="carrera-img-wrapper">
+                                    <img src="images/ciencias.jpg" class="img-fluid carrera-split-img shadow" alt="Ingeniería en Ciencia de Datos">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Indicadores y Controles Integrados -->
+                <div class="d-flex justify-content-center align-items-center gap-3 mt-5">
+                    <button class="carrera-nav-btn prev" type="button" data-bs-target="#carrerasCarousel" data-bs-slide="prev" aria-label="Anterior">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    </button>
+                    
+                    <div class="carousel-indicators position-static m-5">
+                        <button type="button" data-bs-target="#carrerasCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Carrera 1"></button>
+                        <button type="button" data-bs-target="#carrerasCarousel" data-bs-slide-to="1" aria-label="Carrera 2"></button>
+                        <button type="button" data-bs-target="#carrerasCarousel" data-bs-slide-to="2" aria-label="Carrera 3"></button>
+                    </div>
+
+                    <button class="carrera-nav-btn next" type="button" data-bs-target="#carrerasCarousel" data-bs-slide="next" aria-label="Siguiente">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    </button>
+                </div>
+
             </div>
         </div>
 
@@ -164,10 +572,13 @@
             </div>
         </section>
 
-
     </main>
     <!-- Aqui debe ir el footer de la página -->
-    <footer></footer>
+    <footer>
+        <div class="container-fluid py-5">
+            <p class="mb-0">2026 Instituto Tecnológico Universitario Superior (ITUS). Todos los derechos reservados.</p>
+        </div>
+    </footer>
     <!-- Importacion de js para funcionamiento de bootstrap-->
     <script src="js/bootstrap.min.js"></script>
 </body>
