@@ -1,15 +1,15 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Instituto Tecnológico Universitario de Santiago | ITUS</title>
     <!-- Importación de la hoja de estilos de bootstrap-->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <!-- Importación de Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <!-- Importacion de la hoja de estilos css -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
     <!-- Importancio de Font de Google-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,7 +21,7 @@
             <!-- Container fluid similitud a flex-->
             <div class="container-fluid">
                 <!-- Zona destinada al logotipo o marca -->
-                <a class="navbar-brand" href="index.html"> <img class="img-itus" src="images/condor.png" alt=""> </a>
+                <a class="navbar-brand" href="index.html"> <img class="img-itus" src="assets/images/condor.png" alt=""> </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
                     <!-- Boton hamburguesa -->
                     <span class="navbar-toggler-icon"></span>
@@ -29,7 +29,7 @@
                 <div class="collapse navbar-collapse" id="navbarColor01">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="carrera.html">CARRERAS</a>
+                            <a class="nav-link" href="carreras.html">CARRERAS</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="sedes.html">SEDES</a>
@@ -47,27 +47,65 @@
                 </div>
             </div>
         </nav>   
-        <!-- Integración de Carrusel de Noticias -->
-        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+        <!-- Integración de Carrusel Principal de Noticias -->
+        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+            <!-- Indicadores del Carrusel -->
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleControls" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Noticia 1"></button>
+                <button type="button" data-bs-target="#carouselExampleControls" data-bs-slide-to="1" aria-label="Noticia 2"></button>
+                <button type="button" data-bs-target="#carouselExampleControls" data-bs-slide-to="2" aria-label="Noticia 3"></button>
+            </div>
             <!-- Contenedor del carrusel -->
             <div class="carousel-inner">
-                <!-- Páginas o Elementos del Carrusel (Active = Principal) -->
+                <!-- Slide 1: Redirecciona a Noticia 1 con image5.png -->
                 <div class="carousel-item active">
-                    <img class="d-block w-100 object-fit-cover sld" src="images/image5.png" alt="Imágen de estudiantes dando una presentación">
+                    <a href="noticias/torneo-innovacion-2026.html" class="carousel-slide-link" title="Ver noticia: Triunfo en Torneo Nacional de Innovación">
+                        <img class="d-block w-100 object-fit-cover sld" src="assets/images/image5.png" alt="Estudiantes de ITUS en el Torneo Nacional de Innovación">
+                        <div class="carousel-caption-overlay">
+                            <div class="container">
+                                <h2 class="news-carousel-title">Estudiantes de ITUS triunfan en el Torneo Nacional de Innovación 2026</h2>
+                                <p class="news-carousel-text">
+                                    El equipo multidisciplinario de ITUS se llevó el primer lugar nacional con su proyecto de automatización inteligente y teleasistencia para zonas rurales.
+                                </p>
+                            </div>
+                        </div>
+                    </a>
                 </div>
+                <!-- Slide 2: Redirecciona a Noticia 2 con image1.png -->
                 <div class="carousel-item">
-                    <img class="d-block w-100 object-fit-cover sld" src="images/image1.png" alt="Second slide">
+                    <a href="noticias/centro-computo-cloud.html" class="carousel-slide-link" title="Ver noticia: Nuevo Centro de Cómputo Avanzado">
+                        <img class="d-block w-100 object-fit-cover sld" src="assets/images/image1.png" alt="Nuevo Centro de Cómputo Avanzado y Cloud Computing">
+                        <div class="carousel-caption-overlay">
+                            <div class="container">
+                                <h2 class="news-carousel-title">Inauguración del Nuevo Centro de Cómputo Avanzado y Cloud Computing</h2>
+                                <p class="news-carousel-text">
+                                    Espacios equipados con tecnología de vanguardia para entrenamiento de modelos de Inteligencia Artificial, servidores cloud y análisis de Big Data.
+                                </p>
+                            </div>
+                        </div>
+                    </a>
                 </div>
+                <!-- Slide 3: Redirecciona a Noticia 3 con image8.png -->
                 <div class="carousel-item">
-                    <img class="d-block w-100 object-fit-cover sld" src="images/image8.png" alt="Third slide">
+                    <a href="noticias/convenios-certificaciones.html" class="carousel-slide-link" title="Ver noticia: Alianzas Internacionales">
+                        <img class="d-block w-100 object-fit-cover sld" src="assets/images/image8.png" alt="Comunidad ITUS y Alianzas Internacionales">
+                        <div class="carousel-caption-overlay">
+                            <div class="container">
+                                <h2 class="news-carousel-title">ITUS consolida convenios estratégicos para certificaciones internacionales gratuitas</h2>
+                                <p class="news-carousel-text">
+                                    Nuestros alumnos accederán a rutas oficiales de certificación con AWS, Cisco y Microsoft, potenciando la empleabilidad tecnológica al 94%.
+                                </p>
+                            </div>
+                        </div>
+                    </a>
                 </div>
             </div>
-            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-bs-slide="prev">
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev" aria-label="Anterior">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            </a>
-            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-bs-slide="next">
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next" aria-label="Siguiente">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            </a>
+            </button>
         </div>  
     </header>
     <main>
@@ -76,7 +114,7 @@
             <div class="container py-3">
                 <div class="text-center mb-5">
                     <h2 class="fw-bold display-5">Vive la Experiencia ITUS</h2>
-                    <p class="lead text-muted mx-auto" style="max-width: 760px;">
+                    <p class="lead text-muted mx-auto section-lead">
                         Más que una carrera, tu camino hacia el liderazgo digital. Descubre un entorno dinámico, innovación tecnológica y una comunidad comprometida con tu futuro.
                     </p>
                 </div>
@@ -86,7 +124,7 @@
                     <!-- Barra 1: Laboratorios & Innovación -->
                     <div class="col-12 col-md-3 col-lg-2">
                         <div class="mosaic-bar mosaic-bar-1 border-2">
-                            <img src="images/robotica.jpg" class="mosaic-bg-img" alt="Laboratorios de Robótica y Tecnología">
+                            <img src="assets/images/robotica.jpg" class="mosaic-bg-img" alt="Laboratorios de Robótica y Tecnología">
                             <div class="mosaic-overlay"></div>
                             <div class="mosaic-content">
                                 <div class="mosaic-header"></div>
@@ -103,7 +141,7 @@
                     <!-- Barra 2: Comunidad & Vida Estudiantil -->
                     <div class="col-12 col-md-3 col-lg-2">
                         <div class="mosaic-bar mosaic-bar-2 border-2">
-                            <img src="images/image8.png" class="mosaic-bg-img" alt="Comunidad Estudiantil">
+                            <img src="assets/images/image8.png" class="mosaic-bg-img" alt="Comunidad Estudiantil">
                             <div class="mosaic-overlay"></div>
                             <div class="mosaic-content">
                                 <div class="mosaic-header"></div>
@@ -120,7 +158,7 @@
                     <!-- Barra 3: Conexión con la Industria -->
                     <div class="col-12 col-md-3 col-lg-2">
                         <div class="mosaic-bar mosaic-bar-3 border-2">
-                            <img src="images/cloud.jpg" class="mosaic-bg-img" alt="Conexión Empresarial">
+                            <img src="assets/images/cloud.jpg" class="mosaic-bg-img" alt="Conexión Empresarial">
                             <div class="mosaic-overlay"></div>
                             <div class="mosaic-content">
                                 <div class="mosaic-header"></div>
@@ -137,7 +175,7 @@
                     <!-- Barra 4: Mentoría & Futuro -->
                     <div class="col-12 col-md-3 col-lg-2">
                         <div class="mosaic-bar mosaic-bar-4 border-2">
-                            <img src="images/image1.png" class="mosaic-bg-img" alt="Acompañamiento y Mentorías">
+                            <img src="assets/images/image1.png" class="mosaic-bg-img" alt="Acompañamiento y Mentorías">
                             <div class="mosaic-overlay"></div>
                             <div class="mosaic-content">
                                 <div class="mosaic-header"></div>
@@ -160,7 +198,7 @@
             <div class="container py-4">
                 <div class="text-center mb-5">
                     <h2 class="fw-bold display-5">Alianzas Estratégicas</h2>
-                    <p class="lead text-muted mx-auto" style="max-width: 760px;">
+                    <p class="lead text-muted mx-auto section-lead">
                         Convenios con líderes tecnológicos globales para que te formes con herramientas oficiales y obtengas certificaciones de alta demanda en la industria.
                     </p>
                 </div>
@@ -173,19 +211,16 @@
                             <div class="card-body p-4 d-flex flex-column">
                                 <div class="d-flex align-items-center gap-3 mb-3">
                                     <div class="alliance-icon-wrapper">
-                                        <i class="bi bi-cloud-check-fill"></i>
+                                        <img class="w-100" src="assets/icons/aws-2.svg" alt="">
                                     </div>
                                     <div>
-                                        <h3 class="h5 fw-bold mb-0 text-itus-title">AWS Academy</h3>
-                                        <span class="small text-muted">Cloud Computing & DevOps</span>
+                                        <h3 class="h5 fw-bold mb-0 text-itus-title">Cisco Academy</h3>
+                                        <span class="small text-muted">Redes & Ciberseguridad</span>
                                     </div>
                                 </div>
                                 <p class="card-text text-muted small flex-grow-1">
                                     Acceso a entornos y laboratorios en la nube de Amazon Web Services, con preparación y vouchers de certificación oficial.
                                 </p>
-                                <div class="alliance-badge mt-2">
-                                    <span class="badge bg-light text-dark border px-2 py-1"><i class="bi bi-patch-check-fill text-warning me-1"></i>Certificación Oficial AWS</span>
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -196,7 +231,7 @@
                             <div class="card-body p-4 d-flex flex-column">
                                 <div class="d-flex align-items-center gap-3 mb-3">
                                     <div class="alliance-icon-wrapper">
-                                        <i class="bi bi-hdd-network-fill"></i>
+                                        <img class="w-100" src="assets/icons/cisco-2.svg" alt="">
                                     </div>
                                     <div>
                                         <h3 class="h5 fw-bold mb-0 text-itus-title">Cisco Academy</h3>
@@ -206,9 +241,6 @@
                                 <p class="card-text text-muted small flex-grow-1">
                                     Formación curricular basada en estándares mundiales de conectividad, enrutamiento avanzado y seguridad perimetral CCNA.
                                 </p>
-                                <div class="alliance-badge mt-2">
-                                    <span class="badge bg-light text-dark border px-2 py-1"><i class="bi bi-patch-check-fill text-warning me-1"></i>Insignias Digitales Cisco</span>
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -219,7 +251,7 @@
                             <div class="card-body p-4 d-flex flex-column">
                                 <div class="d-flex align-items-center gap-3 mb-3">
                                     <div class="alliance-icon-wrapper">
-                                        <i class="bi bi-windows"></i>
+                                        <img src="assets/icons/microsoft-5.svg" alt="">
                                     </div>
                                     <div>
                                         <h3 class="h5 fw-bold mb-0 text-itus-title">Microsoft Learn</h3>
@@ -229,9 +261,6 @@
                                 <p class="card-text text-muted small flex-grow-1">
                                     Rutas de aprendizaje oficiales en desarrollo de software, servicios de IA generativa y créditos para proyectos en Microsoft Azure.
                                 </p>
-                                <div class="alliance-badge mt-2">
-                                    <span class="badge bg-light text-dark border px-2 py-1"><i class="bi bi-patch-check-fill text-warning me-1"></i>Rutas Azure Certified</span>
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -242,19 +271,16 @@
                             <div class="card-body p-4 d-flex flex-column">
                                 <div class="d-flex align-items-center gap-3 mb-3">
                                     <div class="alliance-icon-wrapper">
-                                        <i class="bi bi-database-fill-check"></i>
+                                        <img class="w-75" src="assets/icons/oracle-6.svg" alt="">
                                     </div>
                                     <div>
-                                        <h3 class="h5 fw-bold mb-0 text-itus-title">Oracle Academy</h3>
-                                        <span class="small text-muted">Bases de Datos & Big Data</span>
+                                        <h3 class="h5 fw-bold mb-0 text-itus-title">Microsoft Learn</h3>
+                                        <span class="small text-muted">Inteligencia Artificial & Azure</span>
                                     </div>
                                 </div>
                                 <p class="card-text text-muted small flex-grow-1">
                                     Especialización en diseño de modelos relacionales, SQL avanzado y administración de grandes volúmenes de datos empresariales.
                                 </p>
-                                <div class="alliance-badge mt-2">
-                                    <span class="badge bg-light text-dark border px-2 py-1"><i class="bi bi-patch-check-fill text-warning me-1"></i>Curriculum Oracle Global</span>
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -265,7 +291,7 @@
                             <div class="card-body p-4 d-flex flex-column">
                                 <div class="d-flex align-items-center gap-3 mb-3">
                                     <div class="alliance-icon-wrapper">
-                                        <i class="bi bi-google"></i>
+                                        <img src="assets/icons/google-cloud-1.svg" alt="">
                                     </div>
                                     <div>
                                         <h3 class="h5 fw-bold mb-0 text-itus-title">Google Cloud</h3>
@@ -275,9 +301,6 @@
                                 <p class="card-text text-muted small flex-grow-1">
                                     Herramientas de vanguardia en analítica con BigQuery, entrenamiento de modelos de Machine Learning y desarrollo nativo en nube.
                                 </p>
-                                <div class="alliance-badge mt-2">
-                                    <span class="badge bg-light text-dark border px-2 py-1"><i class="bi bi-patch-check-fill text-warning me-1"></i>Google Cloud Skills Boost</span>
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -288,7 +311,7 @@
                             <div class="card-body p-4 d-flex flex-column">
                                 <div class="d-flex align-items-center gap-3 mb-3">
                                     <div class="alliance-icon-wrapper">
-                                        <i class="bi bi-terminal-fill"></i>
+                                        <img class="w-75" src="assets/icons/red-hat-1.svg" alt="">
                                     </div>
                                     <div>
                                         <h3 class="h5 fw-bold mb-0 text-itus-title">Red Hat Academy</h3>
@@ -297,23 +320,6 @@
                                 </div>
                                 <p class="card-text text-muted small flex-grow-1">
                                     Formación en administración de sistemas empresariales Red Hat Enterprise Linux, contenedores y microservicios con Kubernetes.
-                                </p>
-                                <div class="alliance-badge mt-2">
-                                    <span class="badge bg-light text-dark border px-2 py-1"><i class="bi bi-patch-check-fill text-warning me-1"></i>Estándar Red Hat RHCSA</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Banner Informativo de Beneficio para Estudiantes -->
-                <div class="alliances-highlight-box mt-5 p-4 rounded-4 text-center border">
-                    <div class="row align-items-center justify-content-center">
-                        <div class="col-lg-10">
-                            <div class="d-flex flex-column flex-md-row align-items-center justify-content-center gap-3">
-                                <i class="bi bi-award-fill text-warning fs-2"></i>
-                                <p class="mb-0 fw-semibold text-itus-title fs-6">
-                                    El 100% de nuestros estudiantes cuenta con acceso gratuito a licencias oficiales, laboratorios en la nube y preparación para exámenes de certificación internacional.
                                 </p>
                             </div>
                         </div>
@@ -327,7 +333,7 @@
             <div class="container py-4">
                 <div class="text-center mb-5">
                     <h2 class="fw-bold display-5">Opciones de Financiamiento</h2>
-                    <p class="lead text-muted mx-auto" style="max-width: 760px;">
+                    <p class="lead text-muted mx-auto section-lead">
                         En ITUS creemos en tu potencial. Contamos con múltiples alternativas estatales e institucionales para que nada te impida alcanzar tu título profesional.
                     </p>
                 </div>
@@ -443,13 +449,13 @@
                                         <div><strong>Modalidad:</strong> Presencial</div>
                                     </div>
                                     <div class="d-flex gap-3 align-items-center">
-                                        <a href="carrera.html" class="btn btn-primary btn-lg px-4 py-2">Explorar Carrera</a>
+                                        <a href="carreras.html" class="btn btn-primary btn-lg px-4 py-2">Explorar Carrera</a>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-lg-6 order-1 order-lg-2">
                                 <div class="carrera-img-wrapper">
-                                    <img src="images/informatica.jpg" class="img-fluid carrera-split-img shadow" alt="Ingeniería Civil en Informática">
+                                    <img src="assets/images/informatica.jpg" class="img-fluid carrera-split-img shadow" alt="Ingeniería Civil en Informática">
                                 </div>
                             </div>
                         </div>
@@ -469,13 +475,13 @@
                                         <div><strong>Modalidad:</strong> Presencial / Híbrida</div>
                                     </div>
                                     <div class="d-flex gap-3 align-items-center">
-                                        <a href="carrera.html" class="btn btn-primary btn-lg px-4 py-2">Explorar Carrera</a>
+                                        <a href="carreras.html" class="btn btn-primary btn-lg px-4 py-2">Explorar Carrera</a>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-lg-6 order-1 order-lg-2">
                                 <div class="carrera-img-wrapper">
-                                    <img src="images/redes.jpg" class="img-fluid carrera-split-img shadow" alt="Ingeniería en Conectividad y Redes">
+                                    <img src="assets/images/redes.jpg" class="img-fluid carrera-split-img shadow" alt="Ingeniería en Conectividad y Redes">
                                 </div>
                             </div>
                         </div>
@@ -495,13 +501,13 @@
                                         <div><strong>Modalidad:</strong> Presencial</div>
                                     </div>
                                     <div class="d-flex gap-3 align-items-center">
-                                        <a href="carrera.html" class="btn btn-primary btn-lg px-4 py-2">Explorar Carrera</a>
+                                        <a href="carreras.html" class="btn btn-primary btn-lg px-4 py-2">Explorar Carrera</a>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-lg-6 order-1 order-lg-2">
                                 <div class="carrera-img-wrapper">
-                                    <img src="images/ciencias.jpg" class="img-fluid carrera-split-img shadow" alt="Ingeniería en Ciencia de Datos">
+                                    <img src="assets/images/ciencias.jpg" class="img-fluid carrera-split-img shadow" alt="Ingeniería en Ciencia de Datos">
                                 </div>
                             </div>
                         </div>
@@ -573,13 +579,69 @@
         </section>
 
     </main>
-    <!-- Aqui debe ir el footer de la página -->
-    <footer>
-        <div class="container-fluid py-5">
-            <p class="mb-0">2026 Instituto Tecnológico Universitario Superior (ITUS). Todos los derechos reservados.</p>
+    <!-- Footer ITUS Institucional -->
+    <footer class="footer-itus pt-5 pb-4 text-center">
+        <div class="container text-center">
+            <div class="row g-4 mb-4 justify-content-center text-center">
+                <div class="col-lg-4 col-md-6 text-center">
+                    <a href="index.html" class="d-inline-block mb-3">
+                        <img class="img-itus" src="assets/images/condor.png" alt="Logo ITUS">
+                    </a>
+                    <p class="text-white-50 small mb-3">
+                        Instituto Tecnológico Universitario de Santiago (ITUS). Formamos profesionales e ingenieros líderes en ciencia, tecnología, inteligencia artificial y transformación digital con estándares internacionales.
+                    </p>
+                    <div class="d-flex justify-content-center gap-2">
+                        <a href="#" class="footer-social-btn" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="footer-social-btn" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="footer-social-btn" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                        <a href="#" class="footer-social-btn" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 text-center">
+                    <h5>Navegación</h5>
+                    <ul class="list-unstyled mb-0">
+                        <li><a href="index.html" class="footer-link">Inicio</a></li>
+                        <li><a href="carreras.html" class="footer-link">Carreras</a></li>
+                        <li><a href="sedes.html" class="footer-link">Sedes</a></li>
+                        <li><a href="sobre-nosotros.html" class="footer-link">Nosotros</a></li>
+                        <li><a href="noticias.html" class="footer-link">Noticias</a></li>
+                        <li><a href="contactos.html" class="footer-link">Contactos</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 text-center">
+                    <h5>Nuestras Sedes</h5>
+                    <ul class="list-unstyled small text-white-50 mb-0">
+                        <li class="mb-2"><strong class="text-white">República:</strong> Av. República #285 (Metro República)</li>
+                        <li class="mb-2"><strong class="text-white">Antonio Varas:</strong> Av. Antonio Varas #660 (Metro Manuel Montt)</li>
+                        <li class="mb-2"><strong class="text-white">Francisco Bilbao:</strong> Av. Francisco Bilbao #2450 (Metro Bilbao)</li>
+                        <li class="mb-2"><strong class="text-white">Diego Portales:</strong> Av. Diego Portales #1420 (Metro Los Quillayes)</li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 text-center">
+                    <h5>Contacto Central</h5>
+                    <ul class="list-unstyled small text-white-50 mb-3">
+                        <li class="mb-2"><i class="bi bi-telephone-fill text-warning me-2"></i> Mesa Central: +56 2 2800 4000</li>
+                        <li class="mb-2"><i class="bi bi-whatsapp text-success me-2"></i> WhatsApp: +56 9 7890 1234</li>
+                        <li class="mb-2"><i class="bi bi-envelope-fill text-warning me-2"></i> contacto@itus.cl</li>
+                        <li class="mb-2"><i class="bi bi-clock-fill text-warning me-2"></i> Lun - Vie: 08:30 a 20:00 hrs</li>
+                    </ul>
+                    <a href="contactos.html" class="btn btn-itus-accent btn-sm w-100 py-2">Escríbenos Aquí</a>
+                </div>
+            </div>
+            <hr class="border-secondary opacity-25">
+            <div class="row align-items-center justify-content-center text-center">
+                <div class="col-12 text-center mb-2 mb-md-0">
+                    <p class="mb-0 small text-white-50">2026 Instituto Tecnológico Universitario Superior (ITUS). Todos los derechos reservados.</p>
+                </div>
+                <div class="col-12 text-center mt-1">
+                    <span class="small text-white-50">Acreditación Institucional de Nivel Avanzado</span>
+                </div>
+            </div>
         </div>
     </footer>
     <!-- Importacion de js para funcionamiento de bootstrap-->
-    <script src="js/bootstrap.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
+

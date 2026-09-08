@@ -3,43 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sedes</title>
-    <!-- Importación de la hoja de estilos de bootstrap-->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <!-- Importacion de la hoja de estilos css -->
-    <link rel="stylesheet" href="style.css">
-    <!-- Importancio de Font de Google-->
+    <title>Sedes ITUS | Presencia Universitaria en Santiago</title>
+    <!-- Importación de Bootstrap 5 -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- Importación de Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- Hoja de estilos personalizada con variables :root -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Google Fonts Roboto -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Cabecera de Navegación Institucional -->
     <header>
         <nav class="navbar navbar-expand-lg my-nav-personalized sticky-top" data-bs-theme="dark">
-            <!-- Container fluid similitud a flex-->
             <div class="container-fluid">
-                <!-- Zona destinada al logotipo o marca -->
-                <a class="navbar-brand" href="index.html"> <img class="img-itus" src="images/condor.png" alt=""> </a>
+                <a class="navbar-brand" href="index.html">
+                    <img class="img-itus" src="assets/images/condor.png" alt="Logo ITUS">
+                </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
-                    <!-- Boton hamburguesa -->
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarColor01">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="carrera.html">CARRERAS</a>
+                            <a class="nav-link" href="carreras.html">CARRERAS</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="sedes.html">SEDES</a>
+                            <a class="nav-link active" href="sedes.html">SEDES</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="sobre-nosotros.html">NOSOTROS </a>
+                            <a class="nav-link" href="sobre-nosotros.html">NOSOTROS</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="contactos.html">CONTACTOS </a>
+                            <a class="nav-link" href="contactos.html">CONTACTOS</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="noticias.html">NOTICIAS </a>
+                            <a class="nav-link" href="noticias.html">NOTICIAS</a>
                         </li>
                     </ul>
                 </div>
@@ -47,9 +49,372 @@
         </nav> 
     </header>
 
+    <main>
+        <!-- Hero de la Sección Sedes -->
+        <section class="page-hero text-center">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-10">
+                        <h1 class="display-4 fw-bold text-itus-title mb-3">Nuestras Sedes en Santiago</h1>
+                        <p class="lead page-hero-subtitle mx-auto mb-0">
+                            Infraestructura de vanguardia, laboratorios de última generación y conectividad estratégica en los principales polos urbanos de la Región Metropolitana.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
+        <!-- Descripción del Despliegue de Sedes en Santiago -->
+        <section class="py-5 bg-white border-bottom border-itus">
+            <div class="container py-3">
+                <div class="row align-items-center g-5">
+                    <div class="col-lg-7">
+                        <div class="pe-lg-3">
+                            <h2 class="display-6 fw-bold mb-3 text-itus-title">Despliegue Territorial en la Capital</h2>
+                            <p class="text-muted fs-5 mb-3 text-justify">
+                                En el <strong>Instituto Tecnológico Universitario de Santiago (ITUS)</strong> entendemos que el acceso a una formación de excelencia requiere cercanía, conectividad y comunidad. Por ello, hemos desplegado una sólida red de <strong>4 sedes universitarias</strong> estratégicamente distribuidas en los ejes neurálgicos de Santiago: <strong>República</strong>, <strong>Antonio Varas</strong>, <strong>Francisco Bilbao</strong> y <strong>Av. Diego Portales</strong>.
+                            </p>
+                            <p class="text-muted mb-0 text-justify">
+                                Esta disposición territorial cubre de manera equilibrada el centro cívico, el polo empresarial y financiero de Providencia y Las Condes, así como el sector sur-oriente de la capital. Cada sede se encuentra a pasos de estaciones de la <strong>Red Metro (Línea 1 y Línea 4)</strong> y corredores principales de transporte público, permitiendo a nuestros estudiantes acceder a talleres avanzados, centros de datos y espacios de estudio sin importar en qué comuna residan.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-5">
+                        <div class="row g-3">
+                            <div class="col-6">
+                                <div class="campus-stat-box h-100">
+                                    <div class="fs-1 fw-bold text-itus-accent mb-1">4</div>
+                                    <h3 class="h6 fw-bold text-itus-title mb-1">Sedes Activas</h3>
+                                    <p class="small text-muted mb-0">Santiago Centro, Providencia, Las Condes y La Florida</p>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="campus-stat-box h-100">
+                                    <div class="fs-1 fw-bold text-itus-accent mb-1">+35k</div>
+                                    <h3 class="h6 fw-bold text-itus-title mb-1">Metros Cuadrados</h3>
+                                    <p class="small text-muted mb-0">Infraestructura bioclimática y salas inteligentes</p>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="campus-stat-box h-100">
+                                    <div class="fs-1 fw-bold text-itus-accent mb-1">100%</div>
+                                    <h3 class="h6 fw-bold text-itus-title mb-1">Conectividad Metro</h3>
+                                    <p class="small text-muted mb-0">Líneas 1 y 4 a pasos caminando</p>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="campus-stat-box h-100">
+                                    <div class="fs-1 fw-bold text-itus-accent mb-1">+45</div>
+                                    <h3 class="h6 fw-bold text-itus-title mb-1">Laboratorios Tech</h3>
+                                    <p class="small text-muted mb-0">Equipados con tecnología de estándar internacional</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
+        <!-- Presentación Informativa de las 4 Sedes (Vista General sin botones de redireccionamiento) -->
+        <section class="py-5 bg-itus-background">
+            <div class="container py-4">
+                <div class="text-center mb-5">
+                    <h2 class="display-5 fw-bold text-itus-title">Presencia Metropolitana</h2>
+                    <p class="lead text-muted mx-auto section-lead">
+                        Información general sobre los programas, instalaciones y ubicación de cada uno de nuestros campus.
+                    </p>
+                </div>
 
-    
+                <div class="row g-4">
+                    <!-- Sede 1: República -->
+                    <div class="col-12 col-lg-6">
+                        <div class="sede-card h-100 shadow-sm d-flex flex-column">
+                            <div class="sede-img-wrapper">
+                                <img src="assets/images/image1.png" alt="Sede República ITUS" class="sede-img">
+                            </div>
+                            <div class="card-body p-4 d-flex flex-column flex-grow-1">
+                                <h3 class="h4 fw-bold text-itus-title mb-1">Sede República</h3>
+                                <div class="text-muted small mb-3">
+                                    <i class="bi bi-train-front-fill text-danger me-1"></i> Metro República (Línea 1) — Santiago Centro
+                                </div>
+                                <p class="text-muted small mb-4">
+                                    Emplazada en el emblemático Barrio Universitario de Santiago Centro, es la Casa Central e histórica de ITUS. Alberga la rectoría general, el gran data center académico y los centros de robótica avanzada e inteligencia artificial.
+                                </p>
+
+                                <ul class="list-unstyled sede-info-list mb-0 text-muted small">
+                                    <li>
+                                        <div class="sede-icon-feature"><i class="bi bi-geo-alt-fill"></i></div>
+                                        <div>
+                                            <strong class="text-itus-title">Dirección:</strong> Av. República #285, Santiago Centro.
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="sede-icon-feature"><i class="bi bi-cpu-fill"></i></div>
+                                        <div>
+                                            <strong class="text-itus-title">Especialidades:</strong> Robótica y Automatización, Inteligencia Artificial, Ciencia de Datos.
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="sede-icon-feature"><i class="bi bi-building-check"></i></div>
+                                        <div>
+                                            <strong class="text-itus-title">Instalaciones:</strong> Data Center Institucional, Auditorio Magna, Biblioteca Central 24/7.
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="sede-icon-feature"><i class="bi bi-clock-fill"></i></div>
+                                        <div>
+                                            <strong class="text-itus-title">Horario de Funcionamiento:</strong> Lunes a Viernes 08:00 a 22:00 hrs | Sábados 09:00 a 14:00 hrs.
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sede 2: Antonio Varas -->
+                    <div class="col-12 col-lg-6">
+                        <div class="sede-card h-100 shadow-sm d-flex flex-column">
+                            <div class="sede-img-wrapper">
+                                <img src="assets/images/image5.png" alt="Sede Antonio Varas ITUS" class="sede-img">
+                            </div>
+                            <div class="card-body p-4 d-flex flex-column flex-grow-1">
+                                <h3 class="h4 fw-bold text-itus-title mb-1">Sede Antonio Varas</h3>
+                                <div class="text-muted small mb-3">
+                                    <i class="bi bi-train-front-fill text-danger me-1"></i> Metro Manuel Montt (Línea 1) — Providencia
+                                </div>
+                                <p class="text-muted small mb-4">
+                                    Ubicada en el sector corporativo y universitario de Providencia. Diseñada especialmente para conectar de manera directa la ingeniería y las ciencias de la computación con el ecosistema de empresas tecnológicas y startups.
+                                </p>
+
+                                <ul class="list-unstyled sede-info-list mb-0 text-muted small">
+                                    <li>
+                                        <div class="sede-icon-feature"><i class="bi bi-geo-alt-fill"></i></div>
+                                        <div>
+                                            <strong class="text-itus-title">Dirección:</strong> Av. Antonio Varas #660, Providencia.
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="sede-icon-feature"><i class="bi bi-cloud-fill"></i></div>
+                                        <div>
+                                            <strong class="text-itus-title">Especialidades:</strong> Cloud Computing, Ciberseguridad, Informática Empresarial.
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="sede-icon-feature"><i class="bi bi-building-check"></i></div>
+                                        <div>
+                                            <strong class="text-itus-title">Instalaciones:</strong> Laboratorio Cloud Computing, SOC de Ciberseguridad, Espacio Coworking ITUS Hub.
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="sede-icon-feature"><i class="bi bi-clock-fill"></i></div>
+                                        <div>
+                                            <strong class="text-itus-title">Horario de Funcionamiento:</strong> Lunes a Viernes 08:30 a 21:30 hrs | Sábados 09:00 a 14:00 hrs.
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sede 3: Francisco Bilbao -->
+                    <div class="col-12 col-lg-6">
+                        <div class="sede-card h-100 shadow-sm d-flex flex-column">
+                            <div class="sede-img-wrapper">
+                                <img src="assets/images/image8.png" alt="Sede Francisco Bilbao ITUS" class="sede-img">
+                            </div>
+                            <div class="card-body p-4 d-flex flex-column flex-grow-1">
+                                <h3 class="h4 fw-bold text-itus-title mb-1">Sede Francisco Bilbao</h3>
+                                <div class="text-muted small mb-3">
+                                    <i class="bi bi-train-front-fill text-primary me-1"></i> Metro Francisco Bilbao (Línea 4) — Providencia / Las Condes
+                                </div>
+                                <p class="text-muted small mb-4">
+                                    Campus de vanguardia en el sector oriente de Santiago. Con un foco prioritario en desarrollo de videojuegos, realidad virtual, analítica de datos a gran escala y aplicaciones bioinformáticas avanzadas.
+                                </p>
+
+                                <ul class="list-unstyled sede-info-list mb-0 text-muted small">
+                                    <li>
+                                        <div class="sede-icon-feature"><i class="bi bi-geo-alt-fill"></i></div>
+                                        <div>
+                                            <strong class="text-itus-title">Dirección:</strong> Av. Francisco Bilbao #2450, Providencia / Las Condes.
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="sede-icon-feature"><i class="bi bi-code-slash"></i></div>
+                                        <div>
+                                            <strong class="text-itus-title">Especialidades:</strong> Desarrollo de Videojuegos, Realidad Aumentada, Bioinformática, Software.
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="sede-icon-feature"><i class="bi bi-building-check"></i></div>
+                                        <div>
+                                            <strong class="text-itus-title">Instalaciones:</strong> Salas Mac Studio con GPU dedicada, Laboratorio de Captura de Movimiento, Modelamiento Molecular.
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="sede-icon-feature"><i class="bi bi-clock-fill"></i></div>
+                                        <div>
+                                            <strong class="text-itus-title">Horario de Funcionamiento:</strong> Lunes a Viernes 08:00 a 21:30 hrs | Sábados 09:00 a 13:30 hrs.
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sede 4: Av. Diego Portales -->
+                    <div class="col-12 col-lg-6">
+                        <div class="sede-card h-100 shadow-sm d-flex flex-column">
+                            <div class="sede-img-wrapper">
+                                <img src="assets/images/robotica.jpg" alt="Sede Av. Diego Portales ITUS" class="sede-img">
+                            </div>
+                            <div class="card-body p-4 d-flex flex-column flex-grow-1">
+                                <h3 class="h4 fw-bold text-itus-title mb-1">Sede Av. Diego Portales</h3>
+                                <div class="text-muted small mb-3">
+                                    <i class="bi bi-train-front-fill text-primary me-1"></i> Metro Los Quillayes (Línea 4) — La Florida / Puente Alto
+                                </div>
+                                <p class="text-muted small mb-4">
+                                    Estratégicamente emplazada en el eje sur-oriente de Santiago, brindando una sólida alternativa universitaria a las comunas de La Florida y Puente Alto. Especializada en telecomunicaciones, redes y hardware embebido.
+                                </p>
+
+                                <ul class="list-unstyled sede-info-list mb-0 text-muted small">
+                                    <li>
+                                        <div class="sede-icon-feature"><i class="bi bi-geo-alt-fill"></i></div>
+                                        <div>
+                                            <strong class="text-itus-title">Dirección:</strong> Av. Diego Portales #1420, La Florida / Puente Alto.
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="sede-icon-feature"><i class="bi bi-router-fill"></i></div>
+                                        <div>
+                                            <strong class="text-itus-title">Especialidades:</strong> Conectividad y Redes, Internet de las Cosas (IoT), Infraestructura Digital.
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="sede-icon-feature"><i class="bi bi-building-check"></i></div>
+                                        <div>
+                                            <strong class="text-itus-title">Instalaciones:</strong> Laboratorios Networking 5G, Talleres de Fibra Óptica, Áreas Verdes de Estudio.
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="sede-icon-feature"><i class="bi bi-clock-fill"></i></div>
+                                        <div>
+                                            <strong class="text-itus-title">Horario de Funcionamiento:</strong> Lunes a Viernes 08:00 a 21:30 hrs | Sábados 09:00 a 14:00 hrs.
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Servicios e Infraestructura Transversal -->
+        <section class="py-5 bg-white border-top border-itus">
+            <div class="container py-3">
+                <div class="text-center mb-5">
+                    <h2 class="display-6 fw-bold text-itus-title">Servicios Comunes en Nuestras 4 Sedes</h2>
+                    <p class="lead text-muted mx-auto section-lead">
+                        Independiente de la sede donde se cursen los estudios, la comunidad accede al mismo estándar de tecnología y confort estudiantil.
+                    </p>
+                </div>
+
+                <div class="row g-4 justify-content-center text-center">
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="p-4 rounded-4 border border-itus h-100 bg-light">
+                            <div class="fs-1 text-itus-buttons mb-3"><i class="bi bi-wifi"></i></div>
+                            <h3 class="h5 fw-bold text-itus-title">Wi-Fi 6 de Alta Velocidad</h3>
+                            <p class="small text-muted mb-0">Conexión simétrica de 1 Gbps disponible en patios, salas, bibliotecas y cafeterías.</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="p-4 rounded-4 border border-itus h-100 bg-light">
+                            <div class="fs-1 text-itus-buttons mb-3"><i class="bi bi-book-half"></i></div>
+                            <h3 class="h5 fw-bold text-itus-title">Biblioteca Híbrida 24/7</h3>
+                            <p class="small text-muted mb-0">Acceso a miles de volúmenes físicos, journals internacionales y salas de estudio silencioso.</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="p-4 rounded-4 border border-itus h-100 bg-light">
+                            <div class="fs-1 text-itus-buttons mb-3"><i class="bi bi-people-fill"></i></div>
+                            <h3 class="h5 fw-bold text-itus-title">Apoyo Estudiantil y Tutorías</h3>
+                            <p class="small text-muted mb-0">Acompañamiento académico personalizado, orientación vocacional y mentorías docentes.</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="p-4 rounded-4 border border-itus h-100 bg-light">
+                            <div class="fs-1 text-itus-buttons mb-3"><i class="bi bi-cup-hot-fill"></i></div>
+                            <h3 class="h5 fw-bold text-itus-title">Cafeterías y Espacios Universitarios</h3>
+                            <p class="small text-muted mb-0">Zonas de alimentación con convenios estudiantiles, microondas y áreas de descanso.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Institucional -->
+    <footer class="footer-itus pt-5 pb-4 text-center">
+        <div class="container text-center">
+            <div class="row g-4 mb-4 justify-content-center text-center">
+                <div class="col-lg-4 col-md-6 text-center">
+                    <a href="index.html" class="d-inline-block mb-3">
+                        <img class="img-itus" src="assets/images/condor.png" alt="Logo ITUS">
+                    </a>
+                    <p class="text-white-50 small mb-3">
+                        Instituto Tecnológico Universitario de Santiago (ITUS). Formamos profesionales e ingenieros líderes en ciencia, tecnología, inteligencia artificial y transformación digital con estándares internacionales.
+                    </p>
+                    <div class="d-flex justify-content-center gap-2">
+                        <a href="#" class="footer-social-btn" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="footer-social-btn" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="footer-social-btn" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                        <a href="#" class="footer-social-btn" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 text-center">
+                    <h5>Navegación</h5>
+                    <ul class="list-unstyled mb-0">
+                        <li><a href="index.html" class="footer-link">Inicio</a></li>
+                        <li><a href="carreras.html" class="footer-link">Carreras</a></li>
+                        <li><a href="sedes.html" class="footer-link">Sedes</a></li>
+                        <li><a href="sobre-nosotros.html" class="footer-link">Nosotros</a></li>
+                        <li><a href="noticias.html" class="footer-link">Noticias</a></li>
+                        <li><a href="contactos.html" class="footer-link">Contactos</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 text-center">
+                    <h5>Nuestras Sedes</h5>
+                    <ul class="list-unstyled small text-white-50 mb-0">
+                        <li class="mb-2"><strong class="text-white">República:</strong> Av. República #285 (Metro República)</li>
+                        <li class="mb-2"><strong class="text-white">Antonio Varas:</strong> Av. Antonio Varas #660 (Metro Manuel Montt)</li>
+                        <li class="mb-2"><strong class="text-white">Francisco Bilbao:</strong> Av. Francisco Bilbao #2450 (Metro Bilbao)</li>
+                        <li class="mb-2"><strong class="text-white">Diego Portales:</strong> Av. Diego Portales #1420 (Metro Los Quillayes)</li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 text-center">
+                    <h5>Contacto Central</h5>
+                    <ul class="list-unstyled small text-white-50 mb-3">
+                        <li class="mb-2"><i class="bi bi-telephone-fill text-warning me-2"></i> Mesa Central: +56 2 2800 4000</li>
+                        <li class="mb-2"><i class="bi bi-whatsapp text-success me-2"></i> WhatsApp: +56 9 7890 1234</li>
+                        <li class="mb-2"><i class="bi bi-envelope-fill text-warning me-2"></i> contacto@itus.cl</li>
+                        <li class="mb-2"><i class="bi bi-clock-fill text-warning me-2"></i> Lun - Vie: 08:30 a 20:00 hrs</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="border-secondary opacity-25">
+            <div class="row align-items-center justify-content-center text-center">
+                <div class="col-12 text-center mb-2 mb-md-0">
+                    <p class="mb-0 small text-white-50">2026 Instituto Tecnológico Universitario Superior (ITUS). Todos los derechos reservados.</p>
+                </div>
+                <div class="col-12 text-center mt-1">
+                    <span class="small text-white-50">Acreditación Institucional de Nivel Avanzado</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+

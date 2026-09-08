@@ -1,0 +1,1142 @@
+:root {
+    /* Variables de Color ITUS */
+    --itus-navbar: #421F73;        /* Barra de navegación */
+    --itus-background: #f8f9fa;    /* Fondo general */
+    --itus-cards: #FFFFFF;         /* Fondo de tarjetas / contenedores */
+    --itus-title: #361D59;         /* Títulos y jerarquía */
+    --itus-text: #361D59;          /* Texto y lectura */
+    --itus-buttons: #7224A6;       /* Botones y llamadas a la acción */
+    --itus-accent: #F2BB16;        /* Color de acento / destaque / dorados */
+    --itus-borders: #D9D9D9;       /* Bordes y líneas divisorias */
+    --itus-alerts: #c9182b;        /* Alertas y avisos */
+    --itus-white: #FFFFFF;         /* Blanco institucional */
+}
+
+/* Base y Tipografía */
+body {
+    background-color: var(--itus-background);
+    color: var(--itus-text);
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--itus-title);
+    font-family: "Roboto", sans-serif;
+}
+
+p {
+    color: var(--itus-text);
+}
+
+/* Barra de Navegación */
+.my-nav-personalized {
+    background-color: var(--itus-navbar);
+}
+
+.img-itus {
+    width: 256px;
+}
+
+.navbar-nav {
+    gap: 10px;
+}
+
+.nav-link {
+    color: var(--itus-borders) !important;
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--itus-accent) !important;
+}
+
+/* Modificaciones al Carrusel de Cabecera */
+#carouselExampleControls .carousel-item img {
+    filter: brightness(65%);
+}
+
+#carouselExampleControls .carousel-item img,
+.sld {
+    height: 650px;
+    object-fit: cover;
+    object-position: center 20%;
+}
+
+#carouselExampleControls .carousel-control-prev-icon,
+#carouselExampleControls .carousel-control-next-icon {
+    filter: drop-shadow(0px 0px 4px var(--itus-navbar));
+}
+
+/* Sección Carreras Destacadas y su Carrusel */
+.featured-careers {
+    padding: 40px 0;
+}
+
+.featured-careers h2 {
+    color: var(--itus-title);
+}
+
+/* Estilos específicos para la presentación dividida de carreras */
+#carrerasCarousel .carousel-item {
+    filter: none;
+    min-height: 420px;
+    transition: transform 0.7s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.carrera-title {
+    color: var(--itus-title);
+    line-height: 1.2;
+}
+
+.carrera-description {
+    color: var(--itus-text);
+    font-size: 1.15rem;
+    line-height: 1.65;
+}
+
+.carrera-meta strong {
+    color: var(--itus-title);
+}
+
+.carrera-img-wrapper {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 2px solid var(--itus-borders);
+    transition: border-color 0.4s ease, transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.carrera-img-wrapper:hover {
+    border-color: var(--itus-accent);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 25px rgba(66, 31, 115, 0.18) !important;
+}
+
+.carrera-split-img {
+    width: 100%;
+    height: 390px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s ease;
+}
+
+.carrera-img-wrapper:hover .carrera-split-img {
+    transform: scale(1.03);
+}
+
+/* Botones de navegación personalizados para el carrusel de carreras */
+.carrera-nav-btn {
+    background-color: var(--itus-navbar);
+    border: none;
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.carrera-nav-btn:hover {
+    background-color: var(--itus-buttons);
+    transform: scale(1.1);
+}
+
+.carrera-nav-btn .carousel-control-prev-icon,
+.carrera-nav-btn .carousel-control-next-icon {
+    width: 20px;
+    height: 20px;
+    filter: none;
+}
+
+#carrerasCarousel .carousel-indicators [data-bs-target] {
+    background-color: var(--itus-navbar);
+    opacity: 0.35;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin: 0 6px;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+#carrerasCarousel .carousel-indicators .active {
+    background-color: var(--itus-accent);
+    opacity: 1;
+    width: 32px;
+    border-radius: 6px;
+}
+
+.card {
+    background-color: var(--itus-cards);
+    border: 1px solid var(--itus-borders);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    border-color: var(--itus-accent);
+    box-shadow: 0 10px 20px rgba(66, 31, 115, 0.15) !important;
+}
+
+.card-title {
+    color: var(--itus-title);
+}
+
+.card-text {
+    color: var(--itus-text);
+    text-align: justify;
+}
+
+/* Botones */
+.btn-primary {
+    background-color: var(--itus-buttons);
+    border-color: var(--itus-buttons);
+    color: #FFFFFF;
+    font-weight: bold;
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active {
+    background-color: var(--itus-navbar);
+    border-color: var(--itus-navbar);
+    color: var(--itus-accent);
+}
+
+/* Sección Estudiantes Felices / Comunidad en Números */
+.happy-learners {
+    background-color: var(--itus-navbar);
+    padding: 60px 0;
+}
+
+.happy-learners h2 {
+    color: #FFFFFF;
+}
+
+.happy-learners .lead {
+    color: var(--itus-borders);
+}
+
+.happy-learners .border {
+    border-color: var(--itus-borders) !important;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.happy-learners .border:hover {
+    border-color: var(--itus-accent) !important;
+    transform: translateY(-10px);
+}
+
+.happy-learners h3 {
+    color: var(--itus-accent) !important;
+}
+
+.happy-learners p {
+    color: var(--itus-borders);
+}
+
+/* Sección Noticias */
+.card-noticias {
+    background-color: var(--itus-navbar);
+    color: var(--itus-borders);
+    padding: 20px;
+    border-radius: 10px;
+    margin: 10px;
+    border: 1px solid var(--itus-borders);
+    display: flex;
+    flex-direction: row; 
+    align-items: center; 
+    gap: 30px; 
+}
+
+.imagen-noticia {
+    width: 250px; 
+    height: 150px;
+    object-fit: cover; 
+    border-radius: 5px; 
+}
+
+.card-body-noticia {
+    display: flex;
+    flex-direction: row;
+    align-items: center; 
+    width: 100%; 
+}
+
+.textos-noticia {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: space-between;  
+    flex-grow: 1;
+    height: 100px; 
+}
+
+.titulo-noticia {
+    margin: 0;
+    font-size: 24px;
+    color: #FFFFFF;
+    font-weight: bold;
+}
+
+.texto-noticia {
+    margin: 0;
+    font-size: 16px;
+    color: var(--itus-borders);
+}
+
+.btn-noticia {
+    background-color: var(--itus-buttons); 
+    color: #FFFFFF;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    flex-shrink: 0; 
+    margin-left: 20px; 
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-noticia:hover {
+    background-color: var(--itus-accent);
+    color: var(--itus-title);
+}
+
+.titulo-seccion-noticia {
+    color: var(--itus-title);
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 32px;
+    text-align: center;
+}
+
+/* Sección: Vive la Experiencia ITUS - Mosaico Intercalado y Apegado */
+.experience-section {
+    background-color: #ffffff;
+    border-bottom: 1px solid var(--itus-borders);
+    overflow: hidden;
+}
+
+.mosaic-container {
+    padding: 10px 0 20px 0;
+}
+
+.mosaic-bar {
+    position: relative;
+    overflow: hidden;
+    background-color: var(--itus-title);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 0;
+    transition: border-color 0.4s ease, box-shadow 0.4s ease;
+    cursor: pointer;
+}
+
+/* Alturas e Intercalado en pantallas de escritorio (Desktop) */
+@media (min-width: 992px) {
+    .mosaic-bar-1 {
+        height: 620px;
+        margin-top: 0;
+    }
+    .mosaic-bar-2 {
+        height: 550px;
+        margin-top: 45px;
+    }
+    .mosaic-bar-3 {
+        height: 620px;
+        margin-top: 0;
+    }
+    .mosaic-bar-4 {
+        height: 550px;
+        margin-top: 45px;
+    }
+}
+
+/* En tablets (md) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .mosaic-bar-1 {
+        height: 520px;
+        margin-top: 0;
+    }
+    .mosaic-bar-2 {
+        height: 470px;
+        margin-top: 30px;
+    }
+    .mosaic-bar-3 {
+        height: 520px;
+        margin-top: 0;
+    }
+    .mosaic-bar-4 {
+        height: 470px;
+        margin-top: 30px;
+    }
+}
+
+/* En móviles (sm/xs) */
+@media (max-width: 767.98px) {
+    .mosaic-bar {
+        height: 450px;
+        border-radius: 0;
+    }
+}
+
+.mosaic-bar:hover {
+    border-color: var(--itus-accent) !important;
+    box-shadow: 0 16px 36px rgba(54, 29, 89, 0.35);
+}
+
+.mosaic-bg-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.mosaic-bar:hover .mosaic-bg-img {
+    transform: scale(1.12);
+}
+
+.mosaic-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        to bottom, 
+        rgba(54, 29, 89, 0.22) 0%, 
+        rgba(54, 29, 89, 0.45) 40%, 
+        rgba(30, 14, 55, 0.93) 74%, 
+        rgba(18, 7, 34, 0.98) 100%
+    );
+    transition: background 0.4s ease;
+}
+
+.mosaic-bar:hover .mosaic-overlay {
+    background: linear-gradient(
+        to bottom, 
+        rgba(66, 31, 115, 0.15) 0%, 
+        rgba(66, 31, 115, 0.4) 35%, 
+        rgba(40, 15, 75, 0.95) 70%, 
+        rgba(22, 6, 42, 1) 100%
+    );
+}
+
+.mosaic-content {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    padding: 30px 22px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.mosaic-number {
+    font-size: 2.2rem;
+    font-weight: 900;
+    color: var(--itus-accent);
+    letter-spacing: 1.5px;
+    line-height: 1;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+}
+
+.mosaic-title {
+    color: #ffffff;
+    font-size: 1.45rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+    line-height: 1.25;
+    transition: color 0.3s ease;
+}
+
+.mosaic-bar:hover .mosaic-title {
+    color: var(--itus-accent);
+}
+
+.mosaic-text {
+    color: #e5dbf7;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 0;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.experience-cta-box {
+    background: linear-gradient(135deg, var(--itus-navbar) 0%, var(--itus-title) 100%);
+    border: 1px solid rgba(242, 187, 22, 0.4);
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-accent-custom {
+    background-color: var(--itus-accent);
+    color: var(--itus-title);
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.btn-accent-custom:hover {
+    background-color: #ffd24d;
+    color: var(--itus-title);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(242, 187, 22, 0.4);
+}
+
+/* Sección: Alianzas Estratégicas y Certificaciones */
+.alliances-section {
+    background-color: #ffffff;
+    border-bottom: 1px solid var(--itus-borders);
+}
+
+.alliance-card {
+    background-color: #ffffff;
+    border: 1px solid var(--itus-borders) !important;
+    border-radius: 18px;
+    transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+}
+
+.alliance-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--itus-accent) !important;
+    box-shadow: 0 14px 28px rgba(66, 31, 115, 0.12) !important;
+}
+
+.alliance-icon-wrapper {
+    width: 48px;
+    height: 48px;
+    background-color: rgba(66, 31, 115, 0.08);
+    color: var(--itus-navbar);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    flex-shrink: 0;
+}
+
+.alliances-highlight-box {
+    background-color: rgba(242, 187, 22, 0.08);
+    border-color: rgba(242, 187, 22, 0.4) !important;
+}
+
+/* Sección: Formas de Financiamiento y Beneficios */
+.financing-section {
+    background-color: var(--itus-background);
+    border-bottom: 1px solid var(--itus-borders);
+}
+
+.financing-card {
+    background-color: #ffffff;
+    border: 1px solid var(--itus-borders) !important;
+    border-radius: 18px;
+    transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+}
+
+.financing-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--itus-accent) !important;
+    box-shadow: 0 16px 32px rgba(66, 31, 115, 0.12) !important;
+}
+
+.financing-icon-box {
+    width: 52px;
+    height: 52px;
+    background-color: rgba(66, 31, 115, 0.08);
+    color: var(--itus-navbar);
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+.text-itus-title {
+    color: var(--itus-title);
+}
+
+.financing-features li {
+    display: flex;
+    align-items: flex-start;
+    line-height: 1.4;
+}
+
+.financing-features i {
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.btn-outline-primary {
+    color: var(--itus-buttons);
+    border-color: var(--itus-buttons);
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--itus-buttons);
+    border-color: var(--itus-buttons);
+    color: #ffffff;
+}
+
+.financing-help-box {
+    background-color: #ffffff;
+    border-color: var(--itus-borders) !important;
+    border-left: 5px solid var(--itus-accent) !important;
+}
+
+.financing-help-icon {
+    width: 50px;
+    height: 50px;
+    background-color: rgba(242, 187, 22, 0.15);
+    color: var(--itus-navbar);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+
+/* Footer Base */
+footer {
+    background-color: var(--itus-title);
+    color: var(--itus-borders);
+    border-top: 3px solid var(--itus-accent);
+    padding: 25px 0;
+    text-align: center;
+}
+
+/* =========================================================
+   Utilidades y Componentes Basados en Variables :root ITUS
+   ========================================================= */
+
+/* Utilidades de Colores */
+.text-itus-title { color: var(--itus-title) !important; }
+.text-itus-navbar { color: var(--itus-navbar) !important; }
+.text-itus-accent { color: var(--itus-accent) !important; }
+.text-itus-buttons { color: var(--itus-buttons) !important; }
+.text-itus-text { color: var(--itus-text) !important; }
+.text-itus-muted { color: #574670 !important; }
+.text-itus-white { color: var(--itus-white) !important; }
+
+.bg-itus-navbar { background-color: var(--itus-navbar) !important; }
+.bg-itus-title { background-color: var(--itus-title) !important; }
+.bg-itus-accent { background-color: var(--itus-accent) !important; }
+.bg-itus-cards { background-color: var(--itus-cards) !important; }
+.bg-itus-background { background-color: var(--itus-background) !important; }
+
+.border-itus { border-color: var(--itus-borders) !important; }
+.border-itus-accent { border-color: var(--itus-accent) !important; }
+.border-itus-navbar { border-color: var(--itus-navbar) !important; }
+
+/* Botones con paleta ITUS */
+.btn-itus-purple {
+    background-color: var(--itus-buttons);
+    color: #ffffff !important;
+    border: 1px solid var(--itus-buttons);
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+.btn-itus-purple:hover,
+.btn-itus-purple:focus {
+    background-color: var(--itus-navbar);
+    border-color: var(--itus-navbar);
+    color: var(--itus-accent) !important;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(66, 31, 115, 0.3);
+}
+
+.btn-itus-accent {
+    background-color: var(--itus-accent);
+    color: var(--itus-title) !important;
+    border: 1px solid var(--itus-accent);
+    font-weight: 700;
+    transition: all 0.3s ease;
+}
+.btn-itus-accent:hover,
+.btn-itus-accent:focus {
+    background-color: #ffd24d;
+    color: var(--itus-title) !important;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(242, 187, 22, 0.4);
+}
+
+.btn-itus-outline {
+    background-color: transparent;
+    color: var(--itus-buttons) !important;
+    border: 2px solid var(--itus-buttons);
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+.btn-itus-outline:hover,
+.btn-itus-outline:focus {
+    background-color: var(--itus-buttons);
+    color: #ffffff !important;
+    transform: translateY(-2px);
+}
+
+.btn-itus-outline-white {
+    background-color: transparent;
+    color: #ffffff !important;
+    border: 2px solid rgba(255, 255, 255, 0.7);
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+.btn-itus-outline-white:hover {
+    background-color: #ffffff;
+    color: var(--itus-navbar) !important;
+}
+
+/* Header / Banner de Páginas Internas */
+.page-hero {
+    background-color: var(--itus-cards);
+    border-bottom: 4px solid var(--itus-accent);
+    color: var(--itus-title);
+    padding: 55px 0 45px 0;
+    position: relative;
+}
+.page-hero h1 {
+    color: var(--itus-title) !important;
+}
+.page-hero-subtitle {
+    color: var(--itus-text);
+    opacity: 0.85;
+    font-size: 1.15rem;
+    max-width: 760px;
+}
+
+/* Limitadores de Ancho */
+.section-lead {
+    max-width: 760px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.max-w-700 { max-width: 700px; }
+.max-w-760 { max-width: 760px; }
+.max-w-850 { max-width: 850px; }
+.max-w-920 { max-width: 920px; }
+
+/* Carrusel Principal con Enlaces y Captions */
+.carousel-slide-link {
+    display: block;
+    text-decoration: none;
+    position: relative;
+    cursor: pointer;
+}
+.carousel-caption-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 60px 40px 40px 40px;
+    background: linear-gradient(to top, rgba(30, 14, 55, 0.95) 0%, rgba(54, 29, 89, 0.7) 60%, transparent 100%);
+    color: #ffffff;
+    text-align: left;
+    transition: background 0.3s ease;
+}
+.carousel-slide-link:hover .carousel-caption-overlay {
+    background: linear-gradient(to top, rgba(22, 6, 42, 0.98) 0%, rgba(66, 31, 115, 0.8) 65%, transparent 100%);
+}
+.carousel-caption-overlay .badge-news-category {
+    background-color: var(--itus-accent);
+    color: var(--itus-title);
+    font-weight: 700;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    padding: 6px 12px;
+}
+.carousel-caption-overlay .news-carousel-title {
+    font-size: 2.1rem;
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 8px;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+}
+.carousel-caption-overlay .news-carousel-text {
+    font-size: 1.05rem;
+    color: var(--itus-borders);
+    max-width: 800px;
+}
+
+@media (max-width: 767.98px) {
+    #carouselExampleControls .carousel-item img,
+    .sld {
+        height: 420px;
+    }
+    .carousel-caption-overlay .news-carousel-title {
+        font-size: 1.25rem;
+    }
+    .carousel-caption-overlay {
+        padding: 30px 15px 20px 15px;
+    }
+    .carousel-caption-overlay .news-carousel-text {
+        display: none;
+    }
+}
+
+/* Vista de Sedes */
+.sede-card {
+    background-color: var(--itus-cards);
+    border: 1px solid var(--itus-borders);
+    border-radius: 20px;
+    overflow: hidden;
+    transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+}
+.sede-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--itus-accent);
+    box-shadow: 0 16px 36px rgba(66, 31, 115, 0.16) !important;
+}
+.sede-img-wrapper {
+    position: relative;
+    overflow: hidden;
+    height: 240px;
+}
+.sede-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+.sede-card:hover .sede-img {
+    transform: scale(1.05);
+}
+.sede-badge-tag {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background-color: var(--itus-title);
+    color: var(--itus-accent);
+    font-size: 0.8rem;
+    font-weight: 700;
+    padding: 6px 14px;
+    border-radius: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(242, 187, 22, 0.4);
+}
+.metro-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 5px 12px;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    background-color: #f1f3f5;
+    color: #333;
+    border: 1px solid var(--itus-borders);
+}
+.metro-badge.metro-l1 {
+    border-left: 5px solid #e21a22;
+}
+.metro-badge.metro-l4 {
+    border-left: 5px solid #14619b;
+}
+.sede-icon-feature {
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+    background-color: rgba(66, 31, 115, 0.08);
+    color: var(--itus-navbar);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+.sede-info-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 12px;
+    font-size: 0.95rem;
+}
+.campus-stat-box {
+    background-color: #ffffff;
+    border: 1px solid var(--itus-borders);
+    border-radius: 16px;
+    padding: 24px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+.campus-stat-box:hover {
+    border-color: var(--itus-accent);
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px rgba(66, 31, 115, 0.08);
+}
+
+/* Vista de Noticias */
+.noticia-card-modern {
+    background-color: var(--itus-cards);
+    border: 1px solid var(--itus-borders);
+    border-radius: 18px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.noticia-card-modern:hover {
+    transform: translateY(-6px);
+    border-color: var(--itus-accent);
+    box-shadow: 0 14px 28px rgba(66, 31, 115, 0.14) !important;
+}
+.noticia-card-img-wrap {
+    position: relative;
+    overflow: hidden;
+    height: 220px;
+}
+.noticia-card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+.noticia-card-modern:hover .noticia-card-img {
+    transform: scale(1.06);
+}
+.noticia-category-badge {
+    position: absolute;
+    bottom: 12px;
+    left: 12px;
+    background-color: var(--itus-accent);
+    color: var(--itus-title);
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 5px 12px;
+    border-radius: 6px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Detalle de Noticia (Container No-Fluid, Imagen Grande y Centralizado) */
+.news-detail-container {
+    max-width: 920px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.news-featured-box {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+.news-featured-img {
+    max-height: 520px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    border: 2px solid var(--itus-borders);
+    box-shadow: 0 14px 32px rgba(66, 31, 115, 0.12);
+}
+.news-article-lead {
+    font-size: 1.25rem;
+    line-height: 1.75;
+    color: var(--itus-text);
+    font-weight: 400;
+    border-left: 4px solid var(--itus-accent);
+    padding-left: 20px;
+    margin-bottom: 2rem;
+}
+.news-article-body {
+    font-size: 1.1rem;
+    line-height: 1.85;
+    color: var(--itus-text);
+}
+.news-article-body p {
+    margin-bottom: 1.5rem;
+}
+.news-quote-box {
+    background-color: rgba(66, 31, 115, 0.05);
+    border-left: 5px solid var(--itus-navbar);
+    border-radius: 0 14px 14px 0;
+    padding: 25px 30px;
+    margin: 2.5rem 0;
+}
+.news-quote-text {
+    font-size: 1.2rem;
+    font-style: italic;
+    color: var(--itus-title);
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+.news-quote-author {
+    font-size: 0.95rem;
+    color: var(--itus-buttons);
+    font-weight: 700;
+}
+.news-highlights-box {
+    background: linear-gradient(135deg, rgba(66, 31, 115, 0.06) 0%, rgba(242, 187, 22, 0.12) 100%);
+    border: 1px solid var(--itus-borders);
+    border-radius: 16px;
+    padding: 25px;
+    margin: 2rem 0;
+}
+
+/* Carreras Cards */
+.carrera-card-horizontal {
+    border: 1px solid var(--itus-borders) !important;
+    border-radius: 16px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+.carrera-card-horizontal:hover {
+    transform: translateY(-4px);
+    border-color: var(--itus-accent) !important;
+    box-shadow: 0 12px 24px rgba(66, 31, 115, 0.15) !important;
+}
+
+/* Contacto y Formularios */
+.contact-icon-box {
+    width: 58px;
+    height: 58px;
+    background-color: rgba(66, 31, 115, 0.1);
+    color: var(--itus-navbar);
+    border-radius: 16px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+}
+.contact-info-card {
+    background-color: var(--itus-cards);
+    border: 1px solid var(--itus-borders);
+    border-radius: 18px;
+    padding: 24px;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+.contact-info-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--itus-accent);
+}
+
+/* Sección y Tarjeta de Contacto (Vista Solo Formulario) */
+.seccion-contacto {
+    background-color: var(--itus-background);
+    padding: 70px 0;
+    min-height: 75vh;
+    display: flex;
+    align-items: center;
+}
+
+.contacto-card {
+    background-color: var(--itus-navbar);
+    border: 2px solid var(--itus-accent) !important;
+    border-radius: 24px;
+    box-shadow: 0 20px 45px rgba(66, 31, 115, 0.25);
+    color: var(--itus-white);
+}
+
+.contacto-card .form-control,
+.contacto-card .form-select {
+    background-color: #ffffff;
+    color: var(--itus-title);
+    border: 1px solid var(--itus-borders);
+}
+
+.contacto-card .form-control:focus,
+.contacto-card .form-select:focus {
+    border-color: var(--itus-accent);
+    box-shadow: 0 0 0 0.25rem rgba(242, 187, 22, 0.35);
+}
+
+/* Vista de Detalle de Carrera */
+.career-detail-hero {
+    background: linear-gradient(135deg, var(--itus-navbar) 0%, var(--itus-title) 100%);
+    border-bottom: 4px solid var(--itus-accent);
+    color: var(--itus-white);
+    padding: 60px 0 50px 0;
+}
+
+.career-meta-box {
+    background-color: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 16px;
+    padding: 20px;
+}
+
+.malla-semestre-card {
+    background-color: var(--itus-cards);
+    border: 1px solid var(--itus-borders);
+    border-radius: 16px;
+    overflow: hidden;
+    transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.malla-semestre-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--itus-accent);
+    box-shadow: 0 10px 20px rgba(66, 31, 115, 0.1);
+}
+
+.malla-header {
+    background-color: var(--itus-navbar);
+    color: var(--itus-white);
+    padding: 12px 16px;
+    font-weight: 700;
+}
+
+.malla-ramo-item {
+    padding: 10px 14px;
+    border-bottom: 1px solid var(--itus-borders);
+    font-size: 0.9rem;
+    color: var(--itus-text);
+}
+
+.malla-ramo-item:last-child {
+    border-bottom: none;
+}
+
+/* Footer Mejorado */
+.footer-itus {
+    background-color: var(--itus-title);
+    color: var(--itus-borders);
+    border-top: 4px solid var(--itus-accent);
+    text-align: center;
+}
+.footer-itus h5 {
+    color: #ffffff;
+    font-weight: 700;
+    margin-bottom: 1.25rem;
+}
+.footer-link {
+    color: var(--itus-borders) !important;
+    text-decoration: none;
+    transition: color 0.2s ease;
+    display: inline-block;
+    margin-bottom: 8px;
+}
+.footer-link:hover {
+    color: var(--itus-accent) !important;
+}
+.footer-social-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+.footer-social-btn:hover {
+    background-color: var(--itus-accent);
+    color: var(--itus-title);
+    transform: translateY(-3px);
+}

@@ -1,0 +1,481 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ingeniería en Ciencia de Datos | ITUS</title>
+    <!-- Importación de Bootstrap 5 -->
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <!-- Importación de Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- Hoja de estilos personalizada con variables :root -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <!-- Google Fonts Roboto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Cabecera de Navegación Institucional -->
+    <header>
+        <nav class="navbar navbar-expand-lg my-nav-personalized sticky-top" data-bs-theme="dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="../index.html">
+                    <img class="img-itus" src="../assets/images/condor.png" alt="Logo ITUS">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarColor01">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="../index.html">CARRERAS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../sedes.html">SEDES</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../sobre-nosotros.html">NOSOTROS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../contactos.html">CONTACTOS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../noticias.html">NOTICIAS</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav> 
+    </header>
+
+    <main>
+        <!-- Migas de Pan -->
+        <div class="container mt-4 mb-2">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb mb-0 small">
+                    <li class="breadcrumb-item"><a href="../index.html" class="text-decoration-none text-muted">Inicio</a></li>
+                    <li class="breadcrumb-item"><a href="../carreras.html" class="text-decoration-none text-muted">Carreras</a></li>
+                    <li class="breadcrumb-item active text-itus-title fw-semibold" aria-current="page">Ingeniería en Ciencia de Datos</li>
+                </ol>
+            </nav>
+        </div>
+
+        <!-- Hero de Detalle de Carrera -->
+        <section class="career-detail-hero">
+            <div class="container">
+                <div class="row align-items-center g-4">
+                    <div class="col-lg-8">
+                        <h1 class="display-4 fw-bold text-itus-white mb-3">
+                            Ingeniería en Ciencia de Datos
+                        </h1>
+                        <p class="lead text-white-50 mb-4">
+                            Transforma volúmenes masivos de información en decisiones estratégicas de alto impacto mediante modelos predictivos avanzados, machine learning, minería de datos y arquitecturas escalables de Big Data.
+                        </p>
+                        <div class="d-flex flex-wrap gap-3">
+                            <a href="../contactos.html" class="btn btn-itus-accent px-4 py-2 fw-bold">Postular a esta Carrera</a>
+                            <a href="#malla" class="btn btn-itus-outline-white px-4 py-2">Ver Malla Curricular</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="career-meta-box">
+                            <h2 class="h5 fw-bold text-itus-white mb-3 border-bottom border-secondary border-opacity-50 pb-2">
+                                Datos del Programa
+                            </h2>
+                            <ul class="list-unstyled mb-0 small text-white-50">
+                                <li class="mb-2">
+                                    <strong class="text-white">Duración:</strong> 8 Semestres (4 años)
+                                </li>
+                                <li class="mb-2">
+                                    <strong class="text-white">Grado Académico:</strong> Licenciado/a en Ciencias de la Ingeniería
+                                </li>
+                                <li class="mb-2">
+                                    <strong class="text-white">Título Profesional:</strong> Ingeniero/a en Ciencia de Datos
+                                </li>
+                                <li class="mb-2">
+                                    <strong class="text-white">Modalidad:</strong> Presencial Diurna y Vespertina
+                                </li>
+                                <li>
+                                    <strong class="text-white">Sedes donde se Imparte:</strong> Sede República y Sede Francisco Bilbao
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Descripción General y Foto Representativa -->
+        <section class="py-5 bg-white border-bottom border-itus">
+            <div class="container py-3">
+                <div class="row align-items-center g-5">
+                    <div class="col-lg-6">
+                        <h2 class="display-6 fw-bold text-itus-title mb-3">Sobre la Carrera</h2>
+                        <p class="text-muted fs-6 lh-base mb-3 text-justify">
+                            La carrera de <strong>Ingeniería en Ciencia de Datos</strong> de ITUS forma especialistas de élite capaces de extraer conocimiento accionable a partir de fuentes de información heterogéneas, masivas y en tiempo real.
+                        </p>
+                        <p class="text-muted fs-6 lh-base mb-3 text-justify">
+                            A través de un plan de estudios alineado con estándares internacionales, nuestros alumnos dominan el pipeline completo de datos: desde la ingestión, limpieza y modelamiento matemático hasta el entrenamiento de algoritmos de Machine Learning y la puesta en producción sobre infraestructuras cloud distribuidas.
+                        </p>
+                        <p class="text-muted fs-6 lh-base mb-0 text-justify">
+                            En laboratorios equipados con clústeres de cómputo de alto rendimiento, los estudiantes desarrollan proyectos reales en analítica predictiva, visión por computador, procesamiento de lenguaje natural y visualización interactiva para resolver desafíos corporativos de alta complejidad.
+                        </p>
+                    </div>
+                    <div class="col-lg-6 text-center">
+                        <img src="../assets/images/ciencias.jpg" alt="Laboratorio de Ciencia de Datos ITUS" class="img-fluid rounded-4 shadow border border-itus">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Perfil de Egreso -->
+        <section class="py-5 bg-itus-background border-bottom border-itus">
+            <div class="container py-3">
+                <div class="text-center mb-5">
+                    <h2 class="display-6 fw-bold text-itus-title">Perfil de Egreso</h2>
+                    <p class="lead text-muted mx-auto section-lead">
+                        Las competencias técnicas, analíticas y de liderazgo que caracterizan a nuestros graduados.
+                    </p>
+                </div>
+
+                <div class="row g-4">
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card h-100 border-itus rounded-4 shadow-sm p-4">
+                            <div class="card-body">
+                                <div class="fs-2 text-itus-buttons mb-3"><i class="bi bi-graph-up-arrow"></i></div>
+                                <h3 class="h5 fw-bold text-itus-title mb-2">Modelado Estadístico y Predictivo</h3>
+                                <p class="card-text text-muted small">
+                                    Dominio de métodos probabilísticos, regresiones complejas, series temporales e inferencia matemática para anticipar tendencias de mercado y comportamiento.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card h-100 border-itus rounded-4 shadow-sm p-4">
+                            <div class="card-body">
+                                <div class="fs-2 text-itus-buttons mb-3"><i class="bi bi-cpu-fill"></i></div>
+                                <h3 class="h5 fw-bold text-itus-title mb-2">Machine Learning y Deep Learning</h3>
+                                <p class="card-text text-muted small">
+                                    Diseño, optimización y entrenamiento de modelos supervisados y no supervisados, redes neuronales profundas y sistemas de recomendación en Python y R.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card h-100 border-itus rounded-4 shadow-sm p-4">
+                            <div class="card-body">
+                                <div class="fs-2 text-itus-buttons mb-3"><i class="bi bi-database-fill-check"></i></div>
+                                <h3 class="h5 fw-bold text-itus-title mb-2">Arquitectura Big Data</h3>
+                                <p class="card-text text-muted small">
+                                    Gestión de ecosistemas distribuidos con Apache Spark, Hadoop, Kafka y bases de datos NoSQL para el procesamiento masivo de datos en streaming.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card h-100 border-itus rounded-4 shadow-sm p-4">
+                            <div class="card-body">
+                                <div class="fs-2 text-itus-buttons mb-3"><i class="bi bi-pie-chart-fill"></i></div>
+                                <h3 class="h5 fw-bold text-itus-title mb-2">Visualización y Business Intelligence</h3>
+                                <p class="card-text text-muted small">
+                                    Creación de tableros de control ejecutivos y narrativas visuales de datos para comunicar descubrimientos cuantitativos a directores y tomadores de decisiones.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card h-100 border-itus rounded-4 shadow-sm p-4">
+                            <div class="card-body">
+                                <div class="fs-2 text-itus-buttons mb-3"><i class="bi bi-shield-check"></i></div>
+                                <h3 class="h5 fw-bold text-itus-title mb-2">Gobierno y Ética de Datos</h3>
+                                <p class="card-text text-muted small">
+                                    Aplicación de marcos éticos, mitigación de sesgos algorítmicos, trazabilidad y cumplimiento riguroso de normativas internacionales de protección de privacidad.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card h-100 border-itus rounded-4 shadow-sm p-4">
+                            <div class="card-body">
+                                <div class="fs-2 text-itus-buttons mb-3"><i class="bi bi-cloud-arrow-up-fill"></i></div>
+                                <h3 class="h5 fw-bold text-itus-title mb-2">MLOps y Cloud Computing</h3>
+                                <p class="card-text text-muted small">
+                                    Automatización de ciclos de vida de modelos de IA, despliegue continuo de pipelines de datos y orquestación de contenedores en la nube empresarial.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Malla Curricular (8 Semestres) -->
+        <section id="malla" class="py-5 bg-white border-bottom border-itus">
+            <div class="container py-3">
+                <div class="text-center mb-5">
+                    <h2 class="display-6 fw-bold text-itus-title">Malla Curricular</h2>
+                    <p class="lead text-muted mx-auto section-lead">
+                        Estructura formativa de 8 semestres diseñada para una progresión sólida desde las ciencias matemáticas hasta la ingeniería de Big Data.
+                    </p>
+                </div>
+
+                <div class="row g-4">
+                    <!-- Semestre 1 -->
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="malla-semestre-card h-100">
+                            <div class="malla-header">1° Semestre</div>
+                            <div class="p-0">
+                                <div class="malla-ramo-item">Cálculo Diferencial</div>
+                                <div class="malla-ramo-item">Álgebra Lineal</div>
+                                <div class="malla-ramo-item">Introducción a la Ciencia de Datos</div>
+                                <div class="malla-ramo-item">Algoritmos y Programación en Python</div>
+                                <div class="malla-ramo-item">Taller de Pensamiento Lógico</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Semestre 2 -->
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="malla-semestre-card h-100">
+                            <div class="malla-header">2° Semestre</div>
+                            <div class="p-0">
+                                <div class="malla-ramo-item">Cálculo Integral</div>
+                                <div class="malla-ramo-item">Probabilidad y Estadística Descriptiva</div>
+                                <div class="malla-ramo-item">Estructuras de Datos Avanzadas</div>
+                                <div class="malla-ramo-item">Bases de Datos Relacionales (SQL)</div>
+                                <div class="malla-ramo-item">Análisis Exploratorio de Datos</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Semestre 3 -->
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="malla-semestre-card h-100">
+                            <div class="malla-header">3° Semestre</div>
+                            <div class="p-0">
+                                <div class="malla-ramo-item">Cálculo Multivariable</div>
+                                <div class="malla-ramo-item">Inferencia Estadística y Muestreo</div>
+                                <div class="malla-ramo-item">Programación Orientada a Objetos</div>
+                                <div class="malla-ramo-item">Álgebra Numérica y Optimización</div>
+                                <div class="malla-ramo-item">Almacenamiento NoSQL y JSON</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Semestre 4 -->
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="malla-semestre-card h-100">
+                            <div class="malla-header">4° Semestre</div>
+                            <div class="p-0">
+                                <div class="malla-ramo-item">Machine Learning Supervisado</div>
+                                <div class="malla-ramo-item">Arquitectura de Cómputo Paralelo</div>
+                                <div class="malla-ramo-item">Series de Tiempo y Pronósticos</div>
+                                <div class="malla-ramo-item">Taller de Minería de Datos</div>
+                                <div class="malla-ramo-item">Ética y Legislación de Datos</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Semestre 5 -->
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="malla-semestre-card h-100">
+                            <div class="malla-header">5° Semestre</div>
+                            <div class="p-0">
+                                <div class="malla-ramo-item">Machine Learning No Supervisado</div>
+                                <div class="malla-ramo-item">Tecnologías Big Data (Spark / Hadoop)</div>
+                                <div class="malla-ramo-item">Visualización y Cuadros de Mando</div>
+                                <div class="malla-ramo-item">Data Warehousing y Pipelines ETL</div>
+                                <div class="malla-ramo-item">Seminario de Innovación en Datos</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Semestre 6 -->
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="malla-semestre-card h-100">
+                            <div class="malla-header">6° Semestre</div>
+                            <div class="p-0">
+                                <div class="malla-ramo-item">Redes Neuronales y Deep Learning</div>
+                                <div class="malla-ramo-item">Procesamiento de Lenguaje Natural (NLP)</div>
+                                <div class="malla-ramo-item">Analítica Predictiva de Negocios</div>
+                                <div class="malla-ramo-item">Gobernanza y Privacidad de Datos</div>
+                                <div class="malla-ramo-item">Taller de Proyecto de Datos I</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Semestre 7 -->
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="malla-semestre-card h-100">
+                            <div class="malla-header">7° Semestre</div>
+                            <div class="p-0">
+                                <div class="malla-ramo-item">Modelos de IA Generativa y LLMs</div>
+                                <div class="malla-ramo-item">MLOps y Despliegue en la Nube</div>
+                                <div class="malla-ramo-item">Toma de Decisiones y Análisis de Riesgo</div>
+                                <div class="malla-ramo-item">Formulación de Proyectos Tecnológicos</div>
+                                <div class="malla-ramo-item">Taller de Proyecto de Datos II</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Semestre 8 -->
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="malla-semestre-card h-100">
+                            <div class="malla-header">8° Semestre</div>
+                            <div class="p-0">
+                                <div class="malla-ramo-item">Auditoría Algorítmica y Sesgo</div>
+                                <div class="malla-ramo-item">Gestión Estratégica de TI</div>
+                                <div class="malla-ramo-item">Práctica Profesional de Ingeniería</div>
+                                <div class="malla-ramo-item">Taller de Emprendimiento Tech</div>
+                                <div class="malla-ramo-item">Memoria de Titulación Profesional</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Visión País y Campo Ocupacional -->
+        <section class="py-5 bg-itus-background">
+            <div class="container py-3">
+                <div class="row align-items-center g-5">
+                    <div class="col-lg-6">
+                        <h2 class="display-6 fw-bold text-itus-title mb-3">Visión País y Empleabilidad</h2>
+                        <p class="text-muted fs-6 lh-base mb-3 text-justify">
+                            En la economía moderna, el dato es el activo de mayor valor estratégico. Chile lidera el ranking regional de adopción digital en telecomunicaciones, banca e industria, generando una demanda sostenida y sin precedentes de ingenieros capaces de modelar datos y convertirlos en ventaja competitiva.
+                        </p>
+                        <p class="text-muted fs-6 lh-base mb-4 text-justify">
+                            Los egresados de Ingeniería en Ciencia de Datos de ITUS lideran áreas de analítica avanzada, inteligencia artificial y gestión estratégica de información tanto en corporaciones locales como en firmas internacionales, destacando por su sólido rigor cuantitativo y dominio de tecnologías cloud de punta.
+                        </p>
+                        <div class="row g-3">
+                            <div class="col-6">
+                                <div class="p-3 bg-white border border-itus rounded-3 text-center">
+                                    <div class="fs-2 fw-bold text-itus-buttons">96%</div>
+                                    <span class="small text-muted">Empleabilidad al 1° año de titulación</span>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="p-3 bg-white border border-itus rounded-3 text-center">
+                                    <div class="fs-2 fw-bold text-itus-buttons">+1.7M</div>
+                                    <span class="small text-muted">Ingreso promedio inicial estimado</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="bg-white p-4 p-md-5 rounded-4 border border-itus shadow-sm">
+                            <h3 class="h5 fw-bold text-itus-title mb-3">Principales Sectores de Desempeño</h3>
+                            <ul class="list-unstyled text-muted small mb-4">
+                                <li class="mb-3 d-flex align-items-start gap-2">
+                                    <i class="bi bi-check-circle-fill text-success fs-5"></i>
+                                    <div>
+                                        <strong class="text-itus-title">Banca, Seguros y Fintech:</strong>
+                                        Modelos de riesgo crediticio, prevención de fraude en tiempo real y sistemas de recomendación financiera personalizada.
+                                    </div>
+                                </li>
+                                <li class="mb-3 d-flex align-items-start gap-2">
+                                    <i class="bi bi-check-circle-fill text-success fs-5"></i>
+                                    <div>
+                                        <strong class="text-itus-title">Minería Inteligente y Energía:</strong>
+                                        Mantenimiento predictivo de maquinaria pesada, optimización de consumo eléctrico y control estocástico de procesos.
+                                    </div>
+                                </li>
+                                <li class="mb-3 d-flex align-items-start gap-2">
+                                    <i class="bi bi-check-circle-fill text-success fs-5"></i>
+                                    <div>
+                                        <strong class="text-itus-title">Retail, E-commerce y Consumo Masivo:</strong>
+                                        Pronóstico dinámico de demanda, optimización de rutas de distribución y segmentación avanzada de clientes.
+                                    </div>
+                                </li>
+                                <li class="d-flex align-items-start gap-2">
+                                    <i class="bi bi-check-circle-fill text-success fs-5"></i>
+                                    <div>
+                                        <strong class="text-itus-title">Sector Público y Salud Digital:</strong>
+                                        Analítica epidemiológica predictiva, optimización de recursos hospitalarios y diseño de políticas públicas basadas en datos.
+                                    </div>
+                                </li>
+                            </ul>
+                            <a href="../contactos.html" class="btn btn-itus-purple w-100 py-3 fw-bold">
+                                Solicitar Información sobre Admisión
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer Institucional -->
+    <footer class="footer-itus pt-5 pb-4 text-center">
+        <div class="container text-center">
+            <div class="row g-4 mb-4 justify-content-center text-center">
+                <div class="col-lg-4 col-md-6 text-center">
+                    <a href="../index.html" class="d-inline-block mb-3">
+                        <img class="img-itus" src="../assets/images/condor.png" alt="Logo ITUS">
+                    </a>
+                    <p class="text-white-50 small mb-3">
+                        Instituto Tecnológico Universitario de Santiago (ITUS). Formamos profesionales e ingenieros líderes en ciencia, tecnología, inteligencia artificial y transformación digital con estándares internacionales.
+                    </p>
+                    <div class="d-flex justify-content-center gap-2">
+                        <a href="#" class="footer-social-btn" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="footer-social-btn" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="footer-social-btn" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                        <a href="#" class="footer-social-btn" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 text-center">
+                    <h5>Navegación</h5>
+                    <ul class="list-unstyled mb-0">
+                        <li><a href="../index.html" class="footer-link">Inicio</a></li>
+                        <li><a href="../index.html" class="footer-link">Carreras</a></li>
+                        <li><a href="../sedes.html" class="footer-link">Sedes</a></li>
+                        <li><a href="../sobre-nosotros.html" class="footer-link">Nosotros</a></li>
+                        <li><a href="../noticias.html" class="footer-link">Noticias</a></li>
+                        <li><a href="../contactos.html" class="footer-link">Contactos</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 text-center">
+                    <h5>Nuestras Sedes</h5>
+                    <ul class="list-unstyled small text-white-50 mb-0">
+                        <li class="mb-2"><strong class="text-white">República:</strong> Av. República #285 (Metro República)</li>
+                        <li class="mb-2"><strong class="text-white">Antonio Varas:</strong> Av. Antonio Varas #660 (Metro Manuel Montt)</li>
+                        <li class="mb-2"><strong class="text-white">Francisco Bilbao:</strong> Av. Francisco Bilbao #2450 (Metro Bilbao)</li>
+                        <li class="mb-2"><strong class="text-white">Diego Portales:</strong> Av. Diego Portales #1420 (Metro Los Quillayes)</li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 text-center">
+                    <h5>Contacto Central</h5>
+                    <ul class="list-unstyled small text-white-50 mb-3">
+                        <li class="mb-2"><i class="bi bi-telephone-fill text-warning me-2"></i> Mesa Central: +56 2 2800 4000</li>
+                        <li class="mb-2"><i class="bi bi-whatsapp text-success me-2"></i> WhatsApp: +56 9 7890 1234</li>
+                        <li class="mb-2"><i class="bi bi-envelope-fill text-warning me-2"></i> contacto@itus.cl</li>
+                        <li class="mb-2"><i class="bi bi-clock-fill text-warning me-2"></i> Lun - Vie: 08:30 a 20:00 hrs</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="border-secondary opacity-25">
+            <div class="row align-items-center justify-content-center text-center">
+                <div class="col-12 text-center mb-2 mb-md-0">
+                    <p class="mb-0 small text-white-50">2026 Instituto Tecnológico Universitario Superior (ITUS). Todos los derechos reservados.</p>
+                </div>
+                <div class="col-12 text-center mt-1">
+                    <span class="small text-white-50">Acreditación Institucional de Nivel Avanzado</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="../assets/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+
+

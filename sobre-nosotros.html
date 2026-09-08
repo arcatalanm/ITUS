@@ -3,43 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Instituto Tecnológico Universitario de Santiago | ITUS</title>
-    <!-- Importación de la hoja de estilos de bootstrap-->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <!-- Importacion de la hoja de estilos css -->
-    <link rel="stylesheet" href="style.css">
-    <!-- Importancio de Font de Google-->
+    <title>Sobre Nosotros | Instituto Tecnológico Universitario de Santiago (ITUS)</title>
+    <!-- Importación de Bootstrap 5 -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- Importación de Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- Hoja de estilos personalizada con variables :root -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Google Fonts Roboto -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Cabecera de Navegación Institucional -->
     <header>
         <nav class="navbar navbar-expand-lg my-nav-personalized sticky-top" data-bs-theme="dark">
-            <!-- Container fluid similitud a flex-->
             <div class="container-fluid">
-                <!-- Zona destinada al logotipo o marca -->
-                <a class="navbar-brand" href="index.html"> <img class="img-itus" src="images/condor.png" alt=""> </a>
+                <a class="navbar-brand" href="index.html">
+                    <img class="img-itus" src="assets/images/condor.png" alt="Logo ITUS">
+                </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
-                    <!-- Boton hamburguesa -->
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarColor01">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="carrera.html">CARRERAS</a>
+                            <a class="nav-link" href="carreras.html">CARRERAS</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="sedes.html">SEDES</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" href="sobre-nosotros.html">NOSOTROS </a>
+                            <a class="nav-link active" href="sobre-nosotros.html">NOSOTROS</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="contactos.html">CONTACTOS </a>
+                            <a class="nav-link" href="contactos.html">CONTACTOS</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="noticias.html">NOTICIAS </a>
+                            <a class="nav-link" href="noticias.html">NOTICIAS</a>
                         </li>
                     </ul>
                 </div>
@@ -48,97 +50,213 @@
     </header>
 
     <main>
-        <div class="container py-5">
-            <h1 class="fw-bold display-5 text-center"> Quiénes Somos</h1>
-            <p class="lead text-center text-white-50"> Liderando la formación en tecnología de vanguardia, innovación digital y ciencias aplicadas para transformar el futuro de la industria y la sociedad. </p>
-        </div>
-
-        <div class="container">
-            <!-- Filas con Gap -->
-            <div class="row g-4">
-                <!-- Adaptabilidad pantalla grande y mediana -->
-                <div class="col-12 col-md-6">
-                    <div class="card h-100 shadow rounded-4">
-                        <div class="card-body">
-                            <h3 class="card-title fw-bold">Misión</h3>
-                            <p class="card-text">Formar profesionales e ingenieros líderes en ciencia, tecnología e innovación, dotados de sólidas competencias técnicas de estándar internacional, pensamiento crítico y compromiso ético, capaces de diseñar soluciones disruptivas y sostenibles que impusel el desarrollo industrial y tecnológico.</p>
-                        </div>
+        <!-- Hero de la Sección Nosotros -->
+        <section class="page-hero text-center">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-10">
+                        <h1 class="display-4 fw-bold text-itus-title mb-3">Quiénes Somos</h1>
+                        <p class="lead page-hero-subtitle mx-auto mb-0">
+                            Liderando la formación en tecnología de vanguardia, innovación digital y ciencias aplicadas para transformar el futuro de la industria y la sociedad.
+                        </p>
                     </div>
                 </div>
+            </div>
+        </section>
 
-                <div class="col-12 col-md-6">
-                    <div class="card h-100 shadow rounded-4">
-                        <div class="card-body">
-                            <h3 class="card-title fw-bold">Visión</h3>
-                            <p class="card-text">Ser reconocidos como el referente universitario de excelencia tecnológica e innovación en la región, distinguidos por la investigación aplicada en inteligencia artificial y tecnologías emergentes, la vinculación con la industria global y la alta empleabilidad de nuestros graduados.</p>
+        <!-- Sección Misión y Visión -->
+        <section class="py-5 bg-white border-bottom border-itus">
+            <div class="container py-3">
+                <div class="row g-4 justify-content-center">
+                    <!-- Misión -->
+                    <div class="col-12 col-md-6">
+                        <div class="card h-100 shadow-sm border-itus rounded-4">
+                            <div class="card-body p-4 p-lg-5 d-flex flex-column">
+                                <div class="d-inline-flex align-items-center justify-content-center mb-3 rounded-3 bg-light p-3 text-itus-buttons fs-2 w-auto me-auto">
+                                    <i class="bi bi-compass-fill"></i>
+                                </div>
+                                <h3 class="card-title fw-bold text-itus-title mb-3">Nuestra Misión</h3>
+                                <p class="card-text text-muted flex-grow-1 fs-6 lh-base">
+                                    Formar profesionales e ingenieros líderes en ciencia, tecnología e innovación, dotados de sólidas competencias técnicas de estándar internacional, pensamiento crítico y compromiso ético, capaces de diseñar soluciones disruptivas y sostenibles que impulsen el desarrollo industrial y tecnológico de Chile y el mundo.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Visión -->
+                    <div class="col-12 col-md-6">
+                        <div class="card h-100 shadow-sm border-itus rounded-4">
+                            <div class="card-body p-4 p-lg-5 d-flex flex-column">
+                                <div class="d-inline-flex align-items-center justify-content-center mb-3 rounded-3 bg-light p-3 text-itus-buttons fs-2 w-auto me-auto">
+                                    <i class="bi bi-eye-fill"></i>
+                                </div>
+                                <h3 class="card-title fw-bold text-itus-title mb-3">Nuestra Visión</h3>
+                                <p class="card-text text-muted flex-grow-1 fs-6 lh-base">
+                                    Ser reconocidos como el referente universitario de excelencia tecnológica e innovación en la región, distinguidos por la investigación aplicada en inteligencia artificial y tecnologías emergentes, la vinculación estrecha con la industria global y la alta empleabilidad y liderazgo de nuestros titulados.
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <!-- Sección valores -->
-        <div class="container py-5">
-            <h2 class="fw-bold display-6 text-center"> Nuestros Valores </h2>
-        </div>
+        <!-- Sección Valores Institucionales -->
+        <section class="py-5 bg-itus-background border-bottom border-itus">
+            <div class="container py-3">
+                <div class="text-center mb-5">
+                    <h2 class="display-6 fw-bold text-itus-title">Nuestros Valores</h2>
+                    <p class="lead text-muted mx-auto section-lead">
+                        Pilares fundamentales que guían nuestro quehacer académico, investigativo y formativo.
+                    </p>
+                </div>
 
-        <div class="container">
-            <div class="row g-4"> 
-                <div class="col-12 col-md-6 col-lg-3">
-                    <div class="card h-100 text-center">
-                        <div class="card-body">
-                            <h3 class="card-title fw-bold">Innovación</h3>
-                            <p class="card-text"> Impulsamos la curiosidad, el pensamiento disruptivo y el desarrollo de nuevas tecnologías para dar respuesta a los desafíos más complejos del mundo contemporáneo..</p>
+                <div class="row g-4"> 
+                    <!-- Innovación -->
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="card h-100 text-center border-itus rounded-4 p-3 shadow-sm">
+                            <div class="card-body">
+                                <div class="fs-1 text-itus-buttons mb-3"><i class="bi bi-lightbulb-fill"></i></div>
+                                <h3 class="card-title h5 fw-bold text-itus-title mb-2">Innovación</h3>
+                                <p class="card-text text-muted small">
+                                    Impulsamos la curiosidad, el pensamiento disruptivo y el desarrollo de nuevas tecnologías para dar respuesta a los desafíos más complejos del mundo contemporáneo.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Excelencia -->
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="card h-100 text-center border-itus rounded-4 p-3 shadow-sm">
+                            <div class="card-body">
+                                <div class="fs-1 text-itus-buttons mb-3"><i class="bi bi-gem"></i></div>
+                                <h3 class="card-title h5 fw-bold text-itus-title mb-2">Excelencia</h3>
+                                <p class="card-text text-muted small">
+                                    Mantenemos los más altos estándares de calidad académica, metodologías de aprendizaje activo y laboratorios equipados con tecnología de vanguardia.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Ética -->
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="card h-100 text-center border-itus rounded-4 p-3 shadow-sm">
+                            <div class="card-body">
+                                <div class="fs-1 text-itus-buttons mb-3"><i class="bi bi-shield-check"></i></div>
+                                <h3 class="card-title h5 fw-bold text-itus-title mb-2">Ética</h3>
+                                <p class="card-text text-muted small">
+                                    Promovemos la integridad, la responsabilidad en el desarrollo tecnológico, la ciberseguridad consciente y la protección del bienestar de las personas.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Compromiso Social -->
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="card h-100 text-center border-itus rounded-4 p-3 shadow-sm">
+                            <div class="card-body">
+                                <div class="fs-1 text-itus-buttons mb-3"><i class="bi bi-heart-pulse-fill"></i></div>
+                                <h3 class="card-title h5 fw-bold text-itus-title mb-2">Compromiso Social</h3>
+                                <p class="card-text text-muted small">
+                                    Ponemos el talento y la ingeniería al servicio del progreso de nuestras comunidades, la inclusión digital y la sostenibilidad ambiental del planeta.
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
-
-                <div class="col-12 col-md-6 col-lg-3">
-                    <div class="card h-100 text-center">
-                        <div class="card-body">
-                            <h3 class="card-title fw-bold">Excelencia</h3>
-                            <p class="card-text">Mantenemos los más altos estándares de calidad académica, metodologías de aprendizaje activo y laboratorios equipados con tecnología de vanguardia.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-12 col-md-6 col-lg-3">
-                    <div class="card h-100 text-center">
-                        <div class="card-body">
-                            <h3 class="card-title fw-bold">Ética</h3>
-                            <p class="card-text"> Promovemos la integridad, la responsabilidad en el desarrollo tecnológico, la ciberseguridad consciente y la protección del bienestar de las personas.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-12 col-md-6 col-lg-3">
-                    <div class="card h-100 text-center">
-                        <div class="card-body">
-                            <h3 class="card-title fw-bold">Compromiso Social</h3>
-                            <p class="card-text"> Ponemos el talento y la ingeniería al servicio del progreso de nuestras comunidades, la inclusión digital y la sostenibilidad ambiental.</p>
-                        </div>
-                    </div>
-                </div>
-                
             </div>
-        </div>
+        </section>
 
-        <!-- Sección Nuestra Historia -->
-        <div class="container py-5">
-            <div class="row align-items-center g-5">
-                <div class="col-12 col-lg-6">
-                    <h2 class="fw-bold display-6 mb-3"> Nuestra Trayectoria </h2>
-                    <p class="text-white-50"> Desde nuestra fundación, ITUS nació con la convicción de transformar la educación técnica e ingeniería en un motor de innovación real. A lo largo de los años, hemos consolidado un modelo educativo práctico y de vinculación directa con las empresas líderes del sector tecnológico. </p>
-                    <p class="text-white-50"> Con modernos centros de investigación, laboratorios de robótica, ciberseguridad e inteligencia artificial, hoy formamos a miles de estudiantes que diseñan soluciones a escala global, construyendo el puente entre el conocimiento académico y las demandas del futuro.</p>
-                </div>
-                <div class="col-12 col-lg-6">
-                    <img class="img-fluid rounded-4 shadow" src="images/iot_smart.jpg" alt="">
+        <!-- Sección Nuestra Trayectoria / Historia -->
+        <section class="py-5 bg-white">
+            <div class="container py-3">
+                <div class="row align-items-center g-5">
+                    <div class="col-12 col-lg-6">
+                        <span class="text-uppercase fw-bold text-itus-accent small d-block mb-2">Evolución & Futuro</span>
+                        <h2 class="display-6 fw-bold mb-3 text-itus-title">Nuestra Trayectoria</h2>
+                        <p class="text-muted fs-6 lh-base mb-3 text-justify">
+                            Desde nuestra fundación, <strong>ITUS</strong> nació con la convicción de transformar la educación técnica y la ingeniería aplicada en un motor de innovación real y tangible. A lo largo de los años, hemos consolidado un modelo educativo práctico de inmersión temprana y vinculación directa con las empresas líderes del sector tecnológico mundial.
+                        </p>
+                        <p class="text-muted fs-6 lh-base mb-4 text-justify">
+                            Con modernos centros de investigación, laboratorios certificados de robótica, ciberseguridad, cloud computing e inteligencia artificial en nuestras <strong>4 sedes metropolitanas</strong> (República, Antonio Varas, Francisco Bilbao y Diego Portales), hoy formamos a más de 5.000 estudiantes que diseñan soluciones a escala global, construyendo el puente entre el conocimiento universitario y las demandas de la industria 4.0.
+                        </p>
+                        <div class="d-flex gap-3">
+                            <a href="carreras.html" class="btn btn-itus-purple px-4 py-2">Explorar Carreras</a>
+                            <a href="sedes.html" class="btn btn-itus-outline px-4 py-2">Conocer Sedes</a>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6 text-center">
+                        <img class="img-fluid rounded-4 shadow border border-itus" src="assets/images/iot_smart.jpg" alt="Innovación tecnológica y vida académica en ITUS">
+                    </div>
                 </div>
             </div>
-        </div>
-
+        </section>
 
     </main>
-    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Footer Institucional -->
+    <footer class="footer-itus pt-5 pb-4 text-center">
+        <div class="container text-center">
+            <div class="row g-4 mb-4 justify-content-center text-center">
+                <div class="col-lg-4 col-md-6 text-center">
+                    <a href="index.html" class="d-inline-block mb-3">
+                        <img class="img-itus" src="assets/images/condor.png" alt="Logo ITUS">
+                    </a>
+                    <p class="text-white-50 small mb-3">
+                        Instituto Tecnológico Universitario de Santiago (ITUS). Formamos profesionales e ingenieros líderes en ciencia, tecnología, inteligencia artificial y transformación digital con estándares internacionales.
+                    </p>
+                    <div class="d-flex justify-content-center gap-2">
+                        <a href="#" class="footer-social-btn" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="footer-social-btn" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="footer-social-btn" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                        <a href="#" class="footer-social-btn" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 text-center">
+                    <h5>Navegación</h5>
+                    <ul class="list-unstyled mb-0">
+                        <li><a href="index.html" class="footer-link">Inicio</a></li>
+                        <li><a href="carreras.html" class="footer-link">Carreras</a></li>
+                        <li><a href="sedes.html" class="footer-link">Sedes</a></li>
+                        <li><a href="sobre-nosotros.html" class="footer-link">Nosotros</a></li>
+                        <li><a href="noticias.html" class="footer-link">Noticias</a></li>
+                        <li><a href="contactos.html" class="footer-link">Contactos</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 text-center">
+                    <h5>Nuestras Sedes</h5>
+                    <ul class="list-unstyled small text-white-50 mb-0">
+                        <li class="mb-2"><strong class="text-white">República:</strong> Av. República #285 (Metro República)</li>
+                        <li class="mb-2"><strong class="text-white">Antonio Varas:</strong> Av. Antonio Varas #660 (Metro Manuel Montt)</li>
+                        <li class="mb-2"><strong class="text-white">Francisco Bilbao:</strong> Av. Francisco Bilbao #2450 (Metro Bilbao)</li>
+                        <li class="mb-2"><strong class="text-white">Diego Portales:</strong> Av. Diego Portales #1420 (Metro Los Quillayes)</li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 text-center">
+                    <h5>Contacto Central</h5>
+                    <ul class="list-unstyled small text-white-50 mb-3">
+                        <li class="mb-2"><i class="bi bi-telephone-fill text-warning me-2"></i> Mesa Central: +56 2 2800 4000</li>
+                        <li class="mb-2"><i class="bi bi-whatsapp text-success me-2"></i> WhatsApp: +56 9 7890 1234</li>
+                        <li class="mb-2"><i class="bi bi-envelope-fill text-warning me-2"></i> contacto@itus.cl</li>
+                        <li class="mb-2"><i class="bi bi-clock-fill text-warning me-2"></i> Lun - Vie: 08:30 a 20:00 hrs</li>
+                    </ul>
+                    <a href="contactos.html" class="btn btn-itus-accent btn-sm w-100 py-2">Escríbenos Aquí</a>
+                </div>
+            </div>
+            <hr class="border-secondary opacity-25">
+            <div class="row align-items-center justify-content-center text-center">
+                <div class="col-12 text-center mb-2 mb-md-0">
+                    <p class="mb-0 small text-white-50">2026 Instituto Tecnológico Universitario Superior (ITUS). Todos los derechos reservados.</p>
+                </div>
+                <div class="col-12 text-center mt-1">
+                    <span class="small text-white-50">Acreditación Institucional de Nivel Avanzado</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
