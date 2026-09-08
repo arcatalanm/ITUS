@@ -15,12 +15,13 @@ body {
     background-color: black;
 }
 
-.my-nav-personalized {
-    background-color: black;
-}
-
 .img-itus {
     width: 256px;
+}
+
+/*BARRA DE NAVEGACION PERSONALIZADA*/
+.my-nav-personalized {
+    background-color: black;
 }
 
 .navbar-nav {
@@ -35,28 +36,6 @@ body {
     font-size: 18px;
 }
 
-/* Modificaciones al Carrusel */
-.carousel-item {
-    filter: brightness(50%);
-}
-
-.carousel-item img {
-    height: 1000px;
-    object-fit: cover;
-    object-position: top;
-}
-
-.featured-careers {
-    color: #D9D9D9;
-}
-
-.card-text {
-    text-align: justify;
-}
-
-/* Sección Clientes Felices */
-.happy-learners {}
-
 
 
 
@@ -65,10 +44,16 @@ body {
 /* Sección Noticias */
 .seccion-noticias {
     display: flex;
+    flex-wrap: wrap;
     width: 100%;
     margin: 0;
     padding: 0;
     background-color: black;
+}
+
+.seccion-noticias>.carousel {
+    flex: 0 0 100%;
+    width: 100%;
 }
 
 .noticias-principal {
@@ -82,3 +67,32 @@ body {
     padding: 20px;
     background-color: black;
 }
+
+/* Modificaciones exclusivas al Carrusel de Noticias */
+.seccion-noticias .carousel-item img {
+    filter: brightness(40%);
+    height: 1000px;
+    object-fit: cover;
+    object-position: top;
+}
+
+.seccion-noticias .carousel-caption {
+    color: white;
+}
+
+.featured-careers {
+    color: #D9D9D9;
+}
+
+.card-text {
+    text-align: justify;
+}
+
+
+
+
+/* Sección Carreras */
+
+
+
+/*Contactos*/
