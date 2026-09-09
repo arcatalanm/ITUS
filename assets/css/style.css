@@ -1140,3 +1140,23 @@ footer {
     color: var(--itus-title);
     transform: translateY(-3px);
 }
+
+/* Boton de Admision destacado (Ghost Button) */
+.btn-admision {
+    background-color: transparent !important;
+    color: var(--itus-accent) !important;
+    font-weight: 700;
+    border-radius: 50px !important;
+    padding: 0.25rem 1rem !important;
+    margin-left: 10px;
+    border: 2px solid var(--itus-accent) !important;
+    font-size: 0.875rem !important;
+    display: inline-flex;
+    align-items: center;
+    margin-top: 0.25rem;
+    height: fit-content;
+}
+.btn-admision:hover {
+    background-color: rgba(242, 187, 22, 0.1) !important;
+    color: var(--itus-accent) !important;
+}
