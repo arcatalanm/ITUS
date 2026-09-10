@@ -1,19 +1,31 @@
 document.addEventListener('DOMContentLoaded', function() {
 
-    // Admision form validation
-    const admisionForm = document.getElementById('admisionForm');
-    if (admisionForm) {
-        admisionForm.addEventListener('submit', function(e) {
+    // Registro form validation
+    const registroForm = document.getElementById('registroForm');
+    if (registroForm) {
+        registroForm.addEventListener('submit', function(e) {
             e.preventDefault();
-            const nombre = document.getElementById('nombre').value;
-            const rut = document.getElementById('rut').value;
-            const email = document.getElementById('email').value;
-            const telefono = document.getElementById('telefono').value;
-            const carrera = document.getElementById('carrera').value;
+            const nombre = document.getElementById('regNombre').value;
+            const correo = document.getElementById('regCorreo').value;
+            const correoConfirm = document.getElementById('regCorreoConfirm').value;
+            const password = document.getElementById('regPassword').value;
+            const passwordConfirm = document.getElementById('regPasswordConfirm').value;
+            const telefono = document.getElementById('regTelefono').value;
+            const carrera = document.getElementById('regCarrera').value;
+            const region = document.getElementById('regRegion').value;
+            const comuna = document.getElementById('regComuna').value;
             
-            if (nombre && rut && email && telefono && carrera) {
-                alert('¡Postulación enviada con éxito! Te contactaremos a la brevedad.');
-                admisionForm.reset();
+            if (correo !== correoConfirm) {
+                alert('Los correos no coinciden.');
+                return;
+            }
+            if (password !== passwordConfirm) {
+                alert('Las contraseñas no coinciden.');
+                return;
+            }
+            if (nombre && correo && password && carrera && region && comuna) {
+                alert('¡Registro exitoso! Ahora puedes iniciar sesión.');
+                registroForm.reset();
             }
         });
     }
