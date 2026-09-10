@@ -36,11 +36,12 @@ document.addEventListener('DOMContentLoaded', function() {
             const loginAlert = document.getElementById('loginAlert');
 
             // Validar dominios permitidos
-            const allowedDomains = ['@gmail.com', '@hotmail.com', '@outlook.com', '@itus.cl'];
-            const isValidDomain = allowedDomains.some(domain => email.endsWith(domain));
+            const studentDomains = ['@gmail.com', '@hotmail.com', '@outlook.com', '@itus.cl'];
+            const isStudent = studentDomains.some(domain => email.endsWith(domain));
+            const isProfessor = email.endsWith('@itusprofesor.cl');
 
-            if (!isValidDomain) {
-                loginAlert.textContent = 'Por favor, utiliza un correo válido (@gmail.com, @hotmail.com, @outlook.com o @itus.cl).';
+            if (!isStudent && !isProfessor) {
+                loginAlert.textContent = 'Por favor, utiliza un correo válido (alumno o @itusprofesor.cl).';
                 loginAlert.classList.remove('d-none');
                 return;
             }
@@ -58,7 +59,11 @@ document.addEventListener('DOMContentLoaded', function() {
             const isSubdir = window.location.pathname.includes('/carreras/') || window.location.pathname.includes('/noticias/');
             const prefix = isSubdir ? '../' : '';
 
-            window.location.href = prefix + 'dashboard-alumno.html';
+            if (isProfessor) {
+                window.location.href = prefix + 'dashboard-profesor.html';
+            } else {
+                window.location.href = prefix + 'dashboard-alumno.html';
+            }
         });
     }
 });
