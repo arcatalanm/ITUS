@@ -7,7 +7,6 @@ document.addEventListener('DOMContentLoaded', function() {
             e.preventDefault();
             const nombre = document.getElementById('regNombre').value;
             const correo = document.getElementById('regCorreo').value;
-            const correoConfirm = document.getElementById('regCorreoConfirm').value;
             const password = document.getElementById('regPassword').value;
             const passwordConfirm = document.getElementById('regPasswordConfirm').value;
             const telefono = document.getElementById('regTelefono').value;
@@ -15,10 +14,6 @@ document.addEventListener('DOMContentLoaded', function() {
             const region = document.getElementById('regRegion').value;
             const comuna = document.getElementById('regComuna').value;
             
-            if (correo !== correoConfirm) {
-                alert('Los correos no coinciden.');
-                return;
-            }
             if (password !== passwordConfirm) {
                 alert('Las contraseñas no coinciden.');
                 return;
