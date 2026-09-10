@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -74,7 +74,9 @@
                                 </p>
                             </div>
 
-                            <form>
+                            <div id="contactoAlert" class="alert alert-danger d-none" role="alert"></div>
+
+                            <form id="contactoForm">
                                 <!-- Nombre Completo -->
                                 <div class="mb-3">
                                     <label for="nombre" class="form-label fw-bold text-itus-white small">Nombre Completo</label>
@@ -91,16 +93,16 @@
 
                                 <!-- Teléfono -->
                                 <div class="mb-3">
-                                    <label for="telefono" class="form-label fw-bold text-itus-white small">Teléfono</label>
+                                    <label for="telefono" class="form-label fw-bold text-itus-white small">Teléfono (Solo números y/o el signo +)</label>
                                     <input type="tel" class="form-control rounded-4 p-3" id="telefono"
-                                        placeholder="Ej: +56 9 1234 5678">
+                                        placeholder="Ej: +56912345678" required>
                                 </div>
 
                                 <!-- Asunto (Selección) -->
                                 <div class="mb-3">
                                     <label for="asunto" class="form-label fw-bold text-itus-white small">Asunto</label>
-                                    <select class="form-select rounded-4 p-3" id="asunto">
-                                        <option selected>Selecciona una opción...</option>
+                                    <select class="form-select rounded-4 p-3" id="asunto" required>
+                                        <option value="" selected>Selecciona una opción...</option>
                                         <option value="1">Admisión / Matrículas</option>
                                         <option value="2">Consultas Académicas</option>
                                         <option value="3">Financiamiento</option>
@@ -112,7 +114,7 @@
                                 <div class="mb-4">
                                     <label for="mensaje" class="form-label fw-bold text-itus-white small">Mensaje</label>
                                     <textarea class="form-control rounded-4 p-3" id="mensaje" rows="4"
-                                        placeholder="Escribe aquí tu consulta..."></textarea>
+                                        placeholder="Escribe aquí tu consulta..." required></textarea>
                                 </div>
 
                                 <!-- Botón de Enviar -->
@@ -192,6 +194,7 @@
 
     <!-- Bootstrap JS Bundle -->
     <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/contactos.js"></script>
 </body>
 </html>
 

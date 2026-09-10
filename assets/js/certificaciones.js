@@ -1,12 +1,12 @@
 document.addEventListener('DOMContentLoaded', () => {
     // 1. Data Base of Certifications
     const certificacionesDB = [
-        { id: "AWS-01", nombre: "AWS Certified Cloud Practitioner", entidad: "AWS", horas: 40, gratuito: true },
-        { id: "AWS-02", nombre: "AWS Certified Solutions Architect", entidad: "AWS", horas: 120, gratuito: false },
-        { id: "CIS-01", nombre: "Cisco CCNA 200-301", entidad: "Cisco", horas: 200, gratuito: false },
-        { id: "CIS-02", nombre: "Cisco CyberOps Associate", entidad: "Cisco", horas: 70, gratuito: true },
-        { id: "MS-01", nombre: "Microsoft Azure Fundamentals", entidad: "Microsoft", horas: 24, gratuito: true },
-        { id: "GOO-01", nombre: "Google Cloud Associate Engineer", entidad: "Google Cloud", horas: 60, gratuito: false }
+        { id: "AWS-01", nombre: "AWS Certified Cloud Practitioner", entidad: "AWS", horas: 40, gratuito: true, icon: "https://skillicons.dev/icons?i=aws" },
+        { id: "AWS-02", nombre: "AWS Certified Solutions Architect", entidad: "AWS", horas: 120, gratuito: false, icon: "https://skillicons.dev/icons?i=aws" },
+        { id: "CIS-01", nombre: "Cisco CCNA 200-301", entidad: "Cisco", horas: 200, gratuito: false, icon: "https://cdn.worldvectorlogo.com/logos/cisco-2.svg" },
+        { id: "CIS-02", nombre: "Cisco CyberOps Associate", entidad: "Cisco", horas: 70, gratuito: true, icon: "https://cdn.worldvectorlogo.com/logos/cisco-2.svg" },
+        { id: "MS-01", nombre: "Microsoft Azure Fundamentals", entidad: "Microsoft", horas: 24, gratuito: true, icon: "https://skillicons.dev/icons?i=azure" },
+        { id: "GOO-01", nombre: "Google Cloud Associate Engineer", entidad: "Google Cloud", horas: 60, gratuito: false, icon: "https://skillicons.dev/icons?i=gcp" }
     ];
 
     // 2. DOM Elements
@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         certificacionesDB.forEach(cert => {
             const yaAgregado = carrito.some(item => item.id === cert.id);
-            const btnClass = yaAgregado ? 'btn-secondary disabled' : 'btn-outline-primary';
+            const btnClass = yaAgregado ? 'btn-secondary disabled' : 'btn-warning text-dark fw-bold';
             const btnText = yaAgregado ? 'Agregado' : 'Añadir a mi selección';
             const badgeGratis = cert.gratuito ? `<span class="badge bg-success mb-2">Gratis Alumnos ITUS</span>` : '';
 
@@ -42,18 +42,21 @@ document.addEventListener('DOMContentLoaded', () => {
             card.className = 'card shadow-sm border-0 mb-3';
             card.innerHTML = `
                 <div class="card-body d-flex justify-content-between align-items-center flex-wrap gap-3">
-                    <div>
-                        <div class="d-flex align-items-center gap-2 mb-1">
-                            <span class="badge bg-dark">${cert.entidad}</span>
-                            <span class="text-muted small">${cert.id}</span>
+                    <div class="d-flex align-items-center gap-3">
+                        <img src="${cert.icon}" alt="${cert.entidad}" style="width: 48px; height: 48px; object-fit: contain;">
+                        <div>
+                            <div class="d-flex align-items-center gap-2 mb-1">
+                                <span class="badge bg-dark">${cert.entidad}</span>
+                                <span class="text-muted small">${cert.id}</span>
+                            </div>
+                            <h5 class="card-title fw-bold text-itus-title mb-1">${cert.nombre}</h5>
+                            <p class="card-text small text-muted mb-0"><i class="bi bi-clock"></i> ${cert.horas} horas cronológicas</p>
+                            <div class="mt-2">${badgeGratis}</div>
                         </div>
-                        <h5 class="card-title fw-bold text-itus-title mb-1">${cert.nombre}</h5>
-                        <p class="card-text small text-muted mb-0"><i class="bi bi-clock"></i> ${cert.horas} horas cronológicas</p>
-                        <div class="mt-2">${badgeGratis}</div>
                     </div>
                     <div>
-                        <button class="btn ${btnClass} btn-sm add-btn" data-id="${cert.id}">
-                            <i class="bi ${yaAgregado ? 'bi-check2' : 'bi-plus-lg'}"></i> ${btnText}
+                        <button class="btn ${btnClass} btn-sm add-btn shadow-sm" data-id="${cert.id}">
+                            <i class="bi ${yaAgregado ? 'bi-check2' : 'bi-cart-plus'}"></i> ${btnText}
                         </button>
                     </div>
                 </div>
