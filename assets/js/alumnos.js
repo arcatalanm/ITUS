@@ -56,13 +56,13 @@ document.addEventListener('DOMContentLoaded', function() {
             loginAlert.classList.add('d-none');
             
             // Check if we are in a subdirectory based on the current URL
-            const isSubdir = window.location.pathname.includes('/carreras/') || window.location.pathname.includes('/noticias/');
+            const isSubdir = window.location.pathname.includes('/carreras/') || window.location.pathname.includes('/noticias/') || window.location.pathname.includes('/certificaciones/');
             const prefix = isSubdir ? '../' : '';
 
             if (isProfessor) {
-                window.location.href = prefix + 'dashboard-profesor.html';
+                window.location.href = prefix + 'Dashboards/dashboard-profesor.html';
             } else {
-                window.location.href = prefix + 'dashboard-alumno.html';
+                window.location.href = prefix + 'Dashboards/dashboard-alumno.html';
             }
         });
     }
