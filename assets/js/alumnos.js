@@ -26,6 +26,7 @@ document.addEventListener('DOMContentLoaded', function() {
             if (nombre && correo && password && carrera && region && comuna) {
                 alert('¡Registro exitoso! Ahora puedes iniciar sesión.');
                 registroForm.reset();
+                window.location.href = 'login-alumno.html';
             }
         });
     }

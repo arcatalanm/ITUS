@@ -58,59 +58,100 @@
         </nav>
     </header>
     <!-- Sección de Login ITUS -->
-    <main class="seccion-contacto">
-        <div class="container-fluid p-0">
-            <div class="row g-0">
-                <!-- Imagen lado izquierdo -->
-                <div class="col-lg-6 d-none d-lg-block position-relative"
-                    style="background-image: url('assets/images/image1.png'); background-size: cover; background-position: center; min-height: 100vh;">
-                    <div class="position-absolute top-0 start-0 w-100 h-100" style="background: rgba(0,0,0,0.3);"></div>
-                </div>
-
-                <!-- Formulario lado derecho -->
-                <div class="col-lg-6 d-flex flex-column align-items-center justify-content-center py-5 bg-itus-dark"
-                    style="min-height: 100vh;">
-                    <div class="w-100 px-4 px-md-5" style="max-width: 600px;">
-
-                        <!-- Formulario de Iniciar Sesión -->
-                        <div class="mb-5 text-dark">
-                            <div class="text-start mb-4">
-                                <h1 class="h3 fw-bold mb-2">Iniciar sesión</h1>
-                                <p class="text-dark-50 small mb-0">
-                                    Iniciar sesion asociada a tu cuenta google o microsoft
-                                </p>
-                            </div>
-
-                            <div id="loginAlert" class="alert alert-danger d-none" role="alert"></div>
-
-                            <form id="loginForm">
-                                <div class="mb-3 text-dark">
-                                    <label for="loginEmail" class="form-label fw-bold text-dark small">Correo
-                                        Electrónico</label>
-                                    <input type="email"
-                                        class="form-control rounded-4 p-3 border-secondary bg-dark text-white"
-                                        id="loginEmail" placeholder="correo@gmail.com o @itus.cl" required>
-                                </div>
-                                <div class="mb-4 text-dark">
-                                    <label for="loginPassword"
-                                        class="form-label fw-bold text-dark small">Contraseña</label>
-                                    <input type="password"
-                                        class="form-control rounded-4 p-3 border-secondary bg-dark text-white"
-                                        id="loginPassword" placeholder="******" required>
-                                </div>
-                                <div class="d-grid gap-3 mt-4">
-                                    <button type="submit"
-                                        class="btn btn-itus-accent btn-lg border-0 rounded-4 fw-bold py-3">
-                                        INICIAR SESIÓN
-                                    </button>
-                                    <a href="registro-alumno.html"
-                                        class="btn btn-itus-accent btn-lg border-0 rounded-4 fw-bold py-3">
-                                        REGISTRARSE
-                                    </a>
-                                </div>
-                            </form>
+    <main class="seccion-contacto d-flex align-items-center py-5" style="background-color: #f8f9fa; min-height: 80vh;">
+        <div class="container d-flex justify-content-center">
+            <div class="w-100" style="max-width: 650px;">
+                <!-- Formulario de Registro -->
+                <div class="bg-white p-4 p-md-5 shadow-sm"
+                    style="background-color: #f1f2f4 !important; border: 1px solid #dee2e6; border-radius: 0 !important;">
+                    <h2 class="h5 mb-4 p-2 fw-bold" style="background-color: #d9d9d9; font-size: 1rem;">Registro de usuario</h2>
+                    <form id="registroForm">
+                        <div class="mb-3">
+                            <label class="form-label small fw-bold mb-1" style="font-size: 0.75rem;">NOMBRE COMPLETO</label>
+                            <input type="text"
+                                class="form-control rounded-0 border-dark shadow-none"
+                                id="regNombre" required>
                         </div>
-                    </div>
+                        <div class="mb-3">
+                            <label class="form-label small fw-bold mb-1" style="font-size: 0.75rem;">CORREO</label>
+                            <input type="email"
+                                class="form-control rounded-0 border-dark shadow-none"
+                                id="regCorreo" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label small fw-bold mb-1" style="font-size: 0.75rem;">CORREO</label>
+                            <input type="email"
+                                class="form-control rounded-0 border-dark shadow-none"
+                                id="regCorreoConfirm" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label small fw-bold mb-1" style="font-size: 0.75rem;">CONTRASEÑA</label>
+                            <input type="password"
+                                class="form-control rounded-0 border-dark shadow-none"
+                                id="regPassword" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label small fw-bold mb-1" style="font-size: 0.75rem;">CONFIRMAR CONTRASEÑA</label>
+                            <input type="password"
+                                class="form-control rounded-0 border-dark shadow-none"
+                                id="regPasswordConfirm" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label small fw-bold mb-1" style="font-size: 0.75rem;">TELEFONO (opcional)</label>
+                            <input type="tel"
+                                class="form-control rounded-0 border-dark shadow-none"
+                                id="regTelefono">
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label class="form-label small fw-bold mb-1" style="font-size: 0.75rem;">CARRERA</label>
+                            <select class="form-select rounded-0 border-dark shadow-none"
+                                id="regCarrera" required style="font-size: 0.8rem;">
+                                <option value="" selected disabled>-- Seleccione una carrera --</option>
+                                <option value="ciencia-de-datos">Ciencia de Datos</option>
+                                <option value="bioinformatica">Bioinformática</option>
+                                <option value="inteligencia-artificial">Inteligencia Artificial</option>
+                                <option value="civil-informatica">Ingeniería Civil Informática</option>
+                                <option value="cloud-computing">Cloud Computing</option>
+                                <option value="robotica">Robótica</option>
+                                <option value="iot">Internet of Things (IoT)</option>
+                                <option value="ciberseguridad">Ciberseguridad</option>
+                                <option value="videojuegos-vr">Videojuegos y Realidad Virtual</option>
+                                <option value="conectividad-redes">Conectividad y Redes</option>
+                            </select>
+                        </div>
+
+                        <div class="row g-3 mb-5">
+                            <div class="col-md-6">
+                                <select class="form-select rounded-0 border-dark shadow-none"
+                                    id="regRegion" required style="font-size: 0.8rem;">
+                                    <option value="" selected disabled>-- Seleccione la región --</option>
+                                    <option value="RM">Región Metropolitana de Santiago</option>
+                                    <option value="Araucania">Región de la Araucanía</option>
+                                    <option value="Nuble">Región de Ñuble</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6">
+                                <select class="form-select rounded-0 border-dark shadow-none"
+                                    id="regComuna" required style="font-size: 0.8rem;">
+                                    <option value="" selected disabled>-- Seleccione la comuna --</option>
+                                    <option value="Linares">Linares</option>
+                                    <option value="Longaví">Longaví</option>
+                                    <option value="Concepción">Concepción</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="text-center mb-3">
+                            <button type="submit" class="btn bg-white border border-dark rounded-0 px-5 py-2 fw-bold"
+                                style="font-size: 0.9rem; box-shadow: 2px 2px 0px rgba(0,0,0,1);">
+                                REGISTRAR
+                            </button>
+                        </div>
+                        <div class="text-center mt-4">
+                            <a href="login-alumno.html" class="text-secondary small text-decoration-underline">¿Ya tienes cuenta? Inicia sesión aquí</a>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
