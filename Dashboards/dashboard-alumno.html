@@ -1,9 +1,9 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulario de Contacto | ITUS</title>
+    <title>Portal del Estudiante | Instituto Tecnológico Universitario de Santiago (ITUS)</title>
     <!-- Importación de Bootstrap 5 -->
     <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
     <!-- Importación de Bootstrap Icons -->
@@ -28,12 +28,15 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarColor01">
-                    <ul class="navbar-nav ms-auto">
+                    <ul class="navbar-nav ms-auto align-items-lg-center">
                         <li class="nav-item">
                             <a class="nav-link" href="../carreras.html">CARRERAS</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="../sedes.html">SEDES</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../certificaciones/certificaciones.html">CERTIFICACIONES</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="../sobre-nosotros.html">NOSOTROS</a>
@@ -46,19 +49,19 @@
                         </li>
                         
                         <li class="nav-item ms-lg-2">
-                            <a class="btn btn-itus-accent btn-sm rounded-pill px-3 mt-1" href="../login-alumno.html">INICIAR SESIÓN</a>
+                            <button class="btn btn-outline-warning btn-sm rounded-pill px-3 mt-1 btn-cerrar-sesion">CERRAR SESIÓN</button>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
-    <main class="bg-light py-5" style="min-height: 80vh;">
+    <main class="bg-light py-5 min-vh-80">
         <div class="container">
             <div class="row mb-4">
                 <div class="col-12 d-flex justify-content-between align-items-center">
                     <h2 class="fw-bold text-itus-title"><i class="bi bi-person-workspace text-itus-navbar me-2"></i> Portal del Estudiante</h2>
-                    <a href="../login-alumno.html" class="btn btn-outline-danger btn-sm rounded-pill px-3">Cerrar Sesión</a>
+                    <button class="btn btn-outline-danger btn-sm rounded-pill px-3 btn-cerrar-sesion">Cerrar Sesión</button>
                 </div>
             </div>
 
@@ -72,13 +75,13 @@
                                     <i class="bi bi-person-fill"></i>
                                 </div>
                             </div>
-                            <h5 class="fw-bold text-itus-title mb-1">Juan Pérez</h5>
-                            <p class="text-muted small mb-3">Rut: 12.345.678-9</p>
+                            <h5 class="fw-bold text-itus-title mb-1" id="dashAlumnoNombre">Juan Pérez González</h5>
+                            <p class="text-muted small mb-3" id="dashAlumnoRun">RUN: 20123456K</p>
                             <hr>
                             <p class="fw-bold text-itus-navbar mb-1">Carrera Asignada:</p>
-                            <p class="text-muted small">Ingeniería en Inteligencia Artificial</p>
+                            <p class="text-muted small" id="dashAlumnoCarrera">Ingeniería en Inteligencia Artificial</p>
                             <p class="fw-bold text-itus-navbar mb-1">Sede:</p>
-                            <p class="text-muted small mb-0">Francisco Bilbao</p>
+                            <p class="text-muted small mb-0" id="dashAlumnoSede">Antonio Varas (Sede Principal)</p>
                         </div>
                     </div>
                 </div>
@@ -94,8 +97,8 @@
                                     <span class="small fw-bold text-muted">Progreso de la Malla</span>
                                     <span class="small fw-bold text-itus-accent">45%</span>
                                 </div>
-                                <div class="progress" style="height: 10px;">
-                                    <div class="progress-bar bg-itus-accent" role="progressbar" style="width: 45%" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100"></div>
+                                <div class="progress progress-h-10">
+                                    <div class="progress-bar bg-itus-accent progress-bar-45" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100"></div>
                                 </div>
                             </div>
 
@@ -160,18 +163,18 @@
                                     <tbody class="small">
                                         <tr>
                                             <td class="fw-bold text-muted">08:30 - 10:00</td>
-                                            <td class="bg-light">Matemáticas Aplicadas<br><span class="text-muted" style="font-size:0.75rem;">Sala 204</span></td>
+                                            <td class="bg-light">Matemáticas Aplicadas<br><span class="text-muted font-size-xs">Sala 204</span></td>
                                             <td></td>
-                                            <td class="bg-light">Matemáticas Aplicadas<br><span class="text-muted" style="font-size:0.75rem;">Sala 204</span></td>
+                                            <td class="bg-light">Matemáticas Aplicadas<br><span class="text-muted font-size-xs">Sala 204</span></td>
                                             <td></td>
                                             <td></td>
                                         </tr>
                                         <tr>
                                             <td class="fw-bold text-muted">10:15 - 11:45</td>
                                             <td></td>
-                                            <td class="bg-light">Programación Avanzada<br><span class="text-muted" style="font-size:0.75rem;">Lab 5</span></td>
+                                            <td class="bg-light">Programación Avanzada<br><span class="text-muted font-size-xs">Lab 5</span></td>
                                             <td></td>
-                                            <td class="bg-light">Programación Avanzada<br><span class="text-muted" style="font-size:0.75rem;">Lab 5</span></td>
+                                            <td class="bg-light">Programación Avanzada<br><span class="text-muted font-size-xs">Lab 5</span></td>
                                             <td></td>
                                         </tr>
                                         <tr>
@@ -180,7 +183,7 @@
                                             <td></td>
                                             <td></td>
                                             <td></td>
-                                            <td class="bg-light">Redes Neuronales 1<br><span class="text-muted" style="font-size:0.75rem;">Lab 2</span></td>
+                                            <td class="bg-light">Redes Neuronales 1<br><span class="text-muted font-size-xs">Lab 2</span></td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -223,7 +226,7 @@
                     <h5>Nuestras Sedes</h5>
                     <ul class="list-unstyled small text-white-50 mb-0">
                         <li class="mb-2"><strong class="text-white">República:</strong> Av. República #285 (Metro República)</li>
-                        <li class="mb-2"><strong class="text-white">Antonio Varas:</strong> Av. Antonio Varas #660 (Metro Manuel Montt)</li>
+                        <li class="mb-2"><strong class="text-white">Antonio Varas (Sede Principal):</strong> Av. Antonio Varas #666 (Metro Manuel Montt)</li>
                         <li class="mb-2"><strong class="text-white">Francisco Bilbao:</strong> Av. Francisco Bilbao #2450 (Metro Bilbao)</li>
                         <li class="mb-2"><strong class="text-white">Diego Portales:</strong> Av. Diego Portales #1420 (Metro Los Quillayes)</li>
                     </ul>
@@ -252,6 +255,8 @@
 
     <!-- Bootstrap JS Bundle -->
     <script src="../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/auth.js"></script>
+    <script src="../assets/js/alumnos.js"></script>
 </body>
 </html>
 

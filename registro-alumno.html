@@ -4,22 +4,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulario de Contacto | ITUS</title>
-    <!-- Importación de Bootstrap 5 -->
+    <title>Registro de Usuario | Instituto Tecnológico Universitario de Santiago (ITUS)</title>
+    <!-- Bootstrap 5 CSS -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <!-- Importación de Bootstrap Icons -->
+    <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <!-- Hoja de estilos personalizada con variables :root -->
+    <!-- Hoja de estilos personalizada -->
     <link rel="stylesheet" href="assets/css/style.css">
     <!-- Google Fonts Roboto -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <!-- Cabecera de Navegación -->
+    <!-- Cabecera de Navegación Institucional -->
     <header>
         <nav class="navbar navbar-expand-lg my-nav-personalized sticky-top" data-bs-theme="dark">
             <div class="container-fluid">
@@ -31,12 +30,15 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarColor01">
-                    <ul class="navbar-nav ms-auto">
+                    <ul class="navbar-nav ms-auto align-items-lg-center">
                         <li class="nav-item">
                             <a class="nav-link" href="carreras.html">CARRERAS</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="sedes.html">SEDES</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="certificaciones/certificaciones.html">CERTIFICACIONES</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="sobre-nosotros.html">NOSOTROS</a>
@@ -47,7 +49,7 @@
                         <li class="nav-item">
                             <a class="nav-link" href="noticias.html">NOTICIAS</a>
                         </li>
-
+                        <!-- Carrito en Navbar -->
                         <li class="nav-item ms-lg-2">
                             <a class="btn btn-itus-accent btn-sm rounded-pill px-3 mt-1"
                                 href="login-alumno.html">INICIAR SESIÓN</a>
@@ -57,99 +59,185 @@
             </div>
         </nav>
     </header>
-    <!-- Sección de Login ITUS -->
-    <main class="seccion-contacto d-flex align-items-center py-5" style="background-color: #f8f9fa; min-height: 80vh;">
+
+    <!-- Contenido Principal: Registro de Usuario -->
+    <main class="seccion-contacto py-5 bg-itus-surface min-vh-85">
         <div class="container d-flex justify-content-center">
-            <div class="w-100" style="max-width: 650px;">
-                <!-- Formulario de Registro -->
-                <div class="bg-white p-4 p-md-5 shadow-sm"
-                    style="background-color: #f1f2f4 !important; border: 1px solid #dee2e6; border-radius: 0 !important;">
-                    <h2 class="h5 mb-4 p-2 fw-bold" style="background-color: #d9d9d9; font-size: 1rem;">Registro de usuario</h2>
-                    <form id="registroForm">
-                        <div class="mb-3">
-                            <label class="form-label small fw-bold mb-1" style="font-size: 0.75rem;">NOMBRE COMPLETO</label>
-                            <input type="text"
-                                class="form-control rounded-0 border-dark shadow-none"
-                                id="regNombre" required>
+            <div class="w-100 register-card-container">
+                <div class="bg-white p-4 p-md-5 shadow-sm rounded-4 border">
+                    
+                    <div class="d-flex align-items-center gap-3 mb-3 border-bottom pb-3">
+                        <div class="rounded-circle bg-warning p-3 d-flex align-items-center justify-content-center text-dark fs-3">
+                            <i class="bi bi-person-plus-fill"></i>
                         </div>
-                        <div class="mb-3">
-                            <label class="form-label small fw-bold mb-1" style="font-size: 0.75rem;">CORREO</label>
-                            <input type="email"
-                                class="form-control rounded-0 border-dark shadow-none"
-                                id="regCorreo" required>
+                        <div>
+                            <h1 class="h3 fw-bold mb-1 text-itus-title">Registro de Usuario</h1>
+                            <p class="text-muted small mb-0">Crea tu cuenta institucional para acceder al portal ITUS (Estudiante o Profesor)</p>
                         </div>
-                        <div class="mb-3">
-                            <label class="form-label small fw-bold mb-1" style="font-size: 0.75rem;">CONTRASEÑA</label>
-                            <input type="password"
-                                class="form-control rounded-0 border-dark shadow-none"
-                                id="regPassword" required>
-                        </div>
-                        <div class="mb-3">
-                            <label class="form-label small fw-bold mb-1" style="font-size: 0.75rem;">CONFIRMAR CONTRASEÑA</label>
-                            <input type="password"
-                                class="form-control rounded-0 border-dark shadow-none"
-                                id="regPasswordConfirm" required>
-                        </div>
-                        <div class="mb-3">
-                            <label class="form-label small fw-bold mb-1" style="font-size: 0.75rem;">TELEFONO (opcional)</label>
-                            <input type="tel"
-                                class="form-control rounded-0 border-dark shadow-none"
-                                id="regTelefono">
-                        </div>
+                    </div>
+
+                    <!-- Contenedor de Alertas Dinámicas del Formulario -->
+                    <div id="registroAlert" class="alert d-none" role="alert"></div>
+
+                    <form id="registroForm" novalidate>
                         
-                        <div class="mb-4">
-                            <label class="form-label small fw-bold mb-1" style="font-size: 0.75rem;">CARRERA</label>
-                            <select class="form-select rounded-0 border-dark shadow-none"
-                                id="regCarrera" required style="font-size: 0.8rem;">
-                                <option value="" selected disabled>-- Seleccione una carrera --</option>
-                                <option value="ciencia-de-datos">Ciencia de Datos</option>
-                                <option value="bioinformatica">Bioinformática</option>
-                                <option value="inteligencia-artificial">Inteligencia Artificial</option>
-                                <option value="civil-informatica">Ingeniería Civil Informática</option>
-                                <option value="cloud-computing">Cloud Computing</option>
-                                <option value="robotica">Robótica</option>
-                                <option value="iot">Internet of Things (IoT)</option>
-                                <option value="ciberseguridad">Ciberseguridad</option>
-                                <option value="videojuegos-vr">Videojuegos y Realidad Virtual</option>
-                                <option value="conectividad-redes">Conectividad y Redes</option>
+                        <!-- Selección de Tipo de Usuario (Estudiante o Profesor) -->
+                        <div class="mb-4 p-3 rounded-3 bg-light border">
+                            <label class="form-label small fw-bold text-uppercase text-secondary mb-2">Tipo de Usuario *</label>
+                            <div class="d-flex gap-4">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="regTipoUsuario" id="tipoEstudiante" value="Estudiante" checked>
+                                    <label class="form-check-label fw-bold text-dark" for="tipoEstudiante">
+                                        <i class="bi bi-mortarboard-fill me-1 text-primary"></i> Estudiante
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="regTipoUsuario" id="tipoProfesor" value="Profesor">
+                                    <label class="form-check-label fw-bold text-dark" for="tipoProfesor">
+                                        <i class="bi bi-person-video3 me-1 text-success"></i> Profesor
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Fila 1: RUN (con Dígito Verificador) -->
+                        <div class="mb-3">
+                            <label for="regRun" class="form-label small fw-bold text-uppercase mb-1">
+                                RUN / RUT * <span class="text-muted fw-normal">(Sin puntos ni guión. Ej: 19011022K)</span>
+                            </label>
+                            <input type="text" class="form-control rounded-3 py-2" id="regRun"
+                                placeholder="19011022K" maxlength="9" minlength="7" required>
+                            <div class="invalid-feedback" id="regRunFeedback">
+                                Ingrese un RUN válido entre 7 y 9 caracteres sin puntos ni guión (validado con dígito verificador).
+                            </div>
+                            <div class="form-text small text-muted">Mínimo 7 y máximo 9 caracteres alfanuméricos con dígito verificador.</div>
+                        </div>
+
+                        <!-- Fila 2: Nombres y Apellidos separados (Exigencia Rúbrica) -->
+                        <div class="row g-3 mb-3">
+                            <div class="col-md-6">
+                                <label for="regNombre" class="form-label small fw-bold text-uppercase mb-1">Nombre(s) *</label>
+                                <input type="text" class="form-control rounded-3 py-2" id="regNombre"
+                                    placeholder="Ej: Juan Andrés" maxlength="50" required>
+                                <div class="invalid-feedback">El nombre es requerido y no debe exceder 50 caracteres.</div>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="regApellidos" class="form-label small fw-bold text-uppercase mb-1">Apellidos *</label>
+                                <input type="text" class="form-control rounded-3 py-2" id="regApellidos"
+                                    placeholder="Ej: Pérez González" maxlength="100" required>
+                                <div class="invalid-feedback">Los apellidos son requeridos y no deben exceder 100 caracteres.</div>
+                            </div>
+                        </div>
+
+                        <!-- Fila 3: Correo Electrónico y Fecha de Nacimiento -->
+                        <div class="row g-3 mb-3">
+                            <div class="col-md-8">
+                                <label for="regCorreo" class="form-label small fw-bold text-uppercase mb-1">Correo Electrónico *</label>
+                                <input type="email" class="form-control rounded-3 py-2" id="regCorreo"
+                                    placeholder="ejemplo@itus.cl o tu correo @gmail.com" maxlength="100" required>
+                                <div class="invalid-feedback" id="regCorreoFeedback">
+                                    Ingrese un correo válido según RFC2822 (@itus.cl, @itusprofesor.cl, @duoc.cl o @gmail.com).
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="regFechaNac" class="form-label small fw-bold text-uppercase mb-1">Fecha de Nacimiento</label>
+                                <input type="date" class="form-control rounded-3 py-2" id="regFechaNac">
+                                <div class="form-text small text-muted">Opcional</div>
+                            </div>
+                        </div>
+
+                        <!-- Fila 4: Carrera o Departamento según Rol -->
+                        <div class="mb-3" id="campoCarreraContainer">
+                            <label for="regCarrera" class="form-label small fw-bold text-uppercase mb-1" id="labelCarrera">Carrera / Área Académica *</label>
+                            <select class="form-select rounded-3 py-2" id="regCarrera" required>
+                                <option value="" selected disabled>-- Seleccione su carrera --</option>
+                                <option value="Ingeniería en Inteligencia Artificial">Ingeniería en Inteligencia Artificial</option>
+                                <option value="Ingeniería Civil en Informática">Ingeniería Civil en Informática</option>
+                                <option value="Ingeniería en Ciencia de Datos">Ingeniería en Ciencia de Datos</option>
+                                <option value="Ingeniería en Ciberseguridad">Ingeniería en Ciberseguridad</option>
+                                <option value="Ingeniería en Cloud Computing">Ingeniería en Cloud Computing</option>
+                                <option value="Ingeniería en Robótica y Automatización">Ingeniería en Robótica y Automatización</option>
+                                <option value="Ingeniería en Internet of Things (IoT)">Ingeniería en Internet of Things (IoT)</option>
+                                <option value="Ingeniería en Videojuegos y VR">Ingeniería en Videojuegos y VR</option>
+                                <option value="Ingeniería en Bioinformática">Ingeniería en Bioinformática</option>
+                                <option value="Ingeniería en Conectividad y Redes">Ingeniería en Conectividad y Redes</option>
                             </select>
+                            <div class="invalid-feedback">Debe seleccionar una carrera o departamento.</div>
                         </div>
 
-                        <div class="row g-3 mb-5">
+                        <!-- Fila 5: Región y Comuna Dinámicas (Pobadas por JS) -->
+                        <div class="row g-3 mb-3">
                             <div class="col-md-6">
-                                <select class="form-select rounded-0 border-dark shadow-none"
-                                    id="regRegion" required style="font-size: 0.8rem;">
+                                <label for="regRegion" class="form-label small fw-bold text-uppercase mb-1">Región *</label>
+                                <select class="form-select rounded-3 py-2" id="regRegion" required>
                                     <option value="" selected disabled>-- Seleccione la región --</option>
-                                    <option value="RM">Región Metropolitana de Santiago</option>
-                                    <option value="Araucania">Región de la Araucanía</option>
-                                    <option value="Nuble">Región de Ñuble</option>
                                 </select>
+                                <div class="invalid-feedback">Seleccione una región de la lista.</div>
                             </div>
                             <div class="col-md-6">
-                                <select class="form-select rounded-0 border-dark shadow-none"
-                                    id="regComuna" required style="font-size: 0.8rem;">
+                                <label for="regComuna" class="form-label small fw-bold text-uppercase mb-1">Comuna *</label>
+                                <select class="form-select rounded-3 py-2" id="regComuna" required disabled>
                                     <option value="" selected disabled>-- Seleccione la comuna --</option>
-                                    <option value="Linares">Linares</option>
-                                    <option value="Longaví">Longaví</option>
-                                    <option value="Concepción">Concepción</option>
                                 </select>
+                                <div class="invalid-feedback">Seleccione una comuna válida.</div>
                             </div>
                         </div>
 
-                        <div class="text-center mb-3">
-                            <button type="submit" class="btn bg-white border border-dark rounded-0 px-5 py-2 fw-bold"
-                                style="font-size: 0.9rem; box-shadow: 2px 2px 0px rgba(0,0,0,1);">
-                                REGISTRAR
+                        <!-- Fila 6: Dirección y Teléfono -->
+                        <div class="row g-3 mb-3">
+                            <div class="col-md-8">
+                                <label for="regDireccion" class="form-label small fw-bold text-uppercase mb-1">Dirección Residencial *</label>
+                                <input type="text" class="form-control rounded-3 py-2" id="regDireccion"
+                                    placeholder="Calle, número, depto o villa" maxlength="300" required>
+                                <div class="invalid-feedback">La dirección es obligatoria (máximo 300 caracteres).</div>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="regTelefono" class="form-label small fw-bold text-uppercase mb-1">Teléfono</label>
+                                <input type="tel" class="form-control rounded-3 py-2" id="regTelefono"
+                                    placeholder="+56912345678">
+                                <div class="form-text small text-muted">Opcional</div>
+                            </div>
+                        </div>
+
+                        <!-- Fila 7: Contraseña y Confirmación -->
+                        <div class="row g-3 mb-4">
+                            <div class="col-md-6">
+                                <label for="regPassword" class="form-label small fw-bold text-uppercase mb-1">Contraseña *</label>
+                                <input type="password" class="form-control rounded-3 py-2" id="regPassword"
+                                    placeholder="4 a 10 car., letras, números y símbolos" maxlength="10" minlength="4" required>
+                                <div class="invalid-feedback" id="regPasswordFeedback">
+                                    Debe tener entre 4 y 10 caracteres, ser alfanumérica y contener al menos un caracter especial (ej: Alumno2026!).
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="regPasswordConfirm" class="form-label small fw-bold text-uppercase mb-1">Confirmar Contraseña *</label>
+                                <input type="password" class="form-control rounded-3 py-2" id="regPasswordConfirm"
+                                    placeholder="Repita su contraseña" maxlength="10" minlength="4" required>
+                                <div class="invalid-feedback" id="regPasswordConfirmFeedback">
+                                    Las contraseñas no coinciden.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Botón de Registro -->
+                        <div class="d-grid gap-2 mb-3">
+                            <button type="submit" class="btn btn-itus-accent btn-lg rounded-3 fw-bold py-3">
+                                <i class="bi bi-check-circle-fill me-2"></i> REGISTRAR USUARIO
                             </button>
                         </div>
-                        <div class="text-center mt-4">
-                            <a href="login-alumno.html" class="text-secondary small text-decoration-underline">¿Ya tienes cuenta? Inicia sesión aquí</a>
+
+                        <div class="text-center mt-3">
+                            <a href="login-alumno.html" class="text-secondary small text-decoration-underline">
+                                ¿Ya tienes una cuenta registrada? Inicia sesión aquí
+                            </a>
                         </div>
                     </form>
                 </div>
             </div>
         </div>
     </main>
+
+    <!-- Footer Institucional -->
     <footer class="footer-itus pt-5 pb-4 text-center">
         <div class="container text-center">
             <div class="row g-4 mb-4 justify-content-center text-center">
@@ -175,6 +263,7 @@
                         <li><a href="index.html" class="footer-link">Inicio</a></li>
                         <li><a href="carreras.html" class="footer-link">Carreras</a></li>
                         <li><a href="sedes.html" class="footer-link">Sedes</a></li>
+                        <li><a href="certificaciones/certificaciones.html" class="footer-link">Certificaciones</a></li>
                         <li><a href="sobre-nosotros.html" class="footer-link">Nosotros</a></li>
                         <li><a href="noticias.html" class="footer-link">Noticias</a></li>
                         <li><a href="contactos.html" class="footer-link">Contactos</a></li>
@@ -183,33 +272,26 @@
                 <div class="col-lg-3 col-md-6 text-center">
                     <h5>Nuestras Sedes</h5>
                     <ul class="list-unstyled small text-white-50 mb-0">
-                        <li class="mb-2"><strong class="text-white">República:</strong> Av. República #285 (Metro
-                            República)</li>
-                        <li class="mb-2"><strong class="text-white">Antonio Varas:</strong> Av. Antonio Varas #660
-                            (Metro Manuel Montt)</li>
-                        <li class="mb-2"><strong class="text-white">Francisco Bilbao:</strong> Av. Francisco Bilbao
-                            #2450 (Metro Bilbao)</li>
-                        <li class="mb-2"><strong class="text-white">Diego Portales:</strong> Av. Diego Portales #1420
-                            (Metro Los Quillayes)</li>
+                        <li class="mb-2"><strong class="text-white">República:</strong> Av. República #285 (Metro República)</li>
+                        <li class="mb-2"><strong class="text-white">Antonio Varas (Sede Principal):</strong> Av. Antonio Varas #666 (Metro Manuel Montt)</li>
+                        <li class="mb-2"><strong class="text-white">Francisco Bilbao:</strong> Av. Francisco Bilbao #2450 (Metro Bilbao)</li>
+                        <li class="mb-2"><strong class="text-white">Diego Portales:</strong> Av. Diego Portales #1420 (Metro Los Quillayes)</li>
                     </ul>
                 </div>
                 <div class="col-lg-3 col-md-6 text-center">
                     <h5>Contacto Central</h5>
                     <ul class="list-unstyled small text-white-50 mb-3">
-                        <li class="mb-2"><i class="bi bi-telephone-fill text-warning me-2"></i> Mesa Central: +56 2 2800
-                            4000</li>
+                        <li class="mb-2"><i class="bi bi-telephone-fill text-warning me-2"></i> Mesa Central: +56 2 2800 4000</li>
                         <li class="mb-2"><i class="bi bi-whatsapp text-success me-2"></i> WhatsApp: +56 9 7890 1234</li>
                         <li class="mb-2"><i class="bi bi-envelope-fill text-warning me-2"></i> contacto@itus.cl</li>
-                        <li class="mb-2"><i class="bi bi-clock-fill text-warning me-2"></i> Lun - Vie: 08:30 a 20:00 hrs
-                        </li>
+                        <li class="mb-2"><i class="bi bi-clock-fill text-warning me-2"></i> Lun - Vie: 08:30 a 20:00 hrs</li>
                     </ul>
                 </div>
             </div>
             <hr class="border-secondary opacity-25">
             <div class="row align-items-center justify-content-center text-center">
                 <div class="col-12 text-center mb-2 mb-md-0">
-                    <p class="mb-0 small text-white-50">2026 Instituto Tecnológico Universitario Superior (ITUS). Todos
-                        los derechos reservados.</p>
+                    <p class="mb-0 small text-white-50">2026 Instituto Tecnológico Universitario Superior (ITUS). Todos los derechos reservados.</p>
                 </div>
                 <div class="col-12 text-center mt-1">
                     <span class="small text-white-50">Acreditación Institucional de Nivel Avanzado</span>
@@ -218,8 +300,9 @@
         </div>
     </footer>
 
-    <!-- Bootstrap JS Bundle -->
+    <!-- Scripts: Bootstrap Bundle, Auth & Regiones, Alumnos Logic -->
     <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/auth.js"></script>
     <script src="assets/js/alumnos.js"></script>
 </body>
 

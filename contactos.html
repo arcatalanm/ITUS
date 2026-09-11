@@ -28,12 +28,15 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarColor01">
-                    <ul class="navbar-nav ms-auto">
+                    <ul class="navbar-nav ms-auto align-items-lg-center">
                         <li class="nav-item">
                             <a class="nav-link" href="carreras.html">CARRERAS</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="sedes.html">SEDES</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="certificaciones/certificaciones.html">CERTIFICACIONES</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="sobre-nosotros.html">NOSOTROS</a>
@@ -44,7 +47,6 @@
                         <li class="nav-item">
                             <a class="nav-link" href="noticias.html">NOTICIAS</a>
                         </li>
-                        
                         <li class="nav-item ms-lg-2">
                             <a class="btn btn-itus-accent btn-sm rounded-pill px-3 mt-1" href="login-alumno.html">INICIAR SESIÓN</a>
                         </li>
@@ -76,45 +78,53 @@
 
                             <div id="contactoAlert" class="alert alert-danger d-none" role="alert"></div>
 
-                            <form id="contactoForm">
-                                <!-- Nombre Completo -->
+                            <form id="contactoForm" novalidate>
+                                <!-- Nombre Completo (Máx. 100 car.) -->
                                 <div class="mb-3">
-                                    <label for="nombre" class="form-label fw-bold text-itus-white small">Nombre Completo</label>
+                                    <label for="nombre" class="form-label fw-bold text-itus-white small">Nombre Completo *</label>
                                     <input type="text" class="form-control rounded-4 p-3" id="nombre"
-                                        placeholder="Ej: Juan Pérez" required>
+                                        placeholder="Ej: Juan Pérez" maxlength="100" required>
+                                    <div class="invalid-feedback text-white bg-danger bg-opacity-75 p-2 rounded-2 mt-1">El nombre es requerido (máx. 100 caracteres).</div>
                                 </div>
 
-                                <!-- Correo Electrónico -->
+                                <!-- Correo Electrónico (RFC2822, Máx. 100 car.) -->
                                 <div class="mb-3">
-                                    <label for="email" class="form-label fw-bold text-itus-white small">Correo Electrónico</label>
+                                    <label for="email" class="form-label fw-bold text-itus-white small">Correo Electrónico *</label>
                                     <input type="email" class="form-control rounded-4 p-3" id="email"
-                                        placeholder="Ej: juan.perez@ejemplo.com" required>
+                                        placeholder="Ej: juan.perez@ejemplo.com" maxlength="100" required>
+                                    <div class="invalid-feedback text-white bg-danger bg-opacity-75 p-2 rounded-2 mt-1">Ingrese un correo electrónico válido RFC2822 (máx. 100 caracteres).</div>
                                 </div>
 
                                 <!-- Teléfono -->
                                 <div class="mb-3">
-                                    <label for="telefono" class="form-label fw-bold text-itus-white small">Teléfono (Solo números y/o el signo +)</label>
+                                    <label for="telefono" class="form-label fw-bold text-itus-white small">Teléfono (Opcional)</label>
                                     <input type="tel" class="form-control rounded-4 p-3" id="telefono"
-                                        placeholder="Ej: +56912345678" required>
+                                        placeholder="Ej: +56912345678">
                                 </div>
 
                                 <!-- Asunto (Selección) -->
                                 <div class="mb-3">
-                                    <label for="asunto" class="form-label fw-bold text-itus-white small">Asunto</label>
+                                    <label for="asunto" class="form-label fw-bold text-itus-white small">Asunto *</label>
                                     <select class="form-select rounded-4 p-3" id="asunto" required>
-                                        <option value="" selected>Selecciona una opción...</option>
-                                        <option value="1">Admisión / Matrículas</option>
-                                        <option value="2">Consultas Académicas</option>
-                                        <option value="3">Financiamiento</option>
-                                        <option value="4">Otro</option>
+                                        <option value="" selected disabled>Selecciona una opción...</option>
+                                        <option value="Admisión / Matrículas">Admisión / Matrículas</option>
+                                        <option value="Consultas Académicas">Consultas Académicas</option>
+                                        <option value="Certificaciones y Cursos">Certificaciones y Cursos</option>
+                                        <option value="Financiamiento">Financiamiento</option>
+                                        <option value="Otro">Otro</option>
                                     </select>
+                                    <div class="invalid-feedback text-white bg-danger bg-opacity-75 p-2 rounded-2 mt-1">Seleccione un asunto.</div>
                                 </div>
 
-                                <!-- Mensaje -->
+                                <!-- Mensaje (Máx. 500 car.) -->
                                 <div class="mb-4">
-                                    <label for="mensaje" class="form-label fw-bold text-itus-white small">Mensaje</label>
+                                    <div class="d-flex justify-content-between align-items-center mb-1">
+                                        <label for="mensaje" class="form-label fw-bold text-itus-white small mb-0">Mensaje *</label>
+                                        <span id="charCounter" class="small text-white-50">0 / 500 caracteres</span>
+                                    </div>
                                     <textarea class="form-control rounded-4 p-3" id="mensaje" rows="4"
-                                        placeholder="Escribe aquí tu consulta..." required></textarea>
+                                        placeholder="Escribe aquí tu consulta detallada (máx. 500 caracteres)..." maxlength="500" required></textarea>
+                                    <div class="invalid-feedback text-white bg-danger bg-opacity-75 p-2 rounded-2 mt-1">El mensaje es obligatorio y no debe exceder 500 caracteres.</div>
                                 </div>
 
                                 <!-- Botón de Enviar -->
@@ -165,7 +175,7 @@
                     <h5>Nuestras Sedes</h5>
                     <ul class="list-unstyled small text-white-50 mb-0">
                         <li class="mb-2"><strong class="text-white">República:</strong> Av. República #285 (Metro República)</li>
-                        <li class="mb-2"><strong class="text-white">Antonio Varas:</strong> Av. Antonio Varas #660 (Metro Manuel Montt)</li>
+                        <li class="mb-2"><strong class="text-white">Antonio Varas (Sede Principal):</strong> Av. Antonio Varas #666 (Metro Manuel Montt)</li>
                         <li class="mb-2"><strong class="text-white">Francisco Bilbao:</strong> Av. Francisco Bilbao #2450 (Metro Bilbao)</li>
                         <li class="mb-2"><strong class="text-white">Diego Portales:</strong> Av. Diego Portales #1420 (Metro Los Quillayes)</li>
                     </ul>
@@ -194,6 +204,7 @@
 
     <!-- Bootstrap JS Bundle -->
     <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/auth.js"></script>
     <script src="assets/js/contactos.js"></script>
 </body>
 </html>

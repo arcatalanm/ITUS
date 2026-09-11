@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulario de Contacto | ITUS</title>
+    <title>Portal del Profesor | Instituto Tecnológico Universitario de Santiago (ITUS)</title>
     <!-- Importación de Bootstrap 5 -->
     <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
     <!-- Importación de Bootstrap Icons -->
@@ -28,12 +28,15 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarColor01">
-                    <ul class="navbar-nav ms-auto">
+                    <ul class="navbar-nav ms-auto align-items-lg-center">
                         <li class="nav-item">
                             <a class="nav-link" href="../carreras.html">CARRERAS</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="../sedes.html">SEDES</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../certificaciones/certificaciones.html">CERTIFICACIONES</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="../sobre-nosotros.html">NOSOTROS</a>
@@ -46,19 +49,19 @@
                         </li>
                         
                         <li class="nav-item ms-lg-2">
-                            <a class="btn btn-itus-accent btn-sm rounded-pill px-3 mt-1" href="../login-alumno.html">INICIAR SESIÓN</a>
+                            <button class="btn btn-outline-warning btn-sm rounded-pill px-3 mt-1 btn-cerrar-sesion">CERRAR SESIÓN</button>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
-    <main class="bg-light py-5" style="min-height: 80vh;">
+    <main class="bg-light py-5 min-vh-80">
         <div class="container">
             <div class="row mb-4">
                 <div class="col-12 d-flex justify-content-between align-items-center">
                     <h2 class="fw-bold text-itus-title"><i class="bi bi-person-video3 text-itus-navbar me-2"></i> Portal del Profesor</h2>
-                    <a href="../login-alumno.html" class="btn btn-outline-danger btn-sm rounded-pill px-3">Cerrar Sesión</a>
+                    <button class="btn btn-outline-danger btn-sm rounded-pill px-3 btn-cerrar-sesion">Cerrar Sesión</button>
                 </div>
             </div>
 
@@ -72,13 +75,13 @@
                                     <i class="bi bi-person-badge-fill"></i>
                                 </div>
                             </div>
-                            <h5 class="fw-bold text-itus-title mb-1">Prof. Roberto Gómez</h5>
-                            <p class="text-muted small mb-3">Departamento de Ciencias e Ingeniería</p>
+                            <h5 class="fw-bold text-itus-title mb-1" id="dashProfeNombre">Prof. Roberto Gómez</h5>
+                            <p class="text-muted small mb-3" id="dashProfeDepto">Departamento de Ciencias e Ingeniería</p>
                             <hr>
                             <p class="fw-bold text-itus-navbar mb-1">Correo Institucional:</p>
-                            <p class="text-muted small">rgomez@itusprofesor.cl</p>
+                            <p class="text-muted small" id="dashProfeCorreo">rgomez@itusprofesor.cl</p>
                             <p class="fw-bold text-itus-navbar mb-1">Sede Principal:</p>
-                            <p class="text-muted small mb-0">Francisco Bilbao</p>
+                            <p class="text-muted small mb-0">Antonio Varas</p>
                         </div>
                     </div>
                 </div>
@@ -148,18 +151,18 @@
                                     <tbody class="small">
                                         <tr>
                                             <td class="fw-bold text-muted">08:30 - 10:00</td>
-                                            <td class="bg-light">Matemáticas Aplicadas<br><span class="text-muted" style="font-size:0.75rem;">Sala 204</span></td>
+                                            <td class="bg-light">Matemáticas Aplicadas<br><span class="text-muted font-size-xs">Sala 204</span></td>
                                             <td></td>
-                                            <td class="bg-light">Matemáticas Aplicadas<br><span class="text-muted" style="font-size:0.75rem;">Sala 204</span></td>
+                                            <td class="bg-light">Matemáticas Aplicadas<br><span class="text-muted font-size-xs">Sala 204</span></td>
                                             <td></td>
                                             <td></td>
                                         </tr>
                                         <tr>
                                             <td class="fw-bold text-muted">10:15 - 11:45</td>
                                             <td></td>
-                                            <td class="bg-light">Programación Avanzada<br><span class="text-muted" style="font-size:0.75rem;">Lab 5</span></td>
+                                            <td class="bg-light">Programación Avanzada<br><span class="text-muted font-size-xs">Lab 5</span></td>
                                             <td></td>
-                                            <td class="bg-light">Programación Avanzada<br><span class="text-muted" style="font-size:0.75rem;">Lab 5</span></td>
+                                            <td class="bg-light">Programación Avanzada<br><span class="text-muted font-size-xs">Lab 5</span></td>
                                             <td></td>
                                         </tr>
                                         <tr>
@@ -168,7 +171,7 @@
                                             <td></td>
                                             <td></td>
                                             <td></td>
-                                            <td class="bg-light">Redes Neuronales 1<br><span class="text-muted" style="font-size:0.75rem;">Lab 2</span></td>
+                                            <td class="bg-light">Redes Neuronales 1<br><span class="text-muted font-size-xs">Lab 2</span></td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -211,7 +214,7 @@
                     <h5>Nuestras Sedes</h5>
                     <ul class="list-unstyled small text-white-50 mb-0">
                         <li class="mb-2"><strong class="text-white">República:</strong> Av. República #285 (Metro República)</li>
-                        <li class="mb-2"><strong class="text-white">Antonio Varas:</strong> Av. Antonio Varas #660 (Metro Manuel Montt)</li>
+                        <li class="mb-2"><strong class="text-white">Antonio Varas (Sede Principal):</strong> Av. Antonio Varas #666 (Metro Manuel Montt)</li>
                         <li class="mb-2"><strong class="text-white">Francisco Bilbao:</strong> Av. Francisco Bilbao #2450 (Metro Bilbao)</li>
                         <li class="mb-2"><strong class="text-white">Diego Portales:</strong> Av. Diego Portales #1420 (Metro Los Quillayes)</li>
                     </ul>
@@ -240,6 +243,8 @@
 
     <!-- Bootstrap JS Bundle -->
     <script src="../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/auth.js"></script>
+    <script src="../assets/js/alumnos.js"></script>
 </body>
 </html>
 

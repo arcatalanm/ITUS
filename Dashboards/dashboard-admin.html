@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Administración | Instituto Tecnológico Universitario de Santiago (ITUS)</title>
+    <!-- Bootstrap 5 CSS -->
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- Hoja de estilos personalizada -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <!-- Google Fonts Roboto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="d-flex">
+        <!-- Menú Vertical / Sidebar Administrativo (Exigido en Pauta) -->
+        <aside class="admin-sidebar p-3 d-flex flex-column">
+            <!-- Brand / Logo -->
+            <a href="../index.html" class="d-flex align-items-center mb-4 text-decoration-none text-white px-2">
+                <img src="../assets/images/condor.png" alt="ITUS" class="admin-brand-logo">
+            </a>
+
+            <div class="px-2 mb-3">
+                <span class="badge bg-warning text-dark px-2 py-1 small fw-bold">SISTEMA ADMINISTRATIVO</span>
+            </div>
+
+            <!-- Navegación del Sidebar -->
+            <ul class="nav nav-pills flex-column mb-auto">
+                <li class="nav-item">
+                    <a href="dashboard-admin.html" class="nav-link active">
+                        <i class="bi bi-people-fill fs-5"></i>
+                        <span>Gestión de Usuarios</span>
+                    </a>
+                </li>
+            </ul>
+
+            <hr class="border-secondary opacity-25">
+
+            <!-- Perfil Admin & Logout -->
+            <div class="dropdown px-2">
+                <div class="d-flex align-items-center justify-content-between">
+                    <div class="d-flex align-items-center gap-2">
+                        <div class="rounded-circle bg-warning text-dark p-2 fw-bold d-flex align-items-center justify-content-center avatar-sm">
+                            AD
+                        </div>
+                        <div>
+                            <div class="small fw-bold text-white">Administrador ITUS</div>
+                            <div class="text-white-50 font-size-xs">admin@itus.cl</div>
+                        </div>
+                    </div>
+                    <button class="btn btn-sm btn-outline-light btn-cerrar-sesion" title="Cerrar Sesión">
+                        <i class="bi bi-box-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Área Central de Contenido -->
+        <main class="admin-content p-4 p-lg-5">
+            <div class="container-fluid">
+                
+                <!-- Encabezado de la Sección -->
+                <div class="d-flex flex-wrap justify-content-between align-items-center gap-3 mb-4">
+                    <div>
+                        <h1 class="h3 fw-bold text-itus-title mb-1">Mantenedor de Usuarios (Estudiantes y Profesores)</h1>
+                        <p class="text-muted small mb-0">
+                            Control central de cuentas requeridas para el flujo de autenticación (Login y Register) en ITUS.
+                        </p>
+                    </div>
+                    <div>
+                        <button class="btn btn-itus-accent rounded-pill px-4 fw-bold shadow-sm" id="btnNuevoUsuario">
+                            <i class="bi bi-person-plus-fill me-2"></i> + Nuevo Usuario
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Tarjetas de Métricas -->
+                <div class="row g-4 mb-4">
+                    <!-- Total Usuarios -->
+                    <div class="col-12 col-sm-6 col-xl-4">
+                        <div class="card metric-card bg-white p-3">
+                            <div class="card-body d-flex align-items-center justify-content-between p-2">
+                                <div>
+                                    <span class="text-muted text-uppercase fw-bold font-size-xs">Total Registrados</span>
+                                    <h2 class="display-6 fw-bold text-itus-title mb-0" id="contadorTotal">0</h2>
+                                </div>
+                                <div class="rounded-circle bg-primary bg-opacity-10 text-primary p-3 fs-3">
+                                    <i class="bi bi-people"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Total Estudiantes -->
+                    <div class="col-12 col-sm-6 col-xl-4">
+                        <div class="card metric-card bg-white p-3">
+                            <div class="card-body d-flex align-items-center justify-content-between p-2">
+                                <div>
+                                    <span class="text-muted text-uppercase fw-bold font-size-xs">Estudiantes Activos</span>
+                                    <h2 class="display-6 fw-bold text-primary mb-0" id="contadorEstudiantes">0</h2>
+                                </div>
+                                <div class="rounded-circle bg-primary bg-opacity-10 text-primary p-3 fs-3">
+                                    <i class="bi bi-mortarboard"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Total Profesores -->
+                    <div class="col-12 col-sm-6 col-xl-4">
+                        <div class="card metric-card bg-white p-3">
+                            <div class="card-body d-flex align-items-center justify-content-between p-2">
+                                <div>
+                                    <span class="text-muted text-uppercase fw-bold font-size-xs">Cuerpo Docente</span>
+                                    <h2 class="display-6 fw-bold text-success mb-0" id="contadorProfesores">0</h2>
+                                </div>
+                                <div class="rounded-circle bg-success bg-opacity-10 text-success p-3 fs-3">
+                                    <i class="bi bi-person-video3"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tabla de Mantenedor de Usuarios -->
+                <div class="card border-0 shadow-sm rounded-4 overflow-hidden">
+                    <div class="card-header bg-white p-3 border-0">
+                        <div class="row g-3 align-items-center">
+                            <!-- Búsqueda por texto -->
+                            <div class="col-12 col-md-6 col-lg-5">
+                                <div class="input-group">
+                                    <span class="input-group-text bg-light border-end-0"><i class="bi bi-search"></i></span>
+                                    <input type="text" class="form-control border-start-0 bg-light" id="inputBusqueda" placeholder="Buscar por Nombre, RUN, Correo o Carrera...">
+                                </div>
+                            </div>
+                            <!-- Filtro por Rol -->
+                            <div class="col-12 col-md-4 col-lg-3 ms-auto">
+                                <div class="d-flex align-items-center gap-2">
+                                    <label class="small text-muted fw-bold text-nowrap">Filtrar:</label>
+                                    <select class="form-select form-select-sm" id="filtroRol">
+                                        <option value="Todos" selected>Todos los Roles</option>
+                                        <option value="Estudiante">Solo Estudiantes</option>
+                                        <option value="Profesor">Solo Profesores</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-body p-0">
+                        <div class="table-responsive">
+                            <table class="table table-hover align-middle mb-0">
+                                <thead class="table-light text-uppercase small text-muted">
+                                    <tr>
+                                        <th class="col-run">RUN</th>
+                                        <th>Usuario & Dirección</th>
+                                        <th>Correo</th>
+                                        <th>Rol</th>
+                                        <th>Carrera / Departamento</th>
+                                        <th>Ubicación</th>
+                                        <th class="text-end col-actions">Acciones</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="tablaUsuariosBody" class="small">
+                                    <!-- Render dinámico con admin.js -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="card-footer bg-white text-muted small p-3 d-flex justify-content-end align-items-center border-top">
+                        <span class="fw-bold">ITUS ERP v1.0</span>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+    <!-- Modal para Crear / Editar Usuario -->
+    <div class="modal fade" id="usuarioModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content rounded-4 border-0 shadow">
+                <div class="modal-header bg-itus-navbar text-white">
+                    <h5 class="modal-title fw-bold" id="modalUsuarioTitulo">
+                        <i class="bi bi-person-plus-fill text-warning me-2"></i> Registrar Nuevo Usuario
+                    </h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <form id="usuarioForm" novalidate>
+                    <div class="modal-body p-4">
+                        <input type="hidden" id="modalModoEdicion" value="crear">
+
+                        <div id="modalAlert" class="alert d-none" role="alert"></div>
+
+                        <!-- Fila 1: RUN y Rol -->
+                        <div class="row g-3 mb-3">
+                            <div class="col-md-6">
+                                <label for="modalRun" class="form-label small fw-bold text-uppercase mb-1">
+                                    RUN * <span class="text-muted fw-normal">(Sin puntos ni guión, ej: 19011022K)</span>
+                                </label>
+                                <input type="text" class="form-control rounded-3" id="modalRun" maxlength="9" minlength="7" placeholder="19011022K" required>
+                                <div class="invalid-feedback">RUN inválido (7-9 caracteres, algoritmo Módulo 11).</div>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="modalRol" class="form-label small fw-bold text-uppercase mb-1">Tipo de Usuario (Rol) *</label>
+                                <select class="form-select rounded-3" id="modalRol" required>
+                                    <option value="Estudiante" selected>Estudiante</option>
+                                    <option value="Profesor">Profesor</option>
+                                </select>
+                                <div class="invalid-feedback">Seleccione el rol del usuario.</div>
+                            </div>
+                        </div>
+
+                        <!-- Fila 2: Nombre y Apellidos -->
+                        <div class="row g-3 mb-3">
+                            <div class="col-md-6">
+                                <label for="modalNombre" class="form-label small fw-bold text-uppercase mb-1">Nombre *</label>
+                                <input type="text" class="form-control rounded-3" id="modalNombre" maxlength="50" placeholder="Ej: Juan Andrés" required>
+                                <div class="invalid-feedback">Nombre obligatorio (máx. 50 caracteres).</div>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="modalApellidos" class="form-label small fw-bold text-uppercase mb-1">Apellidos *</label>
+                                <input type="text" class="form-control rounded-3" id="modalApellidos" maxlength="100" placeholder="Ej: Pérez González" required>
+                                <div class="invalid-feedback">Apellidos obligatorios (máx. 100 caracteres).</div>
+                            </div>
+                        </div>
+
+                        <!-- Fila 3: Correo y Carrera/Depto -->
+                        <div class="row g-3 mb-3">
+                            <div class="col-md-6">
+                                <label for="modalCorreo" class="form-label small fw-bold text-uppercase mb-1">Correo Electrónico *</label>
+                                <input type="email" class="form-control rounded-3" id="modalCorreo" maxlength="100" placeholder="usuario@itus.cl" required>
+                                <div class="invalid-feedback">Correo inválido según norma RFC2822.</div>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="modalCarrera" class="form-label small fw-bold text-uppercase mb-1" id="labelCarreraModal">Carrera Asignada *</label>
+                                <input type="text" class="form-control rounded-3" id="modalCarrera" placeholder="Ej: Ingeniería en Inteligencia Artificial" required>
+                                <div class="invalid-feedback">Indique la carrera o departamento.</div>
+                            </div>
+                        </div>
+
+                        <!-- Fila 4: Región y Comuna Dinámicas -->
+                        <div class="row g-3 mb-3">
+                            <div class="col-md-6">
+                                <label for="modalRegion" class="form-label small fw-bold text-uppercase mb-1">Región *</label>
+                                <select class="form-select rounded-3" id="modalRegion" required>
+                                    <option value="" selected disabled>-- Seleccione región --</option>
+                                </select>
+                                <div class="invalid-feedback">Seleccione una región.</div>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="modalComuna" class="form-label small fw-bold text-uppercase mb-1">Comuna *</label>
+                                <select class="form-select rounded-3" id="modalComuna" required disabled>
+                                    <option value="" selected disabled>-- Seleccione comuna --</option>
+                                </select>
+                                <div class="invalid-feedback">Seleccione una comuna.</div>
+                            </div>
+                        </div>
+
+                        <!-- Fila 5: Dirección y Contraseña -->
+                        <div class="row g-3 mb-3">
+                            <div class="col-md-7">
+                                <label for="modalDireccion" class="form-label small fw-bold text-uppercase mb-1">Dirección Residencial *</label>
+                                <input type="text" class="form-control rounded-3" id="modalDireccion" maxlength="300" placeholder="Calle, número o villa" required>
+                                <div class="invalid-feedback">Dirección requerida (máx. 300 caracteres).</div>
+                            </div>
+                            <div class="col-md-5">
+                                <label for="modalPassword" class="form-label small fw-bold text-uppercase mb-1">Contraseña *</label>
+                                <input type="password" class="form-control rounded-3" id="modalPassword" maxlength="10" minlength="4" placeholder="4 a 10 car., alnum + especial" required>
+                                <div class="invalid-feedback">4 a 10 caracteres alfanumérica con caracter especial.</div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="modal-footer bg-light border-top">
+                        <button type="button" class="btn btn-secondary rounded-pill px-4" data-bs-dismiss="modal">Cancelar</button>
+                        <button type="submit" class="btn btn-itus-accent rounded-pill px-4 fw-bold">
+                            <i class="bi bi-save-fill me-1"></i> Guardar Usuario
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/auth.js"></script>
+    <script src="../assets/js/alumnos.js"></script>
+    <script src="../assets/js/admin.js"></script>
+</body>
+
+</html>
