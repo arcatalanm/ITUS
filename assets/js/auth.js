@@ -76,7 +76,7 @@ const CHILE_REGIONES_COMUNAS = [
 function validarRutChileno(runCompleto) {
     if (!runCompleto) return false;
     const runLimpio = runCompleto.toString().trim().replace(/[\.\-\s]/g, '').toUpperCase();
-    
+
     // Rango de longitud: 7 a 9 caracteres
     if (runLimpio.length < 7 || runLimpio.length > 9) {
         return false;
@@ -130,9 +130,9 @@ function validarEmailRFC2822(email) {
  */
 function validarPasswordFormato(password) {
     if (!password) return false;
-    if (password.length < 4 || password.length > 20) return false;
+    if (password.length < 4 || password.length > 10) return false;
     // Al menos una letra, un número y un caracter especial
-    const regex = /^(?=.*[a-zA-Z])(?=.*[0-9])(?=.*[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]).{4,20}$/;
+    const regex = /^(?=.*[a-zA-Z])(?=.*[0-9])(?=.*[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]).{4,10}$/;
     return regex.test(password);
 }
 
@@ -205,7 +205,7 @@ function inicializarUsuariosLocalStorage() {
 
     // Asegurar que los usuarios semilla (Admin, Docente, Alumno) siempre existan
     USUARIOS_INICIALES.forEach(seed => {
-        const idx = usuarios.findIndex(u => 
+        const idx = usuarios.findIndex(u =>
             u.correo.trim().toLowerCase() === seed.correo.trim().toLowerCase() ||
             u.run.replace(/[\.\-\s]/g, '').toUpperCase() === seed.run.replace(/[\.\-\s]/g, '').toUpperCase()
         );
@@ -397,7 +397,7 @@ function actualizarContadorCarritoNavbar() {
                 badge.classList.add('d-none');
             }
         });
-    } catch (e) {}
+    } catch (e) { }
 }
 
 // Auto inicializar al cargar documento

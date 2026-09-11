@@ -11,7 +11,7 @@
 // ==========================================
 // 1. BASE DE DATOS DE CERTIFICACIONES / CURSOS
 // ==========================================
-const certificacionesDB = [
+const CERTIFICACIONES_INICIALES = [
     {
         id: "AWS-01",
         nombre: "AWS Certified Cloud Practitioner",
@@ -146,8 +146,36 @@ const certificacionesDB = [
     }
 ];
 
+const STORAGE_KEY_CERTIFICACIONES = 'itus_certificaciones';
+
+function inicializarCertificacionesLocalStorage() {
+    let certificaciones = [];
+    try {
+        const data = localStorage.getItem(STORAGE_KEY_CERTIFICACIONES);
+        if (data) {
+            certificaciones = JSON.parse(data);
+        }
+    } catch (e) {
+        console.error("Error parseando certificaciones desde LocalStorage", e);
+    }
+
+    if (certificaciones.length === 0) {
+        certificaciones = [...CERTIFICACIONES_INICIALES];
+        localStorage.setItem(STORAGE_KEY_CERTIFICACIONES, JSON.stringify(certificaciones));
+    }
+    return certificaciones;
+}
+
+window.obtenerCertificaciones = function() {
+    return inicializarCertificacionesLocalStorage();
+};
+
+window.guardarCertificaciones = function(certificaciones) {
+    localStorage.setItem(STORAGE_KEY_CERTIFICACIONES, JSON.stringify(certificaciones));
+};
+
 // Compartir globalmente
-window.ITUS_CERTIFICACIONES_DB = certificacionesDB;
+window.ITUS_CERTIFICACIONES_DB = inicializarCertificacionesLocalStorage();
 
 // ==========================================
 // 2. GESTIÓN DEL CARRITO EN LOCALSTORAGE
@@ -173,7 +201,7 @@ function guardarCarrito(carrito) {
 function agregarAlCarrito(id) {
     const carrito = getCarrito();
     if (!carrito.some(item => item.id === id)) {
-        const item = certificacionesDB.find(c => c.id === id);
+        const item = obtenerCertificaciones().find(c => c.id === id);
         if (item) {
             carrito.push(item);
             guardarCarrito(carrito);
@@ -226,8 +254,8 @@ document.addEventListener('DOMContentLoaded', () => {
             const carrito = getCarrito();
 
             const cursosMostrados = filtro === 'Todas'
-                ? certificacionesDB
-                : certificacionesDB.filter(c => c.entidad === filtro);
+                ? obtenerCertificaciones()
+                : obtenerCertificaciones().filter(c => c.entidad === filtro);
 
             cursosMostrados.forEach(cert => {
                 const yaAgregado = carrito.some(item => item.id === cert.id);
@@ -378,7 +406,8 @@ document.addEventListener('DOMContentLoaded', () => {
     if (detalleContenedor) {
         const urlParams = new URLSearchParams(window.location.search);
         const productoId = urlParams.get('id') || 'AWS-01'; // Default al primero si no viene
-        const producto = certificacionesDB.find(p => p.id === productoId) || certificacionesDB[0];
+        const db = obtenerCertificaciones();
+        const producto = db.find(p => p.id === productoId) || db[0];
 
         const carrito = getCarrito();
         const yaAgregado = carrito.some(i => i.id === producto.id);
@@ -492,7 +521,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (contenedorDestacados) {
         contenedorDestacados.innerHTML = '';
         const carrito = getCarrito();
-        const destacados = certificacionesDB.filter(c => c.destacado).slice(0, 4);
+        const destacados = obtenerCertificaciones().filter(c => c.destacado).slice(0, 4);
 
         destacados.forEach(item => {
             const yaAgregado = carrito.some(c => c.id === item.id);
